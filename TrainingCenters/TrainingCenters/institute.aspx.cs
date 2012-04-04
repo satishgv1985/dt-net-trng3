@@ -19,6 +19,14 @@ namespace TrainingCenters
 
         }
 
+        protected void cvUserName_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            args.IsValid = true;
+            if (tbUserName.Text.Length < 8 || tbUserName.Text.Length > 15)
+                args.IsValid = false;
+
+        }
+
         
         
         
