@@ -21,30 +21,30 @@
         {
             width: 100%;
         }
-        .style2
-        {
-            width: 279px;
-        }
         .style3
         {
             width: 292px;
         }
-        .style4
-        {
-            width: 276px;
-        }
-        .style5
-        {
-            width: 303px;
-        }
         .style6
         {
-            width: 303px;
+            width: 502px;
             height: 23px;
         }
         .style7
         {
             height: 23px;
+        }
+        .style8
+        {
+            width: 501px;
+        }
+        .style9
+        {
+            width: 502px;
+        }
+        .style10
+        {
+            width: 503px;
         }
     </style>
 </head>
@@ -57,7 +57,7 @@
         </center>
         <table class="style1">
             <tr>
-                <td class="style2" align="right">
+                <td class="style8" align="right">
                     <asp:Label ID="lblInstituteName" runat="server" Text="Enter Institute Name  :" Font-Bold="True"></asp:Label>
                 </td>
                 <td align="left">
@@ -68,7 +68,7 @@
                 </td>
             </tr>
             <tr>
-                <td class="style2" align="right">
+                <td class="style8" align="right">
                     <asp:Label ID="lblUserName" runat="server" Text="Enter User Name  :" Font-Bold="True"></asp:Label>
                 </td>
                 <td align="left">
@@ -82,7 +82,7 @@
                 </td>
             </tr>
             <tr>
-                <td class="style2" align="right">
+                <td class="style8" align="right">
                     <asp:Label ID="lblPassword" runat="server" Text="Password  :" Font-Bold="True"></asp:Label>
                 </td>
                 <td align="left">
@@ -93,7 +93,7 @@
                 </td>
             </tr>
             <tr>
-                <td class="style2" align="right">
+                <td class="style8" align="right">
                     <asp:Label ID="lblConfirmPassword" runat="server" Text="Confirm Password  :" Font-Bold="True"></asp:Label>
                 </td>
                 <td align="left">
@@ -106,8 +106,10 @@
                         ForeColor="red" ValidationGroup="vgInstitute"></asp:CompareValidator>
                 </td>
             </tr>
+            </table>
+            <table>
             <tr>
-                <td class="style2" align="right">
+                <td class="style8" align="right">
                     <asp:Label ID="lblDateOfEstablishment" runat="server" Text="Date Of Establishment  :"
                         Font-Bold="True"></asp:Label>
                 </td>
@@ -115,8 +117,10 @@
                     <asp:Calendar ID="cDateOfEstablishment" runat="server"></asp:Calendar>
                 </td>
             </tr>
+            </table>
+            <table>
             <tr>
-                <td class="style2" align="right">
+                <td class="style8" align="right">
                     <asp:Label ID="Label1" runat="server" Text="Courses Offered  :" Font-Bold="True"></asp:Label>
                 </td>
                 <td align="left" class="style3">
@@ -138,14 +142,19 @@
                 </td>
             </tr>
         </table>
-        <strong>
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            Insitute Address&nbsp; :<br />
-        </strong>
         <table class="style1">
             <tr>
-                <td align="right" class="style5">
+                <td align="right" class="style10">
+                    <asp:Label ID="lblInstituteAddress" runat="server" style="font-weight: 700" 
+                        Text="Institute Address  :"></asp:Label>
+                </td>
+                <td>
+                    &nbsp;</td>
+            </tr>
+        </table>
+        <table class="style1">
+            <tr>
+                <td align="right" class="style9">
                     <asp:Label ID="lblDoorNumber" runat="server" Style="font-weight: 700" Text="Door Number  :"></asp:Label>
                 </td>
                 <td>
@@ -153,7 +162,7 @@
                 </td>
             </tr>
             <tr>
-                <td align="right" class="style5">
+                <td align="right" class="style9">
                     <asp:Label ID="lblArea" runat="server" Style="font-weight: 700" Text="Area  :"></asp:Label>
                 </td>
                 <td>
@@ -169,7 +178,7 @@
                 </td>
             </tr>
             <tr>
-                <td align="right" class="style5">
+                <td align="right" class="style9">
                     <asp:Label ID="lblMobileNumber" runat="server" Style="font-weight: 700" Text="Mobile Number  :"></asp:Label>
                 </td>
                 <td>
@@ -180,7 +189,7 @@
                 </td>
             </tr>
             <tr>
-                <td align="right" class="style5">
+                <td align="right" class="style9">
                     <asp:Label ID="lblEmailId" runat="server" Style="font-weight: 700" Text="Email ID  :"></asp:Label>
                 </td>
                 <td>
@@ -191,7 +200,7 @@
                 </td>
             </tr>
             <tr>
-                <td align="right" class="style5">
+                <td align="right" class="style9">
                     <asp:Label ID="lblPincodeNumber" runat="server" Style="font-weight: 700" Text="Pincode Number  :"></asp:Label>
                 </td>
                 <td>
@@ -210,7 +219,8 @@
             <tr>
                 <td align="center">
                     <asp:Button ID="btnSubmitForm" runat="server" Text="SubmitForm" ValidationGroup="vgInstitute"
-                        OnClick="btninstsubmit_Click" CausesValidation="true" />
+                        OnClick="btninstsubmit_Click" CausesValidation="true" 
+                        style="font-weight: 700; margin-left: 0px" Width="219px" />
                 </td>
             </tr>
         </table>
