@@ -8,6 +8,13 @@
         function funcCheckCourses() {
             return true;
         }
+
+        function funcCheckUserNameLength(source, arguments) {
+            arguments.IsValid = true;
+            var un = document.getElementById('tbUserName').value;
+            if (un.length < 8 || un.length>15)
+                arguments.IsValid = false;
+        }
     </script>
     <style type="text/css">
         .style1
@@ -41,12 +48,12 @@
         }
     </style>
 </head>
-<body style="background-color:Olive">
+<body style="background-color: Olive">
     <form id="form2" runat="server">
     <div>
         <center>
             <h1 style="text-decoration: underline">
-                Institute Registration</h1>
+                Institute Registration Form</h1>
         </center>
         <table class="style1">
             <tr>
@@ -55,9 +62,9 @@
                 </td>
                 <td align="left">
                     <asp:TextBox ID="tbInstituteName" runat="server"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="rfvInstituteName" Display="Dynamic" runat="server" ControlToValidate="tbInstituteName"
-                        ErrorMessage="Institute Name should be required" SetFocusOnError="true" ForeColor="red"
-                        ValidationGroup="vgInstitute"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="rfvInstituteName" Display="Dynamic" runat="server"
+                        ControlToValidate="tbInstituteName" ErrorMessage="Institute Name should be required"
+                        SetFocusOnError="true" ForeColor="red" ValidationGroup="vgInstitute"></asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
@@ -66,9 +73,12 @@
                 </td>
                 <td align="left">
                     <asp:TextBox ID="tbUserName" runat="server"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="rfvUserName"  Display="Dynamic" runat="server" ControlToValidate="tbUserName"
+                    <asp:RequiredFieldValidator ID="rfvUserName" Display="Dynamic" runat="server" ControlToValidate="tbUserName"
                         ErrorMessage="Name should be required" SetFocusOnError="true" ForeColor="red"
                         ValidationGroup="vgInstitute"></asp:RequiredFieldValidator>
+                    <asp:CustomValidator ID="cvUserName" runat="server" ControlToValidate="tbUserName"
+                        ErrorMessage="UserName should be 8-15characters" ForeColor="Red" 
+                      ValidationGroup="vgInstitute"   onservervalidate="cvUserName_ServerValidate" ></asp:CustomValidator>
                 </td>
             </tr>
             <tr>
@@ -105,11 +115,9 @@
                     <asp:Calendar ID="cDateOfEstablishment" runat="server"></asp:Calendar>
                 </td>
             </tr>
-       
             <tr>
-               <td class="style2" align="right">
-                    <asp:Label ID="Label1" runat="server" Text="Courses Offered  :"
-                        Font-Bold="True"></asp:Label>
+                <td class="style2" align="right">
+                    <asp:Label ID="Label1" runat="server" Text="Courses Offered  :" Font-Bold="True"></asp:Label>
                 </td>
                 <td align="left" class="style3">
                     <asp:CheckBoxList ID="cblCoursesOffered" runat="server" RepeatColumns="2" Style="margin-bottom: 0px;
@@ -166,9 +174,9 @@
                 </td>
                 <td>
                     <asp:TextBox ID="tbMobileNumber" runat="server"></asp:TextBox>
-                    <asp:RegularExpressionValidator ID="revMobileNumber" Display="Dynamic" runat="server" ControlToValidate="tbMobileNumber"
-                        ErrorMessage="Mobile number should be 10 digits" ForeColor="Red" ValidationExpression="\d{10}"
-                        ValidationGroup="vgInstitute"></asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="revMobileNumber" Display="Dynamic" runat="server"
+                        ControlToValidate="tbMobileNumber" ErrorMessage="Mobile number should be 10 digits"
+                        ForeColor="Red" ValidationExpression="\d{10}" ValidationGroup="vgInstitute"></asp:RegularExpressionValidator>
                 </td>
             </tr>
             <tr>
@@ -177,9 +185,9 @@
                 </td>
                 <td>
                     <asp:TextBox ID="tbEmailId" runat="server"></asp:TextBox>
-                    <asp:RegularExpressionValidator ID="revEmailId" Display="Dynamic" runat="server" ControlToValidate="tbEmailId"
-                        ErrorMessage="give valid email id" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"
-                        ValidationGroup="vgInstitute"></asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="revEmailId" Display="Dynamic" runat="server"
+                        ControlToValidate="tbEmailId" ErrorMessage="give valid email id" ForeColor="Red"
+                        ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGroup="vgInstitute"></asp:RegularExpressionValidator>
                 </td>
             </tr>
             <tr>
@@ -188,15 +196,16 @@
                 </td>
                 <td>
                     <asp:TextBox ID="tbPincodeNumber" runat="server"></asp:TextBox>
-                    <asp:RegularExpressionValidator ID="revPincodeNumber" Display="Dynamic" runat="server" ControlToValidate="tbPincodeNumber"
-                        ErrorMessage="Give valid pincode number" ForeColor="Red" ValidationExpression="\d{5}"
-                        ValidationGroup="vgInstitute"></asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="revPincodeNumber" Display="Dynamic" runat="server"
+                        ControlToValidate="tbPincodeNumber" ErrorMessage="Give valid pincode number"
+                        ForeColor="Red" ValidationExpression="\d{5}" ValidationGroup="vgInstitute"></asp:RegularExpressionValidator>
                 </td>
             </tr>
         </table>
         <br />
-        <asp:ValidationSummary ID="vsIstitute" runat="server" Display="Dynamic" ForeColor="Red" ValidationGroup="vgInstitute"
-            HeaderText="Errors occured" ShowMessageBox="false" Visible="false" />
+        <asp:ValidationSummary ID="vsIstitute" runat="server" Display="Dynamic" ForeColor="Red"
+            ValidationGroup="vgInstitute" HeaderText="Errors occured" ShowMessageBox="false"
+            Visible="false" />
         <table class="style1">
             <tr>
                 <td align="center">
