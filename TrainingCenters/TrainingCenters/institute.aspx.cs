@@ -16,7 +16,7 @@ namespace TrainingCenters
 
         protected void btninstsubmit_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         protected void cvUserName_ServerValidate(object source, ServerValidateEventArgs args)
