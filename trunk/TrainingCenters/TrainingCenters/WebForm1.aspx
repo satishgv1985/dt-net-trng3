@@ -46,6 +46,7 @@
                 </td>
                 <td align="left">
                     <asp:TextBox ID="tbUserName" runat="server"></asp:TextBox>
+                   
                     <asp:RequiredFieldValidator ID="rfvUserName" Display="Dynamic" runat="server" ControlToValidate="tbUserName"
                         ErrorMessage="Name should be required" SetFocusOnError="true" ForeColor="red"
                         ValidationGroup="vgStudent"></asp:RequiredFieldValidator>
@@ -64,7 +65,7 @@
             </tr>
             <tr>
                 <td class="style2" align="right">
-                    <asp:Label ID="lblConfirmPassword" runat="server" Text="Confirm Passwor  :" Font-Bold="True"></asp:Label>
+                    <asp:Label ID="lblConfirmPassword" runat="server" Text="Confirm Password  :" Font-Bold="True"></asp:Label>
                 </td>
                 <td align="left">
                     <asp:TextBox ID="tbConfirmPassword" TextMode="Password" runat="server"></asp:TextBox>

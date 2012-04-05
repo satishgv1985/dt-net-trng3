@@ -1,5 +1,0 @@
-C:\Users\Mahesh\Desktop\dt-net-trng3\TrainingCenters\TrainingCenters\bin\TrainingCenters.dll
-C:\Users\Mahesh\Desktop\dt-net-trng3\TrainingCenters\TrainingCenters\bin\TrainingCenters.pdb
-C:\Users\Mahesh\Desktop\dt-net-trng3\TrainingCenters\TrainingCenters\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\Mahesh\Desktop\dt-net-trng3\TrainingCenters\TrainingCenters\obj\Debug\TrainingCenters.dll
-C:\Users\Mahesh\Desktop\dt-net-trng3\TrainingCenters\TrainingCenters\obj\Debug\TrainingCenters.pdb
