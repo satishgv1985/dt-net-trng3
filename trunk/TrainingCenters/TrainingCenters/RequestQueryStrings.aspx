@@ -17,7 +17,8 @@
 
     <br />
     <asp:Button ID="btnSubmit" runat="server" Text="Submit(GET)" onclick="btnSubmit_Click" />
-    &nbsp;&nbsp;<asp:Button ID="btnSubmitPost" runat="server" Text="Submit(POST)" PostBackUrl="~/ReadPostData.aspx" />
+    &nbsp;&nbsp;<asp:Button ID="btnSubmitPost" runat="server" Text="Submit(POST)" 
+            PostBackUrl="~/ReadPostData.aspx" onclick="btnSubmitPost_Click" />
 
     </div>
     </form>

@@ -54,9 +54,11 @@
     <Content Include="CourseOffering.aspx" />
     <Content Include="ForgotPassword.aspx" />
     <Content Include="institute.aspx" />
+    <Content Include="ReadInstituteRegistration.aspx" />
     <Content Include="ReadPostData.aspx" />
     <Content Include="LoginPage.aspx" />
     <Content Include="ReadQueryStrings.aspx" />
+    <Content Include="ReadStudentRegistration.aspx" />
     <Content Include="RequestQueryStrings.aspx" />
     <Content Include="Technique_Cookie.aspx" />
     <Content Include="Technique_ViewState.aspx" />
@@ -67,7 +69,7 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="WebForm1.aspx" />
+    <Content Include="StudentRegistraion.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ASPNetControls.aspx.cs">
@@ -106,6 +108,13 @@
       <DependentUpon>LoginPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReadInstituteRegistration.aspx.cs">
+      <DependentUpon>ReadInstituteRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReadInstituteRegistration.aspx.designer.cs">
+      <DependentUpon>ReadInstituteRegistration.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ReadPostData.aspx.cs">
       <DependentUpon>ReadPostData.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -119,6 +128,13 @@
     </Compile>
     <Compile Include="ReadQueryStrings.aspx.designer.cs">
       <DependentUpon>ReadQueryStrings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReadStudentRegistration.aspx.cs">
+      <DependentUpon>ReadStudentRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReadStudentRegistration.aspx.designer.cs">
+      <DependentUpon>ReadStudentRegistration.aspx</DependentUpon>
     </Compile>
     <Compile Include="RequestQueryStrings.aspx.cs">
       <DependentUpon>RequestQueryStrings.aspx</DependentUpon>
@@ -141,12 +157,12 @@
     <Compile Include="Technique_ViewState.aspx.designer.cs">
       <DependentUpon>Technique_ViewState.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="StudentRegistraion.aspx.cs">
+      <DependentUpon>StudentRegistraion.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="StudentRegistraion.aspx.designer.cs">
+      <DependentUpon>StudentRegistraion.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
