@@ -61,7 +61,7 @@
                     <asp:RegularExpressionValidator ID="revStudentEmailId" Display="Dynamic" runat="server"
                         ControlToValidate="tbStudentEmald" ErrorMessage="give valid email id" ForeColor="Red"
                         ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" 
-                                ValidationGroup="vgInstitute"></asp:RegularExpressionValidator>
+                                ValidationGroup="vgStudentLogin"></asp:RegularExpressionValidator>
                         </td>
                     </tr>
                     <tr>
@@ -72,7 +72,7 @@
                     <asp:TextBox ID="tbStudentPassword" runat="server" TextMode="Password"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="rfvStudentPassword" SetFocusOnError="true" runat="server"
                         ControlToValidate="tbStudentPassword" ErrorMessage="Password should not be blank" ForeColor="red"
-                        ValidationGroup="vgInstitute"></asp:RequiredFieldValidator>
+                        ValidationGroup="vgStudentLogin"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
                     </table>
@@ -81,11 +81,13 @@
                     <tr>
                         <td>
                     <asp:Button ID="btnStudentSubmit" runat="server" style="margin-left: 65px" 
-                        Text="StudentSubmition" Width="156px" onclick="btnStudentSubmit_Click" />
+                        Text="StudentSubmition" Width="156px" onclick="btnStudentSubmit_Click" 
+                                ValidationGroup="vgStudentLogin" />
                         </td>
                         <td>
                     <asp:Button ID="btnStudentReset" runat="server" style="margin-left: 107px" 
-                        Text="StudentReset" Width="124px" onclick="btnStudentReset_Click" />
+                        Text="StudentReset" Width="124px" onclick="btnStudentReset_Click" 
+                                ValidationGroup="InstituteLogin" />
                         </td>
                     </tr>
                 </table>
@@ -124,7 +126,7 @@
                     <asp:RegularExpressionValidator ID="revUserEmailId" Display="Dynamic" runat="server"
                         ControlToValidate="tbUserEmaild" ErrorMessage="give valid email id" ForeColor="Red"
                         ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" 
-                                ValidationGroup="vgInstitute"></asp:RegularExpressionValidator>
+                                ValidationGroup="vgInstituteLogin"></asp:RegularExpressionValidator>
                         </td>
                     </tr>
                     <tr>
@@ -135,7 +137,7 @@
                     <asp:TextBox ID="tbUserPassword" runat="server" TextMode="Password"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="rfvUserPassword0" SetFocusOnError="true" runat="server"
                         ControlToValidate="tbUserPassword" ErrorMessage="Password should not be blank" ForeColor="red"
-                        ValidationGroup="vgInstitute"></asp:RequiredFieldValidator>
+                        ValidationGroup="vgInstituteLogin"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
                     </table>
@@ -144,11 +146,13 @@
                     <tr>
                         <td>
                     <asp:Button ID="btnInstituteSubmit" runat="server" style="margin-left: 61px" 
-                        Text="InstituteSubmit" Width="111px" PostBackUrl="~/CourseOffering.aspx" />
+                        Text="InstituteSubmit" Width="111px" PostBackUrl="~/CourseOffering.aspx" 
+                                ValidationGroup="vgInstituteLogin" />
                         </td>
                         <td>
                     <asp:Button ID="btnInstituteReset" runat="server" style="margin-left: 61px" 
-                        Text="InstituteReset" Width="111px" onclick="btnInstituteReset_Click" />
+                        Text="InstituteReset" Width="111px" onclick="btnInstituteReset_Click" 
+                                ValidationGroup="vgInstituteLogin" />
                         </td>
                     </tr>
                 </table>

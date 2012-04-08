@@ -16,7 +16,7 @@ namespace TrainingCenters
 
         protected void btninstsubmit_Click(object sender, EventArgs e)
         {
-            
+            //Response.Redirect("ReadInstituteRegistration.aspx? " + tbInstituteName.Text + "" + tbUserName.Text +"" + tbDoorNumber.Text + ""+tbArea.Text+""+tbCity.Text+""+tbEmailId+""+tbMobileNumber);
         }
 
         protected void cvUserName_ServerValidate(object source, ServerValidateEventArgs args)
@@ -26,6 +26,8 @@ namespace TrainingCenters
                 args.IsValid = false;
 
         }
+
+     
 
         
         

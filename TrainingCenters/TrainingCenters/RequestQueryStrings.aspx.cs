@@ -18,5 +18,10 @@ namespace TrainingCenters
         {
             Response.Redirect("ReadQueryStrings.aspx?name="+txtName.Text+"&rollno="+txtRollNo.Text);
         }
+
+        protected void btnSubmitPost_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
