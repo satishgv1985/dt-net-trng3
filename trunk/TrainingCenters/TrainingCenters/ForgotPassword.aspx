@@ -1,9 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ForgotPassword.aspx.cs" Inherits="TrainingCenters.ForgotPassword" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/TCSite.Master" CodeBehind="ForgotPassword.aspx.cs" Inherits="TrainingCenters.ForgotPassword" %>
+<asp:Content ID="Conntent1" ContentPlaceHolderID="cphHeader" runat="server">
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+
     <title>Forgot Password</title>
     <style type="text/css">
         .style1
@@ -15,9 +14,9 @@
             width: 543px;
         }
     </style>
-</head>
-<body bgcolor="#66ffff">
-    <form id="form1" runat="server">
+    </asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="cphBody" runat="server">
+
     <table class="style1">
         <tr>
             <td align="center">
@@ -68,6 +67,5 @@
         </table>
     
     </div>
-    </form>
-</body>
-</html>
+    </asp:Content>
+

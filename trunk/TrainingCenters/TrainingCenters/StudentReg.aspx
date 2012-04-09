@@ -32,8 +32,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="cphBody" runat="server">
   <div>
         <center>
-            <h1 style="text-decoration: underline">
-                Student Registration</h1>
+            <h3 style="text-decoration: underline">
+                Student Registration</h3>
         </center>
         <table class="style1">
             <tr>

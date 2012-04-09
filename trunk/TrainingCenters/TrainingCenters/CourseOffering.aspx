@@ -2,7 +2,7 @@
     Inherits="TrainingCenters.CourseOffering" %>
     <%@ Register Src="~/InstituteCommon.ascx" TagName="Institute" TagPrefix="uc" %>
     <asp:Content ID="cpCO" ContentPlaceHolderID="cphHeader" runat="server" >
-    <title></title>
+        <title></title>
     <style type="text/css">
         .style1
         {
@@ -24,7 +24,7 @@
     </asp:Content>
 
    <asp:Content ID="cpCOBody" ContentPlaceHolderID="cphBody" runat="server">
-    <div>
+       <div>
 
     <uc:Institute ID="ucInstitute" runat="server" />
         <table class="style1">
@@ -131,4 +131,4 @@
         <asp:Button ID="btnSelectAnoyherCourse" runat="server" 
             Text="Select Another Course" ValidationGroup="vgCourseDetails" />
     </p>
-   
+   </asp:Content>
