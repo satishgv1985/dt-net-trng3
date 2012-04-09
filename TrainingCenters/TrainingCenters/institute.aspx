@@ -1,8 +1,7 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="institute.aspx.cs" Inherits="TrainingCenters.institute" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/TCSite.Master" CodeBehind="institute.aspx.cs"
+    Inherits="TrainingCenters.institute" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head id="Head2" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="cphHeader" runat="server">
     <title>institute Registration Form</title>
     <script type="text/javascript">
         function funcCheckCourses() {
@@ -12,7 +11,7 @@
         function funcCheckUserNameLength(source, arguments) {
             arguments.IsValid = true;
             var un = document.getElementById('tbUserName').value;
-            if (un.length < 8 || un.length>15)
+            if (un.length < 8 || un.length > 15)
                 arguments.IsValid = false;
         }
     </script>
@@ -47,13 +46,12 @@
             width: 503px;
         }
     </style>
-</head>
-<body style="background-color: Olive">
-    <form id="form2" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="cphBody" runat="server">
     <div>
         <center>
-            <h1 style="text-decoration: underline">
-                Institute Registration Form</h1>
+            <h3 style="text-decoration: underline">
+                Institute Registration Form</h3>
         </center>
         <table class="style1">
             <tr>
@@ -77,8 +75,8 @@
                         ErrorMessage="Name should be required" SetFocusOnError="true" ForeColor="red"
                         ValidationGroup="vgInstitute"></asp:RequiredFieldValidator>
                     <asp:CustomValidator ID="cvUserName" runat="server" ControlToValidate="tbUserName"
-                        ErrorMessage="UserName should be 8-15characters" ForeColor="Red" 
-                      ValidationGroup="vgInstitute"   onservervalidate="cvUserName_ServerValidate" ></asp:CustomValidator>
+                        ErrorMessage="UserName should be 8-15characters" ForeColor="Red" ValidationGroup="vgInstitute"
+                        OnServerValidate="cvUserName_ServerValidate"></asp:CustomValidator>
                 </td>
             </tr>
             <tr>
@@ -106,8 +104,8 @@
                         ForeColor="red" ValidationGroup="vgInstitute"></asp:CompareValidator>
                 </td>
             </tr>
-            </table>
-            <table>
+        </table>
+        <table>
             <tr>
                 <td class="style8" align="right">
                     <asp:Label ID="lblDateOfEstablishment" runat="server" Text="Date Of Establishment  :"
@@ -117,8 +115,8 @@
                     <asp:Calendar ID="cDateOfEstablishment" runat="server"></asp:Calendar>
                 </td>
             </tr>
-            </table>
-            <table>
+        </table>
+        <table>
             <tr>
                 <td class="style8" align="right">
                     <asp:Label ID="Label1" runat="server" Text="Courses Offered  :" Font-Bold="True"></asp:Label>
@@ -145,11 +143,11 @@
         <table class="style1">
             <tr>
                 <td align="right" class="style10">
-                    <asp:Label ID="lblInstituteAddress" runat="server" style="font-weight: 700" 
-                        Text="Institute Address  :"></asp:Label>
+                    <asp:Label ID="lblInstituteAddress" runat="server" Style="font-weight: 700" Text="Institute Address  :"></asp:Label>
                 </td>
                 <td>
-                    &nbsp;</td>
+                    &nbsp;
+                </td>
             </tr>
         </table>
         <table class="style1">
@@ -219,13 +217,11 @@
             <tr>
                 <td align="center">
                     <asp:Button ID="btnSubmitForm" runat="server" Text="SubmitForm" ValidationGroup="vgInstitute"
-                        OnClick="btninstsubmit_Click" CausesValidation="true" 
-                        style="font-weight: 700; margin-left: 0px" Width="219px" 
+                        OnClick="btninstsubmit_Click" CausesValidation="true" Style="font-weight: 700;
+                        margin-left: 0px" Width="219px" />
                         PostBackUrl="~/ReadInstituteRegistration.aspx" />
                 </td>
             </tr>
         </table>
     </div>
-    </form>
-</body>
-</html>
+</asp:Content>
