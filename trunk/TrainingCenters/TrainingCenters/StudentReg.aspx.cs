@@ -7,19 +7,16 @@ using System.Web.UI.WebControls;
 
 namespace TrainingCenters
 {
-    public partial class WebForm1 : System.Web.UI.Page
+    public partial class StudentReg : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (IsPostBack)
-            {
-            }
+
         }
-
-
-
         protected void ddlState_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+
             ddlCity.Items.Clear();
 
             if (ddlState.SelectedValue == "0")
@@ -50,11 +47,5 @@ namespace TrainingCenters
                 ddlCity.Items.Add(licity);
             }
         }
-
-
-
-
-
-
     }
 }

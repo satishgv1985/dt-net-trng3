@@ -1,9 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="TrainingCenters.WebForm1" %>
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>Student Registration Form</title>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TCSite.Master" AutoEventWireup="true" CodeBehind="StudentReg.aspx.cs" Inherits="TrainingCenters.StudentReg" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="cphHeader" runat="server">
+ <title>Student Registration Form</title>
 <script type="text/javascript">
     function funcCheckCourses() {
         return true;
@@ -31,10 +28,9 @@
             width: 303px;
         }
         </style>
-</head>
-<body style="background-color:Yellow">
-    <form id="form1" runat="server">
-    <div>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="cphBody" runat="server">
+  <div>
         <center>
             <h1 style="text-decoration: underline">
                 Student Registration</h1>
@@ -200,6 +196,5 @@
             </tr>
         </table>
     </div>
-    </form>
-</body>
-</html>
+
+</asp:Content>
