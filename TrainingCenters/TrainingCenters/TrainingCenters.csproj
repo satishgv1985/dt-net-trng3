@@ -54,6 +54,7 @@
     <Content Include="CourseOffering.aspx" />
     <Content Include="EditInstituteProfile.aspx" />
     <Content Include="ForgotPassword.aspx" />
+    <Content Include="HomeTrainingCenter.aspx" />
     <Content Include="institute.aspx" />
     <Content Include="InstituteCommon.ascx" />
     <Content Include="InstituteProfile.aspx" />
@@ -64,6 +65,7 @@
     <Content Include="LoginPage.aspx" />
     <Content Include="ReadQueryStrings.aspx" />
     <Content Include="ReadStudentReg.aspx" />
+    <Content Include="RegistrationLink.aspx" />
     <Content Include="RequestQueryStrings.aspx" />
     <Content Include="StudentReg.aspx" />
     <Content Include="Technique_Cookie.aspx" />
@@ -108,6 +110,13 @@
     </Compile>
     <Compile Include="ForgotPassword.aspx.designer.cs">
       <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomeTrainingCenter.aspx.cs">
+      <DependentUpon>HomeTrainingCenter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeTrainingCenter.aspx.designer.cs">
+      <DependentUpon>HomeTrainingCenter.aspx</DependentUpon>
     </Compile>
     <Compile Include="institute.aspx.cs">
       <DependentUpon>institute.aspx</DependentUpon>
@@ -179,6 +188,13 @@
     </Compile>
     <Compile Include="ReadStudentReg.aspx.designer.cs">
       <DependentUpon>ReadStudentReg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationLink.aspx.cs">
+      <DependentUpon>RegistrationLink.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistrationLink.aspx.designer.cs">
+      <DependentUpon>RegistrationLink.aspx</DependentUpon>
     </Compile>
     <Compile Include="RequestQueryStrings.aspx.cs">
       <DependentUpon>RequestQueryStrings.aspx</DependentUpon>
