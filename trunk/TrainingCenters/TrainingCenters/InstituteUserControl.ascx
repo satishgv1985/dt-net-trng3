@@ -70,6 +70,10 @@
         </td>
         <td>
             <asp:TextBox ID="tbDoorNumber" runat="server"></asp:TextBox>
+        &nbsp;
+            <asp:RequiredFieldValidator ID="rfvDoorNumber" runat="server" 
+                ControlToValidate="tbDoorNumber" ErrorMessage="Door number should be required" 
+                ForeColor="Red"></asp:RequiredFieldValidator>
         </td>
     </tr>
     <tr>
@@ -78,6 +82,9 @@
         </td>
         <td>
             <asp:TextBox ID="tbArea" runat="server"></asp:TextBox>
+        &nbsp;<asp:RequiredFieldValidator ID="rfvArea" runat="server" 
+                ControlToValidate="tbArea" ErrorMessage="Area should be required" 
+                ForeColor="Red"></asp:RequiredFieldValidator>
         </td>
     </tr>
     <tr>
@@ -87,6 +94,9 @@
         <td class="style2">
             <asp:TextBox ID="tbCity" runat="server"></asp:TextBox>
             &nbsp;
+            <asp:RequiredFieldValidator ID="rfvCity" runat="server" 
+                ControlToValidate="tbCity" ErrorMessage="City should be required" 
+                ForeColor="Red"></asp:RequiredFieldValidator>
         </td>
     </tr>
     <tr>

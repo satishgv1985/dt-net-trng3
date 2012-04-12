@@ -69,7 +69,7 @@
                     <asp:RequiredFieldValidator ID="rfvStudentPassword" SetFocusOnError="true" runat="server"
                         ControlToValidate="tbStudentPassword" ErrorMessage="Password should not be blank" ForeColor="red"
                         ValidationGroup="vgInstitute"></asp:RequiredFieldValidator>
-                        ValidationGroup="vgStudentLogin"></asp:RequiredFieldValidator>
+                        
                         </td>
                     </tr>
                     </table>
