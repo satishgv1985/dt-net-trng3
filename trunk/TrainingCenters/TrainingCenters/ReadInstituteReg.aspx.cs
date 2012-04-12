@@ -11,10 +11,12 @@ namespace TrainingCenters
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-        
-            //TextBox tb = (TextBox)PreviousPage.FindControl("tbInstituteName");
-            //lblInstituteName.Text = tb.Text;
 
+            if (!IsPostBack)
+            {
+                //TextBox tb = (TextBox)PreviousPage.Controls[0].("tbUserName");
+               // lblUserName.Text = tb.Text;
+            }
            // TextBox tb1 = (TextBox)PreviousPage.FindControl("tbUserName");
            // lblUserName.Text = tb1.Text;
 

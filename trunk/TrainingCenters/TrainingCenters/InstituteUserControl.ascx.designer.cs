@@ -40,31 +40,22 @@ namespace TrainingCenters {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvInstituteName;
         
         /// <summary>
-        /// lblUserName control.
+        /// lblDateOfEstablishment control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblUserName;
+        protected global::System.Web.UI.WebControls.Label lblDateOfEstablishment;
         
         /// <summary>
-        /// tbUserName control.
+        /// cDateOfEstablishment control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbUserName;
-        
-        /// <summary>
-        /// rfvUserName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvUserName;
+        protected global::System.Web.UI.WebControls.Calendar cDateOfEstablishment;
         
         /// <summary>
         /// Label1 control.
