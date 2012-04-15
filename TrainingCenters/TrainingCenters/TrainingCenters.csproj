@@ -50,7 +50,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AboutUs.aspx" />
     <Content Include="ASPNetControls.aspx" />
+    <Content Include="ContactUs.aspx" />
     <Content Include="CourseOffering.aspx" />
     <Content Include="EditInstituteProfile.aspx" />
     <Content Include="ForgotPassword.aspx" />
@@ -60,16 +62,17 @@
     <Content Include="InstituteProfile.aspx" />
     <Content Include="InstituteUserControl.ascx" />
     <Content Include="InstituteWelcome.aspx" />
+    <Content Include="PrivacyPolicy.aspx" />
     <Content Include="ReadInstituteReg.aspx" />
     <Content Include="ReadPostData.aspx" />
     <Content Include="LoginPage.aspx" />
     <Content Include="ReadQueryStrings.aspx" />
     <Content Include="ReadStudentReg.aspx" />
-    <Content Include="RegistrationLink.aspx" />
     <Content Include="RequestQueryStrings.aspx" />
     <Content Include="StudentReg.aspx" />
     <Content Include="Technique_Cookie.aspx" />
     <Content Include="Technique_ViewState.aspx" />
+    <Content Include="Terms Of Use.aspx" />
     <Content Include="training\AccessMPTextBox.aspx" />
     <Content Include="training\ReadMPTextbox.aspx" />
     <Content Include="training\ReadUCValue.aspx" />
@@ -83,12 +86,26 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ASPNetControls.aspx.cs">
       <DependentUpon>ASPNetControls.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ASPNetControls.aspx.designer.cs">
       <DependentUpon>ASPNetControls.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContactUs.aspx.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactUs.aspx.designer.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
     </Compile>
     <Compile Include="CourseOffering.aspx.cs">
       <DependentUpon>CourseOffering.aspx</DependentUpon>
@@ -160,6 +177,13 @@
     <Compile Include="LoginPage.aspx.designer.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="PrivacyPolicy.aspx.cs">
+      <DependentUpon>PrivacyPolicy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrivacyPolicy.aspx.designer.cs">
+      <DependentUpon>PrivacyPolicy.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReadInstituteReg.aspx.cs">
       <DependentUpon>ReadInstituteReg.aspx</DependentUpon>
@@ -188,13 +212,6 @@
     </Compile>
     <Compile Include="ReadStudentReg.aspx.designer.cs">
       <DependentUpon>ReadStudentReg.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="RegistrationLink.aspx.cs">
-      <DependentUpon>RegistrationLink.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="RegistrationLink.aspx.designer.cs">
-      <DependentUpon>RegistrationLink.aspx</DependentUpon>
     </Compile>
     <Compile Include="RequestQueryStrings.aspx.cs">
       <DependentUpon>RequestQueryStrings.aspx</DependentUpon>
@@ -230,6 +247,13 @@
     </Compile>
     <Compile Include="Technique_ViewState.aspx.designer.cs">
       <DependentUpon>Technique_ViewState.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Terms Of Use.aspx.cs">
+      <DependentUpon>Terms Of Use.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Terms Of Use.aspx.designer.cs">
+      <DependentUpon>Terms Of Use.aspx</DependentUpon>
     </Compile>
     <Compile Include="training\AccessMPTextBox.aspx.cs">
       <DependentUpon>AccessMPTextBox.aspx</DependentUpon>

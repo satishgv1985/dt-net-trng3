@@ -13,42 +13,6 @@ namespace TrainingCenters {
     public partial class HomeTrainingCenter {
         
         /// <summary>
-        /// hlHome control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlHome;
-        
-        /// <summary>
-        /// hlAboutUs control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlAboutUs;
-        
-        /// <summary>
-        /// hlRegistration control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlRegistration;
-        
-        /// <summary>
-        /// hlLogIn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlLogIn;
-        
-        /// <summary>
         /// lblCoursesOffering control.
         /// </summary>
         /// <remarks>
@@ -175,31 +139,103 @@ namespace TrainingCenters {
         protected global::System.Web.UI.WebControls.HyperLink hlNetWorking;
         
         /// <summary>
-        /// archForInstitutes control.
+        /// lblTopInstitutes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label archForInstitutes;
+        protected global::System.Web.UI.WebControls.Label lblTopInstitutes;
         
         /// <summary>
-        /// tbInstituteSearch control.
+        /// hlInstitute1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbInstituteSearch;
+        protected global::System.Web.UI.WebControls.HyperLink hlInstitute1;
         
         /// <summary>
-        /// InstituteSearch control.
+        /// hlInstitute2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button InstituteSearch;
+        protected global::System.Web.UI.WebControls.HyperLink hlInstitute2;
+        
+        /// <summary>
+        /// hlInstitute3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hlInstitute3;
+        
+        /// <summary>
+        /// hlInstitute4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hlInstitute4;
+        
+        /// <summary>
+        /// hlInstitute5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hlInstitute5;
+        
+        /// <summary>
+        /// hlInstitute6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hlInstitute6;
+        
+        /// <summary>
+        /// hlInstitute7 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hlInstitute7;
+        
+        /// <summary>
+        /// hlInstitute8 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hlInstitute8;
+        
+        /// <summary>
+        /// hlInstitute9 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hlInstitute9;
+        
+        /// <summary>
+        /// hlInstitute10 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hlInstitute10;
         
         /// <summary>
         /// rtisements control.
@@ -209,14 +245,5 @@ namespace TrainingCenters {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label rtisements;
-        
-        /// <summary>
-        /// hlContactUs control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlContactUs;
     }
 }

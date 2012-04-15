@@ -13,5 +13,10 @@ namespace TrainingCenters
         {
 
         }
+
+        protected void InstituteSearch_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
