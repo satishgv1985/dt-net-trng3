@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace TrainingCenters
 {
-    public partial class RegistrationLink : System.Web.UI.Page
+    public partial class AboutUs : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

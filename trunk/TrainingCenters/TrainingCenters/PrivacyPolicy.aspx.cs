@@ -7,15 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace TrainingCenters
 {
-    public partial class HomeTrainingCenter : System.Web.UI.Page
+    public partial class PrivacyPolicy : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-
-      
-
-    
     }
 }
