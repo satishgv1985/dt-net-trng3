@@ -107,6 +107,15 @@
                 <asp:Label ID="lblEmailId" runat="server"></asp:Label>
             </td>
         </tr>
+        <tr>
+            <td align="right">
+                <asp:Label ID="lblPincode0" runat="server" style="font-weight: 700" 
+                    Text="Pincode Number  :"></asp:Label>
+            </td>
+            <td>
+                <asp:Label ID="lblPincodeNumber" runat="server"></asp:Label>
+            </td>
+        </tr>
     </table>
     <br />
     <br />

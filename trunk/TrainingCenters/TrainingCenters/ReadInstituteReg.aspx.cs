@@ -15,7 +15,20 @@ namespace TrainingCenters
             if (!IsPostBack)
             {
                 lblInstituteName.Text = Convert.ToString(Session["InstituteName"]);
+                lblDateOfEstablishment.Text = Convert.ToString(Session["EstablishDate"]);
+
+                lblDoorNumber.Text = Convert.ToString(Session["DoorNumber"]);
+                lblEmailId.Text=Convert.ToString(Session["EmailId"]);
+                lblMobileNumber.Text = Convert.ToString(Session["MobileNumber"]);
+                lblPincodeNumber.Text = Convert.ToString(Session["PincodeNumber"]);
+                lblArea.Text = Convert.ToString(Session["Area"]);
+                lblCity.Text = Convert.ToString(Session["City"]);
+               
                 CheckBoxList cbNew = (CheckBoxList)Session["CBL_Courses"];
+
+              //  TextBox tb1 = (TextBox)PreviousPage.FindControl("tbUserName");
+               // lblUserName.Text = tb1.Text;
+
                 if (cbNew != null)
                 {
                     foreach (ListItem item in cbNew.Items)

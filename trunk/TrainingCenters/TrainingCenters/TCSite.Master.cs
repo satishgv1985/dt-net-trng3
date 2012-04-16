@@ -18,5 +18,11 @@ namespace TrainingCenters
         {
 
         }
+
+        protected void lbLogout_Click(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Response.Redirect("LoginPage.aspx");
+        }
     }
 }

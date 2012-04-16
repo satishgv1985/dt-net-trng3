@@ -17,7 +17,7 @@ namespace TrainingCenters
                 Response.SetCookie(hc);
                 
             }
-            lblRollNo.Text = Request.Cookies["rollno1"].Value;
+            //lblRollNo.Text = Request.Cookies["rollno1"].Value;
         }
 
         protected void btnSubmit_Click(object sender, EventArgs e)
