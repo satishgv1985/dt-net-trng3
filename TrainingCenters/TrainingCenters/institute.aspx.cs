@@ -16,6 +16,13 @@ namespace TrainingCenters
 
         protected void btninstsubmit_Click(object sender, EventArgs e)
         {
+            TextBox tb = (TextBox)ucInstituteReg.FindControl("tbInstituteName");
+            Session["InstituteName"] = tb.Text;
+
+            CheckBoxList cbl = (CheckBoxList)ucInstituteReg.FindControl("cblCoursesOffered");
+            Session["CBL_Courses"] = cbl;
+
+            Response.Redirect("ReadInstituteReg.aspx");
             //TextBox tb = (TextBox)ucInstituteReg.FindControl("tbDoorNumber");
             
             //Response.Redirect("ReadInstituteRegistration.aspx? " + tbInstituteName.Text + "" + tbUserName.Text +"" + tbDoorNumber.Text + ""+tbArea.Text+""+tbCity.Text+""+tbEmailId+""+tbMobileNumber);

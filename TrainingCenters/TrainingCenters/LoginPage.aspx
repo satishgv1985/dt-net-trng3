@@ -145,7 +145,8 @@
                     <tr>
                         <td>
                     <asp:Button ID="btnInstituteSubmit" runat="server" style="margin-left: 61px" 
-                        Text="InstituteSubmit" Width="111px" PostBackUrl="~/InstituteWelcome.aspx" />
+                        Text="InstituteSubmit" Width="111px"  
+                                onclick="btnInstituteSubmit_Click" />
                         </td>
                         <td>
                     <asp:Button ID="btnInstituteReset" runat="server" style="margin-left: 61px" 

@@ -14,8 +14,16 @@ namespace TrainingCenters
 
             if (!IsPostBack)
             {
-                //TextBox tb = (TextBox)PreviousPage.Controls[0].("tbUserName");
-               // lblUserName.Text = tb.Text;
+                lblInstituteName.Text = Convert.ToString(Session["InstituteName"]);
+                CheckBoxList cbNew = (CheckBoxList)Session["CBL_Courses"];
+                if (cbNew != null)
+                {
+                    foreach (ListItem item in cbNew.Items)
+                    {
+                        if (item.Selected)
+                            lblSelectedCourse.Text += item.Text + ",";
+                    }
+                }
             }
            // TextBox tb1 = (TextBox)PreviousPage.FindControl("tbUserName");
            // lblUserName.Text = tb1.Text;

@@ -87,7 +87,7 @@
             <tr>
                 <td align="center" colspan="2">
                     <asp:Button ID="btnSubmitForm" runat="server" Text="SubmitForm" ValidationGroup="vgInstitute"
-                        OnClick="btninstsubmit_Click" PostBackUrl="~/ReadInstituteReg.aspx" CausesValidation="true" Style="font-weight: 700;
+                        OnClick="btninstsubmit_Click" CausesValidation="true" Style="font-weight: 700;
                         margin-left: 0px" Width="219px" />
                 </td>
             </tr>
