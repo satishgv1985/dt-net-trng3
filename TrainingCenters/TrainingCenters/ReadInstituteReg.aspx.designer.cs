@@ -184,6 +184,24 @@ namespace TrainingCenters {
         protected global::System.Web.UI.WebControls.Label lblEmailId;
         
         /// <summary>
+        /// lblPincode0 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPincode0;
+        
+        /// <summary>
+        /// lblPincodeNumber control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPincodeNumber;
+        
+        /// <summary>
         /// btnConfirm control.
         /// </summary>
         /// <remarks>

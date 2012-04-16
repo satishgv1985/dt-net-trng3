@@ -78,7 +78,7 @@
                     <asp:TextBox ID="tbConfirmPassword" TextMode="Password" runat="server"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="rfvConfirmPassword" Display="Dynamic" runat="server"
                         ControlToValidate="tbConfirmPassword" ErrorMessage="Password should not be blank"
-                        ForeColor="red"></asp:RequiredFieldValidator>
+                        ForeColor="red" ValidationGroup="vgInstitute"></asp:RequiredFieldValidator>
                     <asp:CompareValidator ID="cvPassword" Display="Dynamic" runat="server" ControlToCompare="tbPassword"
                         ControlToValidate="tbConfirmPassword" ErrorMessage="Both Passwords should be same"
                         ForeColor="red" ValidationGroup="vgInstitute"></asp:CompareValidator>

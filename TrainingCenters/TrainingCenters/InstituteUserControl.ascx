@@ -73,7 +73,7 @@
         &nbsp;
             <asp:RequiredFieldValidator ID="rfvDoorNumber" runat="server" 
                 ControlToValidate="tbDoorNumber" ErrorMessage="Door number should be required" 
-                ForeColor="Red"></asp:RequiredFieldValidator>
+                ForeColor="Red" ValidationGroup="vgInstitute"></asp:RequiredFieldValidator>
         </td>
     </tr>
     <tr>
@@ -84,7 +84,7 @@
             <asp:TextBox ID="tbArea" runat="server"></asp:TextBox>
         &nbsp;<asp:RequiredFieldValidator ID="rfvArea" runat="server" 
                 ControlToValidate="tbArea" ErrorMessage="Area should be required" 
-                ForeColor="Red"></asp:RequiredFieldValidator>
+                ForeColor="Red" ValidationGroup="vgInstitute"></asp:RequiredFieldValidator>
         </td>
     </tr>
     <tr>
@@ -96,7 +96,7 @@
             &nbsp;
             <asp:RequiredFieldValidator ID="rfvCity" runat="server" 
                 ControlToValidate="tbCity" ErrorMessage="City should be required" 
-                ForeColor="Red"></asp:RequiredFieldValidator>
+                ForeColor="Red" ValidationGroup="vgInstitute"></asp:RequiredFieldValidator>
         </td>
     </tr>
     <tr>

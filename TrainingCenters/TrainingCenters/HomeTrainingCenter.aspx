@@ -5,7 +5,7 @@
     <style type="text/css">
         .style1
         {
-            width: 100%;
+            width: 101%;
         }
         .style2
         {
@@ -13,7 +13,7 @@
         }
         .style3
         {
-            width: 99%;
+            width: 101%;
         }
         .style4
         {
@@ -23,87 +23,100 @@
         {
             height: 23px;
         }
+        .style11
+        {
+            height: 23px;
+            width: 346px;
+        }
+        .style12
+        {
+            width: 289px;
+        }
+        .style13
+        {
+            width: 346px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphBody" runat="server">
-    <table>
+    <table style="width:100%">
         <tr>
-            <td>
-                <table class="style1" border="1">
+            <td class="style12" style="width:25%">
+                <table class="style1">
                     <tr>
-                        <td align="left">
+                        <td align="left" class="style13">
                             <asp:Label ID="lblCoursesOffering" runat="server" Font-Bold="True" Font-Size="Larger"
                                 Font-Underline="True" Style="font-size: large" Text="CoursesOffering"></asp:Label>
                         </td>
                     </tr>
                     <tr>
-                        <td align="left">
+                        <td align="left" class="style13">
                             <asp:HyperLink ID="hlJava" runat="server">JAVA</asp:HyperLink>
                         </td>
                     </tr>
                     <tr>
-                        <td align="left">
+                        <td align="left" class="style13">
                             <asp:HyperLink ID="hlDotNet" runat="server">DotNet</asp:HyperLink>
                         </td>
                     </tr>
                     <tr>
-                        <td align="left">
+                        <td align="left" class="style13">
                             <asp:HyperLink ID="hlOracle" runat="server">ORACLE</asp:HyperLink>
                         </td>
                     </tr>
                     <tr>
-                        <td align="left">
+                        <td align="left" class="style13">
                             <asp:HyperLink ID="hlClanguage" runat="server">C Language</asp:HyperLink>
                         </td>
                     </tr>
                     <tr>
-                        <td align="left">
+                        <td align="left" class="style13">
                             <asp:HyperLink ID="hlCpp" runat="server">C++</asp:HyperLink>
                         </td>
                     </tr>
                     <tr>
-                        <td align="left">
+                        <td align="left" class="style13">
                             <asp:HyperLink ID="hlUnix" runat="server">UNIX</asp:HyperLink>
                         </td>
                     </tr>
                     <tr>
-                        <td align="left">
+                        <td align="left" class="style13">
                             <asp:HyperLink ID="hlTesting" runat="server">TESTING</asp:HyperLink>
                         </td>
                     </tr>
                     <tr>
-                        <td align="left" class="style5">
+                        <td align="left" class="style11">
                             <asp:HyperLink ID="hlSap" runat="server">SAP</asp:HyperLink>
                         </td>
                     </tr>
                     <tr>
-                        <td align="left">
+                        <td align="left" class="style13">
                             <asp:HyperLink ID="hlPhp" runat="server">PHP</asp:HyperLink>
                         </td>
                     </tr>
                     <tr>
-                        <td align="left">
+                        <td align="left" class="style13">
                             <asp:HyperLink ID="hlSql" runat="server">SQL/PLSQL</asp:HyperLink>
                         </td>
                     </tr>
                     <tr>
-                        <td align="left">
+                        <td align="left" class="style13">
                             <asp:HyperLink ID="hlDataWareHousing" runat="server">DATAWAREHOUSING</asp:HyperLink>
                         </td>
                     </tr>
                     <tr>
-                        <td align="left">
+                        <td align="left" class="style13">
                             <asp:HyperLink ID="hlDba" runat="server">DBA</asp:HyperLink>
                         </td>
                     </tr>
                     <tr>
-                        <td align="left">
+                        <td align="left" class="style13">
                             <asp:HyperLink ID="hlNetWorking" runat="server">NETWORKING</asp:HyperLink>
                         </td>
                     </tr>
                 </table>
             </td>
-            <td class="style4">
+            <td class="style4" style="width:50%">
                 <table class="style3">
                     <tr>
                         <td align="center">

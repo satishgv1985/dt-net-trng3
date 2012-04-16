@@ -19,8 +19,32 @@ namespace TrainingCenters
             TextBox tb = (TextBox)ucInstituteReg.FindControl("tbInstituteName");
             Session["InstituteName"] = tb.Text;
 
+            TextBox tb1 = (TextBox)ucInstituteReg.FindControl("tbDoorNumber");
+            Session["DoorNumber"] = tb1.Text;
+
+            TextBox tb2 = (TextBox)ucInstituteReg.FindControl("tbArea");
+            Session["Area"] = tb2.Text;
+
+            TextBox tb3 = (TextBox)ucInstituteReg.FindControl("tbCity");
+            Session["City"] = tb3.Text;
+
+            TextBox tb4 = (TextBox)ucInstituteReg.FindControl("tbEmailId");
+            Session["EmailId"] = tb4.Text;
+            TextBox tb5 = (TextBox)ucInstituteReg.FindControl("tbMobileNumber");
+            Session["MobileNumber"] = tb5.Text;
+
+            TextBox tb6 = (TextBox)ucInstituteReg.FindControl("tbPincodeNumber");
+            Session["PincodeNumber"] = tb6.Text;
+
+
+
+
+
             CheckBoxList cbl = (CheckBoxList)ucInstituteReg.FindControl("cblCoursesOffered");
             Session["CBL_Courses"] = cbl;
+
+            Calendar cl = (Calendar)ucInstituteReg.FindControl("cDateOfEstablishment");
+            Session["EstablishDate"] = cl.SelectedDate;
 
             Response.Redirect("ReadInstituteReg.aspx");
             //TextBox tb = (TextBox)ucInstituteReg.FindControl("tbDoorNumber");

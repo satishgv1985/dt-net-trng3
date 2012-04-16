@@ -22,13 +22,13 @@
         {
             width: 312px;
         }
-        .style7
-        {
-            width: 364px;
-        }
         .style8
         {
-            width: 132px;
+            width: 220px;
+        }
+        .style9
+        {
+            width: 219px;
         }
     </style>
 </head>
@@ -59,7 +59,7 @@
                     <asp:HyperLink ID="hlAboutUs" runat="server" Font-Bold="True" ForeColor="Red" 
                         NavigateUrl="~/AboutUs.aspx">About Us</asp:HyperLink>
                 </td>
-                 <td align="right" class="style7">
+                 <td align="right" class="style9">
                     <asp:HyperLink ID="hlStudentRegistration" runat="server" Font-Bold="True" Font-Underline="True"
                         ForeColor="Blue" NavigateUrl="~/StudentReg.aspx">StudentRegistration</asp:HyperLink>
                 </td>
@@ -71,6 +71,10 @@
                 <td align="right">
                     <asp:HyperLink ID="hlLogIn" runat="server" Font-Bold="True" Font-Underline="True"
                         ForeColor="Blue" NavigateUrl="~/LoginPage.aspx">LogIn</asp:HyperLink>
+                </td>
+                <td align="right">
+<asp:LinkButton ID="lbLogout" runat="server" Text="Log Out" 
+        onclick="lbLogout_Click" Font-Bold="True" ForeColor="Blue"></asp:LinkButton>
                 </td>
             </tr>
             </table>
