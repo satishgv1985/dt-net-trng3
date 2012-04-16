@@ -125,7 +125,7 @@
                     </asp:DropDownList>
                     <asp:RequiredFieldValidator ID="rfvQualification" runat="server" Display="Dynamic" 
                         ControlToValidate="ddlQualification" ErrorMessage="Select atleast one" 
-                        ForeColor="Red" InitialValue="1" ValidationGroup="vgStudent"></asp:RequiredFieldValidator>
+                        ForeColor="Red" InitialValue="0" ValidationGroup="vgStudent"></asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
@@ -142,7 +142,7 @@
                     </asp:DropDownList>
                     <asp:RequiredFieldValidator ID="rfvState" runat="server" Display="Dynamic"
                         ControlToValidate="ddlState" ErrorMessage="Select atleast one State" 
-                        ForeColor="Red" InitialValue="1" ValidationGroup="vgStudent"></asp:RequiredFieldValidator>
+                        ForeColor="Red" InitialValue="0" ValidationGroup="vgStudent"></asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
@@ -155,7 +155,7 @@
                     </asp:DropDownList>
                     <asp:RequiredFieldValidator ID="rfvCity" runat="server" Display="Dynamic"
                         ControlToValidate="ddlCity" ErrorMessage="Select atleast one City" 
-                        ForeColor="Red" InitialValue="1" ValidationGroup="vgStudent"></asp:RequiredFieldValidator>
+                        ForeColor="Red" InitialValue="0" ValidationGroup="vgStudent"></asp:RequiredFieldValidator>
                 </td>
             </tr>
         </table>

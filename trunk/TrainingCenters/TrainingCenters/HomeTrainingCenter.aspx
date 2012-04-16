@@ -15,21 +15,21 @@
         {
             width: 99%;
         }
-    .style4
-    {
-        width: 50%;
-    }
-    .style5
-    {
-        height: 23px;
-    }
+        .style4
+        {
+            width: 50%;
+        }
+        .style5
+        {
+            height: 23px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphBody" runat="server">
-    <table  class="style1" style="border:1px; width:100%">
+    <table>
         <tr>
-            <td style="width:25%">
-                <table style="border:1px">
+            <td>
+                <table class="style1" border="1">
                     <tr>
                         <td align="left">
                             <asp:Label ID="lblCoursesOffering" runat="server" Font-Bold="True" Font-Size="Larger"
@@ -104,11 +104,11 @@
                 </table>
             </td>
             <td class="style4">
-               <table class="style3">
+                <table class="style3">
                     <tr>
                         <td align="center">
-                            <asp:Label ID="lblTopInstitutes" runat="server" Font-Bold="True" 
-                                Font-Underline="True" Text="TOP 10 INSTITUTES"></asp:Label>
+                            <asp:Label ID="lblTopInstitutes" runat="server" Font-Bold="True" Font-Underline="True"
+                                Text="TOP 10 INSTITUTES"></asp:Label>
                         </td>
                     </tr>
                     <tr>
@@ -163,22 +163,22 @@
                     </tr>
                     <tr>
                         <td align="center" class="style5">
-                            </td>
+                        </td>
                     </tr>
                     <tr>
                         <td align="center" class="style5">
-                            </td>
+                        </td>
                     </tr>
                     <tr>
                         <td>
-                            &nbsp;</td>
+                            &nbsp;
+                        </td>
                     </tr>
                 </table>
-               
             </td>
-            <td style="width:25%">
-                <table class="style1" 
-                    style="border-style: none; border-color: inherit; border-width: 1px; width: 249px;">
+            <td style="width: 25%">
+                <table class="style1" style="border-style: none; border-color: inherit; border-width: 1px;
+                    width: 249px;">
                     <tr>
                         <td align="right">
                             <asp:Label ID="rtisements" runat="server" Font-Bold="True" Font-Size="Larger" Font-Underline="True"

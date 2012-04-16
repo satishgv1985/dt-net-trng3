@@ -11,8 +11,9 @@ namespace TrainingCenters
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-        
-          
+
+
+            lblQualification.Text = Session["City"].ToString();
 
             TextBox tb1 = (TextBox)PreviousPage.FindControl("tbUserName");
             lblUserName.Text = tb1.Text;
@@ -24,7 +25,7 @@ namespace TrainingCenters
             lblGender.Text = rbtn.SelectedValue;
 
             DropDownList ddl1 = (DropDownList)PreviousPage.FindControl("ddlQualification");
-            lblQualification.Text = ddl1.SelectedValue;
+            lblQualification.Text = ddl1.SelectedItem.Text;
 
             DropDownList ddl2 = (DropDownList)PreviousPage.FindControl("ddlState");
             lblState.Text = ddl2.SelectedValue;

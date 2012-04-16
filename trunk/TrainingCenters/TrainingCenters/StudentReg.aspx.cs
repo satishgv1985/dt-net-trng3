@@ -11,7 +11,7 @@ namespace TrainingCenters
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //Session["City"] = ddlCity.SelectedItem.Text;
         }
         protected void ddlState_SelectedIndexChanged(object sender, EventArgs e)
         {

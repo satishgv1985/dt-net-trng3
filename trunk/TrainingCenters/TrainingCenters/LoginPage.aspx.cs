@@ -28,8 +28,16 @@ namespace TrainingCenters
 
         protected void btnStudentSubmit_Click(object sender, EventArgs e)
         {
-          
+
             
+        }
+
+        protected void btnInstituteSubmit_Click(object sender, EventArgs e)
+        {
+            //validate the email id and password against db and then store the session value
+            Session["InstituteEmailID"] = tbUserEmaild.Text;
+
+            Response.Redirect("InstituteWelcome.aspx");
         }
     }
 }
