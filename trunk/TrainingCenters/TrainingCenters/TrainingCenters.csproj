@@ -74,10 +74,18 @@
     <Content Include="Technique_ViewState.aspx" />
     <Content Include="Terms Of Use.aspx" />
     <Content Include="training\AccessMPTextBox.aspx" />
+    <Content Include="training\books.xml" />
+    <Content Include="training\CacheItemRemove.aspx" />
+    <Content Include="training\CacheRead.aspx" />
+    <Content Include="training\CacheReadKeys.aspx" />
+    <Content Include="training\CacheSet.aspx" />
     <Content Include="training\ReadMPTextbox.aspx" />
     <Content Include="training\ReadUCValue.aspx" />
+    <Content Include="training\student.xml" />
     <Content Include="training\UserDataUC.ascx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -261,6 +269,34 @@
     </Compile>
     <Compile Include="training\AccessMPTextBox.aspx.designer.cs">
       <DependentUpon>AccessMPTextBox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="training\CacheItemRemove.aspx.cs">
+      <DependentUpon>CacheItemRemove.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="training\CacheItemRemove.aspx.designer.cs">
+      <DependentUpon>CacheItemRemove.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="training\CacheRead.aspx.cs">
+      <DependentUpon>CacheRead.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="training\CacheRead.aspx.designer.cs">
+      <DependentUpon>CacheRead.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="training\CacheReadKeys.aspx.cs">
+      <DependentUpon>CacheReadKeys.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="training\CacheReadKeys.aspx.designer.cs">
+      <DependentUpon>CacheReadKeys.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="training\CacheSet.aspx.cs">
+      <DependentUpon>CacheSet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="training\CacheSet.aspx.designer.cs">
+      <DependentUpon>CacheSet.aspx</DependentUpon>
     </Compile>
     <Compile Include="training\ReadMPTextbox.aspx.cs">
       <DependentUpon>ReadMPTextbox.aspx</DependentUpon>
