@@ -14,7 +14,9 @@ namespace TrainingCenters
 
             if (!IsPostBack)
             {
-                lblInstituteName.Text = Convert.ToString(Session["InstituteName"]);
+                //lblInstituteName.Text = Convert.ToString(Session["InstituteName"]);
+                lblInstituteName.Text = Convert.ToString(Cache["InstituteName"]);
+
                 lblDateOfEstablishment.Text = Convert.ToString(Session["EstablishDate"]);
 
                 lblDoorNumber.Text = Convert.ToString(Session["DoorNumber"]);

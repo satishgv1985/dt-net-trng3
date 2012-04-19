@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Web.Caching;
 
 namespace TrainingCenters
 {
@@ -18,6 +19,8 @@ namespace TrainingCenters
         {
             TextBox tb = (TextBox)ucInstituteReg.FindControl("tbInstituteName");
             Session["InstituteName"] = tb.Text;
+            Cache["InstituteName"] = tb.Text;
+           
 
             TextBox tb1 = (TextBox)ucInstituteReg.FindControl("tbDoorNumber");
             Session["DoorNumber"] = tb1.Text;
