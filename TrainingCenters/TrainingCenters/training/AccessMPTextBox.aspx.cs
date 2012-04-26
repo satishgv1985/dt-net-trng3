@@ -11,7 +11,10 @@ namespace TrainingCenters.training
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                hfSearchTerm.Value = Request.QueryString["searchTerm"];
+            }
         }
 
         protected void btnSubmit_Click(object sender, EventArgs e)

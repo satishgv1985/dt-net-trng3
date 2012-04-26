@@ -48,10 +48,17 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="TBServerControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TBServerControl\bin\Debug\TBServerControl.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="AboutUs.aspx" />
     <Content Include="ASPNetControls.aspx" />
+    <Content Include="bin\TBServerControl.dll" />
+    <Content Include="bin\TrainingCenters.dll" />
+    <Content Include="bin\TrainingCenters.pdb" />
     <Content Include="ContactUs.aspx" />
     <Content Include="CourseOffering.aspx" />
     <Content Include="EditInstituteProfile.aspx" />
