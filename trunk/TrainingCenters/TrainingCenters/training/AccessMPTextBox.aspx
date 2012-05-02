@@ -1,4 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/training/TestSite.Master" AutoEventWireup="true"
+﻿
+
+<%@ Page Title="" Language="C#" MasterPageFile="~/training/TestSite.Master" AutoEventWireup="true"
     CodeBehind="AccessMPTextBox.aspx.cs" Inherits="TrainingCenters.training.AccessMPTextBox" %>
 
 <%@ Register Assembly="TBServerControl" Namespace="TBServerControl" TagPrefix="mc" %>
@@ -15,6 +17,18 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+   
+   
+   <asp:Wizard ID="Wizard1" runat="server">
+    <WizardSteps>
+        <asp:WizardStep ID="WizardStep1" runat="server" Title="Step 1">
+       Name:<asp:TextBox ID="txtName" runat="server"></asp:TextBox>
+        </asp:WizardStep>
+        <asp:WizardStep ID="WizardStep2" runat="server" Title="Step 2" >
+      Entered NAme  <asp:Label ID="lblEnteredName" runat="server" Text=""></asp:Label>
+        </asp:WizardStep>
+    </WizardSteps>
+</asp:Wizard>
     this is child page
     <br />
     <asp:Label ID="lblName" runat="server"></asp:Label><br />
