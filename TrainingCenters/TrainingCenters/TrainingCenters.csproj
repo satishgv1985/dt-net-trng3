@@ -80,7 +80,6 @@
     <Content Include="Technique_Cookie.aspx" />
     <Content Include="Technique_ViewState.aspx" />
     <Content Include="Terms Of Use.aspx" />
-    <Content Include="training\AccessMPTextBox.aspx" />
     <Content Include="training\books.xml" />
     <Content Include="training\CacheItemRemove.aspx" />
     <Content Include="training\CacheRead.aspx" />
@@ -269,13 +268,6 @@
     </Compile>
     <Compile Include="Terms Of Use.aspx.designer.cs">
       <DependentUpon>Terms Of Use.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="training\AccessMPTextBox.aspx.cs">
-      <DependentUpon>AccessMPTextBox.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="training\AccessMPTextBox.aspx.designer.cs">
-      <DependentUpon>AccessMPTextBox.aspx</DependentUpon>
     </Compile>
     <Compile Include="training\CacheItemRemove.aspx.cs">
       <DependentUpon>CacheItemRemove.aspx</DependentUpon>
