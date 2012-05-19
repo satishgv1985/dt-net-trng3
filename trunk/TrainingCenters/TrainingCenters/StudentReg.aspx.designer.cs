@@ -130,15 +130,6 @@ namespace TrainingCenters {
         protected global::System.Web.UI.WebControls.RangeValidator rvAge;
         
         /// <summary>
-        /// lblGender control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblGender;
-        
-        /// <summary>
         /// rbtnGender control.
         /// </summary>
         /// <remarks>
@@ -155,15 +146,6 @@ namespace TrainingCenters {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvGender;
-        
-        /// <summary>
-        /// lblQualification control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblQualification;
         
         /// <summary>
         /// ddlQualification control.
@@ -184,15 +166,6 @@ namespace TrainingCenters {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvQualification;
         
         /// <summary>
-        /// lblState control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblState;
-        
-        /// <summary>
         /// ddlState control.
         /// </summary>
         /// <remarks>
@@ -209,15 +182,6 @@ namespace TrainingCenters {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvState;
-        
-        /// <summary>
-        /// lblCity control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCity;
         
         /// <summary>
         /// ddlCity control.
