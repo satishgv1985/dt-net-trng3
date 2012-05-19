@@ -60,6 +60,7 @@
     <Content Include="bin\TrainingCenters.dll" />
     <Content Include="bin\TrainingCenters.pdb" />
     <Content Include="ContactUs.aspx" />
+    <Content Include="Course Search.aspx" />
     <Content Include="CourseOffering.aspx" />
     <Content Include="EditInstituteProfile.aspx" />
     <Content Include="ForgotPassword.aspx" />
@@ -67,6 +68,7 @@
     <Content Include="institute.aspx" />
     <Content Include="InstituteCommon.ascx" />
     <Content Include="InstituteProfile.aspx" />
+    <Content Include="InstituteSearch.aspx" />
     <Content Include="InstituteUserControl.ascx" />
     <Content Include="InstituteWelcome.aspx" />
     <Content Include="PrivacyPolicy.aspx" />
@@ -76,6 +78,7 @@
     <Content Include="ReadQueryStrings.aspx" />
     <Content Include="ReadStudentReg.aspx" />
     <Content Include="RequestQueryStrings.aspx" />
+    <Content Include="SendStudentEmail.aspx" />
     <Content Include="StudentReg.aspx" />
     <Content Include="Technique_Cookie.aspx" />
     <Content Include="Technique_ViewState.aspx" />
@@ -120,6 +123,13 @@
     </Compile>
     <Compile Include="ContactUs.aspx.designer.cs">
       <DependentUpon>ContactUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Course Search.aspx.cs">
+      <DependentUpon>Course Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Course Search.aspx.designer.cs">
+      <DependentUpon>Course Search.aspx</DependentUpon>
     </Compile>
     <Compile Include="CourseOffering.aspx.cs">
       <DependentUpon>CourseOffering.aspx</DependentUpon>
@@ -169,6 +179,13 @@
     </Compile>
     <Compile Include="InstituteProfile.aspx.designer.cs">
       <DependentUpon>InstituteProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InstituteSearch.aspx.cs">
+      <DependentUpon>InstituteSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InstituteSearch.aspx.designer.cs">
+      <DependentUpon>InstituteSearch.aspx</DependentUpon>
     </Compile>
     <Compile Include="InstituteUserControl.ascx.cs">
       <DependentUpon>InstituteUserControl.ascx</DependentUpon>
@@ -233,6 +250,13 @@
     </Compile>
     <Compile Include="RequestQueryStrings.aspx.designer.cs">
       <DependentUpon>RequestQueryStrings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SendStudentEmail.aspx.cs">
+      <DependentUpon>SendStudentEmail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SendStudentEmail.aspx.designer.cs">
+      <DependentUpon>SendStudentEmail.aspx</DependentUpon>
     </Compile>
     <Compile Include="StudentReg.aspx.cs">
       <DependentUpon>StudentReg.aspx</DependentUpon>

@@ -1,0 +1,5 @@
+C:\Documents and Settings\Administrator\Desktop\dt-net-trng3\TrainingCenters\TBServerControl\bin\Debug\TBServerControl.dll
+C:\Documents and Settings\Administrator\Desktop\dt-net-trng3\TrainingCenters\TBServerControl\bin\Debug\TBServerControl.pdb
+C:\Documents and Settings\Administrator\Desktop\dt-net-trng3\TrainingCenters\TBServerControl\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\Desktop\dt-net-trng3\TrainingCenters\TBServerControl\obj\Debug\TBServerControl.dll
+C:\Documents and Settings\Administrator\Desktop\dt-net-trng3\TrainingCenters\TBServerControl\obj\Debug\TBServerControl.pdb
