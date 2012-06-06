@@ -35,67 +35,67 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <table  width="100%" style="border: 1px solid black; border-collapse: collapse">
+        <table width="100%" style="border: 1px solid black; border-collapse: collapse">
             <tr>
                 <td align="center" class="style2">
                     <h1>
                         Training Center</h1>
                 </td>
-                <td align="right"><asp:Label ID="lblSearchForInstitutes" runat="server" 
-                                                        Text="Search For Institutes  :" 
-                        Font-Bold="True"></asp:Label> 
-                                                        <asp:TextBox ID="tbInstituteSearch" runat="server" Width="233px"></asp:TextBox>
-                                                &nbsp;<asp:Button ID="btnSearch" runat="server" Text="Search" 
-                                                        onclick="InstituteSearch_Click" />
-                                                </td>
+                <td align="right">
+                    <asp:Label ID="lblSearchForInstitutes" runat="server" Text="Search For Institutes  :"
+                        Font-Bold="True"></asp:Label>
+                    <asp:TextBox ID="tbInstituteSearch" runat="server" Width="233px"></asp:TextBox>
+                    &nbsp;<asp:Button ID="btnSearch" runat="server" Text="Search" OnClick="InstituteSearch_Click" />
+                </td>
             </tr>
-            </table>
-           <table width="100%" style="border: 1px solid black; border-collapse: collapse" >
+            <tr>
+                <td>
+                    <asp:Label ID="lblName" runat="server"></asp:Label>
+                </td>
+            </tr>
+        </table>
+        <table width="100%" style="border: 1px solid black; border-collapse: collapse">
             <tr>
                 <td>
                     <asp:HyperLink ID="hlHome" runat="server" Font-Bold="True" ForeColor="Red" NavigateUrl="~/HomeTrainingCenter.aspx">Home</asp:HyperLink>
                 </td>
                 <td class="style8">
-                    <asp:HyperLink ID="hlAboutUs" runat="server" Font-Bold="True" ForeColor="Red" 
-                        NavigateUrl="~/AboutUs.aspx">About Us</asp:HyperLink>
+                    <asp:HyperLink ID="hlAboutUs" runat="server" Font-Bold="True" ForeColor="Red" NavigateUrl="~/AboutUs.aspx">About Us</asp:HyperLink>
                 </td>
-                 <td align="right" class="style9">
+                <td align="right" class="style9">
                     <asp:HyperLink ID="hlStudentRegistration" runat="server" Font-Bold="True" Font-Underline="True"
                         ForeColor="Blue" NavigateUrl="~/StudentReg.aspx">StudentRegistration</asp:HyperLink>
                 </td>
-
                 <td align="right">
                     <asp:HyperLink ID="hlInstituteRegistration" runat="server" Font-Bold="True" Font-Underline="True"
                         ForeColor="Blue" NavigateUrl="~/institute.aspx">InstituteRegistration</asp:HyperLink>
                 </td>
+                
                 <td align="right">
-                    <asp:HyperLink ID="hlLogIn" runat="server" Font-Bold="True" Font-Underline="True"
-                        ForeColor="Blue" NavigateUrl="~/LoginPage.aspx">LogIn</asp:HyperLink>
-                </td>
-                <td align="right">
-<asp:LinkButton ID="lbLogout" runat="server" Text="Log Out" 
-        onclick="lbLogout_Click" Font-Bold="True" ForeColor="Blue"></asp:LinkButton>
+                    <asp:LinkButton ID="lbLoginLogout" runat="server"  
+                        Font-Bold="True" ForeColor="Blue" onclick="lbLoginLogout_Click" CausesValidation="false"></asp:LinkButton>
                 </td>
             </tr>
-            </table>
-            <table width="100%" style="border: 1px solid black; border-collapse: collapse">
+        </table>
+        <table width="100%" style="border: 1px solid black; border-collapse: collapse">
             <tr>
                 <td>
                     <asp:ContentPlaceHolder ID="cphBody" runat="server">
                     </asp:ContentPlaceHolder>
                 </td>
             </tr>
-            </table>
-            <table width="100%" style="border: 1px solid black; border-collapse: collapse">
+        </table>
+        <table width="100%" style="border: 1px solid black; border-collapse: collapse">
             <tr>
-            <td class="style4">
-                <asp:HyperLink ID="hlPrivacyPolicy" runat="server" 
-                    Font-Bold="True" NavigateUrl="~/PrivacyPolicy.aspx">Privacy Policy</asp:HyperLink></td>
-            <td class="style5">
-                <asp:HyperLink ID="hlTermsOfUse" runat="server" 
-                    Font-Bold="True" NavigateUrl="~/Terms Of Use.aspx">Terms Of Use</asp:HyperLink></td>
-            <td align="right" class="style6"><asp:HyperLink ID="hlContactUs" runat="server" 
-                    Font-Bold="True" NavigateUrl="~/ContactUs.aspx">Contact Us</asp:HyperLink></td>
+                <td class="style4">
+                    <asp:HyperLink ID="hlPrivacyPolicy" runat="server" Font-Bold="True" NavigateUrl="~/PrivacyPolicy.aspx">Privacy Policy</asp:HyperLink>
+                </td>
+                <td class="style5">
+                    <asp:HyperLink ID="hlTermsOfUse" runat="server" Font-Bold="True" NavigateUrl="~/Terms Of Use.aspx">Terms Of Use</asp:HyperLink>
+                </td>
+                <td align="right" class="style6">
+                    <asp:HyperLink ID="hlContactUs" runat="server" Font-Bold="True" NavigateUrl="~/ContactUs.aspx">Contact Us</asp:HyperLink>
+                </td>
                 <td>
                     <h3 align="right">
                         Copyright protected</h3>

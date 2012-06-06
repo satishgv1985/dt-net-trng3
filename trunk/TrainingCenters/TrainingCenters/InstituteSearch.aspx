@@ -32,7 +32,8 @@
         <tr>
             <td align="right">
                 <asp:Button ID="btnInstituteSearch" runat="server" Text="Institute Search" 
-                    Width="144px" style="margin-left: 0px" />
+                    Width="144px" style="margin-left: 0px" 
+                    onclick="btnInstituteSearch_Click" />
             </td>
             <td align="center">
                 <asp:Button ID="btnCancel" runat="server" Text="Cancel" Width="173px" />
