@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AboutUs.aspx" />
+    <Content Include="admin\ManageInstitutes.aspx" />
     <Content Include="ASPNetControls.aspx" />
     <Content Include="bin\TBServerControl.dll" />
     <Content Include="bin\TrainingCenters.dll" />
@@ -112,6 +113,13 @@
     </Compile>
     <Compile Include="AboutUs.aspx.designer.cs">
       <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ManageInstitutes.aspx.cs">
+      <DependentUpon>ManageInstitutes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ManageInstitutes.aspx.designer.cs">
+      <DependentUpon>ManageInstitutes.aspx</DependentUpon>
     </Compile>
     <Compile Include="ASPNetControls.aspx.cs">
       <DependentUpon>ASPNetControls.aspx</DependentUpon>
