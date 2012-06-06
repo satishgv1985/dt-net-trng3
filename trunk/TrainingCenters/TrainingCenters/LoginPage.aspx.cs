@@ -59,7 +59,7 @@ namespace TrainingCenters
             {
                 Session["InstituteEmailID"] = tbUserEmaild.Text;
 
-                FormsAuthentication.RedirectFromLoginPage(tbUserEmaild.Text, false);
+                FormsAuthentication.RedirectFromLoginPage("satish", false);
                 //Response.Redirect("InstituteWelcome.aspx");
             }
             else
