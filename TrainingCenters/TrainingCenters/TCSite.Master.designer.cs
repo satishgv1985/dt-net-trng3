@@ -58,6 +58,15 @@ namespace TrainingCenters {
         protected global::System.Web.UI.WebControls.Button btnSearch;
         
         /// <summary>
+        /// lblName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblName;
+        
+        /// <summary>
         /// hlHome control.
         /// </summary>
         /// <remarks>
@@ -94,22 +103,13 @@ namespace TrainingCenters {
         protected global::System.Web.UI.WebControls.HyperLink hlInstituteRegistration;
         
         /// <summary>
-        /// hlLogIn control.
+        /// lbLoginLogout control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlLogIn;
-        
-        /// <summary>
-        /// lbLogout control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbLogout;
+        protected global::System.Web.UI.WebControls.LinkButton lbLoginLogout;
         
         /// <summary>
         /// cphBody control.

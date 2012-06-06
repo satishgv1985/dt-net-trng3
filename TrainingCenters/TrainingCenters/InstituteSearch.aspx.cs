@@ -14,6 +14,23 @@ namespace TrainingCenters
 
         }
 
+        protected void btnInstituteSearch_Click(object sender, EventArgs e)
+        {
+            bool validUser = true;
+            string Name = "Drona";
+            if (validUser)
+            {
+
+                Session["InstitueName"] = tbInstituteName.Text;
+                Response.Redirect("StudentWelcome.aspx");
+            }
+            else
+            {
+                lblInstituteName.Visible = true;
+            }
+
+        }
+
        
     }
 }

@@ -6,14 +6,13 @@
 <head runat="server">
     <title></title>
     <script type="text/javascript">
-        function funcCheckUserNameLength(source, arguments) 
-        {            
+        function funcCheckUserNameLength(source, arguments) {            
             arguments.IsValid = true;
             var un = document.getElementById('tbUserName').value;
             if (un.length < 8 || un.length > 15)
                 arguments.IsValid = false;
         }
-        </script>
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">

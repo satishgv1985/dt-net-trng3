@@ -10,33 +10,24 @@
 namespace TrainingCenters {
     
     
-    public partial class InstituteCommon {
+    public partial class StudentWelcome {
         
         /// <summary>
-        /// hlCourseOffering control.
+        /// lblName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlCourseOffering;
+        protected global::System.Web.UI.WebControls.Label lblName;
         
         /// <summary>
-        /// hlYourProfile control.
+        /// ucStudent control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlYourProfile;
-        
-        /// <summary>
-        /// hlEnquiry control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlEnquiry;
+        protected global::TrainingCenters.CourseSearch ucStudent;
     }
 }

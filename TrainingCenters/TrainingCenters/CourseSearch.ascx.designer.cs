@@ -10,33 +10,24 @@
 namespace TrainingCenters {
     
     
-    public partial class InstituteCommon {
+    public partial class CourseSearch {
         
         /// <summary>
-        /// hlCourseOffering control.
+        /// hlCourseSearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlCourseOffering;
+        protected global::System.Web.UI.WebControls.HyperLink hlCourseSearch;
         
         /// <summary>
-        /// hlYourProfile control.
+        /// hlInstituteSearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlYourProfile;
-        
-        /// <summary>
-        /// hlEnquiry control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlEnquiry;
+        protected global::System.Web.UI.WebControls.HyperLink hlInstituteSearch;
     }
 }
