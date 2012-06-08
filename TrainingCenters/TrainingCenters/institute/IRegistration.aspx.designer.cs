@@ -10,7 +10,7 @@
 namespace TrainingCenters {
     
     
-    public partial class institute {
+    public partial class IRegistration {
         
         /// <summary>
         /// ucInstituteReg control.
