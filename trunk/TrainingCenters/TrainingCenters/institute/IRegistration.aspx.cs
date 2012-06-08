@@ -8,7 +8,7 @@ using System.Web.Caching;
 
 namespace TrainingCenters
 {
-    public partial class institute : System.Web.UI.Page
+    public partial class IRegistration : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

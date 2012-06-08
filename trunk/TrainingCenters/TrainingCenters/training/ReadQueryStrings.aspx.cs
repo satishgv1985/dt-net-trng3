@@ -14,11 +14,20 @@ namespace TrainingCenters
 
             lblName.Text = Request.QueryString["name"];
             lblRollNo.Text = Request.QueryString["rollno"];
+            int rno;
+
+            
 
             if (Request.QueryString["rollno"] != null)
             {
-               
+
+                if (Int32.TryParse(Request.QueryString["rollno"], out rno))
+                {
+
+                }
+
             }
+
 
 
             if (Request.QueryString["s"] == "t")
