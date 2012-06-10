@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.Caching;
 
-namespace TrainingCenters
+namespace TrainingCenters.institute
 {
     public partial class IRegistration : System.Web.UI.Page
     {

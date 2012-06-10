@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TrainingCenters {
+namespace TrainingCenters.institute {
     
     
     public partial class InstituteWelcome {
@@ -28,6 +28,6 @@ namespace TrainingCenters {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::TrainingCenters.InstituteCommon ucInstitute;
+        protected global::System.Web.UI.UserControl ucInstitute;
     }
 }

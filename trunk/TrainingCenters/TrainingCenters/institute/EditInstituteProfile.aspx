@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TCSite.Master" AutoEventWireup="true" CodeBehind="EditInstituteProfile.aspx.cs" Inherits="TrainingCenters.EditInstituteProfile" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TCSite.Master" AutoEventWireup="true" CodeBehind="EditInstituteProfile.aspx.cs" Inherits="TrainingCenters.institute.EditInstituteProfile" %>
 <%@ Register Src="~/InstituteUserControl.ascx" TagName="editInstitute" TagPrefix="uc" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphHeader" runat="server">
     <style type="text/css">

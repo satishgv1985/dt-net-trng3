@@ -7,7 +7,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TrainingCenters {
+namespace TrainingCenters.institute
+{
     
     
     public partial class SendStudentEmail {

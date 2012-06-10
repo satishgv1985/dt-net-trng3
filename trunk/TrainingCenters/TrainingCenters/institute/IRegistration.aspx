@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/TCSite.Master" CodeBehind="IRegistration.aspx.cs"
-    Inherits="TrainingCenters.IRegistration" %>
+    Inherits="TrainingCenters.institute.IRegistration" %>
 
 <%@ Register Src="~/InstituteUserControl.ascx" TagName="instituteReg" TagPrefix="uc" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphHeader" runat="server">

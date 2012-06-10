@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TrainingCenters {
+namespace TrainingCenters.student {
     
     
     public partial class StudentReg {

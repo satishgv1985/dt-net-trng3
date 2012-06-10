@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TrainingCenters {
+namespace TrainingCenters.institute {
     
     
     public partial class IRegistration {
@@ -19,7 +19,7 @@ namespace TrainingCenters {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::TrainingCenters.InstituteUserControl ucInstituteReg;
+        protected global::System.Web.UI.UserControl ucInstituteReg;
         
         /// <summary>
         /// lblUserName control.
