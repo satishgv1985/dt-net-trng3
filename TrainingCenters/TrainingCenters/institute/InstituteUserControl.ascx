@@ -1,5 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="InstituteUserControl.ascx.cs"
-    Inherits="TrainingCenters.InstituteUserControl" %>
+    Inherits="TrainingCenters.institute.InstituteUserControl" %>
 <style type="text/css">
     .style1
     {

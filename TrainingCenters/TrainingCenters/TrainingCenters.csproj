@@ -70,9 +70,9 @@
     <Content Include="institute\IRegistration.aspx" />
     <Content Include="institute\InstituteCommon.ascx" />
     <Content Include="institute\InstituteProfile.aspx" />
-    <Content Include="InstituteSearch.aspx" />
+    <Content Include="institute\InstituteSearch.aspx" />
     <Content Include="InstituteSendEnquiry.aspx" />
-    <Content Include="InstituteUserControl.ascx" />
+    <Content Include="institute\InstituteUserControl.ascx" />
     <Content Include="institute\InstituteWelcome.aspx" />
     <Content Include="institute\testSam.aspx" />
     <Content Include="PrivacyPolicy.aspx" />
@@ -202,11 +202,11 @@
     <Compile Include="institute\InstituteProfile.aspx.designer.cs">
       <DependentUpon>InstituteProfile.aspx</DependentUpon>
     </Compile>
-    <Compile Include="InstituteSearch.aspx.cs">
+    <Compile Include="institute\InstituteSearch.aspx.cs">
       <DependentUpon>InstituteSearch.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="InstituteSearch.aspx.designer.cs">
+    <Compile Include="institute\InstituteSearch.aspx.designer.cs">
       <DependentUpon>InstituteSearch.aspx</DependentUpon>
     </Compile>
     <Compile Include="InstituteSendEnquiry.aspx.cs">
@@ -216,11 +216,11 @@
     <Compile Include="InstituteSendEnquiry.aspx.designer.cs">
       <DependentUpon>InstituteSendEnquiry.aspx</DependentUpon>
     </Compile>
-    <Compile Include="InstituteUserControl.ascx.cs">
+    <Compile Include="institute\InstituteUserControl.ascx.cs">
       <DependentUpon>InstituteUserControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="InstituteUserControl.ascx.designer.cs">
+    <Compile Include="institute\InstituteUserControl.ascx.designer.cs">
       <DependentUpon>InstituteUserControl.ascx</DependentUpon>
     </Compile>
     <Compile Include="institute\InstituteWelcome.aspx.cs">

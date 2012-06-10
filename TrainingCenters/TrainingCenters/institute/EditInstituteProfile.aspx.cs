@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace TrainingCenters
+namespace TrainingCenters.institute
 {
     public partial class EditInstituteProfile : System.Web.UI.Page
     {

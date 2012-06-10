@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TCSite.Master" AutoEventWireup="true" CodeBehind="InstituteSearch.aspx.cs" Inherits="TrainingCenters.InstituteSearch" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TCSite.Master" AutoEventWireup="true" CodeBehind="InstituteSearch.aspx.cs" Inherits="TrainingCenters.institute.InstituteSearch" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphHeader" runat="server">
     <style type="text/css">
         .style10

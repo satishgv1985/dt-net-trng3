@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TCSite.Master" AutoEventWireup="true" CodeBehind="ReadInstituteReg.aspx.cs" Inherits="TrainingCenters.ReadInstituteReg" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TCSite.Master" AutoEventWireup="true" CodeBehind="ReadInstituteReg.aspx.cs" Inherits="TrainingCenters.institute.ReadInstituteReg" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphHeader" runat="server">
 
     <title></title>
@@ -27,7 +27,7 @@
         </tr>
     </table>
     <br />
-    <table class="style1">
+    <table class="style1"> 
         <tr>
             <td align="right">
                 <asp:Label ID="lblInstituteName0" runat="server" style="font-weight: 700" 

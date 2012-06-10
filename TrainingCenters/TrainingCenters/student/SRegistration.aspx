@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TCSite.Master" AutoEventWireup="true" CodeBehind="SRegistration.aspx.cs" Inherits="TrainingCenters.StudentReg" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TCSite.Master" AutoEventWireup="true" CodeBehind="SRegistration.aspx.cs" Inherits="TrainingCenters.student.StudentReg" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphHeader" runat="server">
  <title>Student Registration Form</title>
 <script type="text/javascript">

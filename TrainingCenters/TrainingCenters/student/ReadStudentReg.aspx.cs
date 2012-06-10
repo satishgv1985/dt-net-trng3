@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace TrainingCenters
+namespace TrainingCenters.student
 {
     public partial class ReadStudentReg : System.Web.UI.Page
     {

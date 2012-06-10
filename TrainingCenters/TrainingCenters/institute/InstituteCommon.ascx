@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="InstituteCommon.ascx.cs" Inherits="TrainingCenters.InstituteCommon" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="InstituteCommon.ascx.cs" Inherits="TrainingCenters.institute.InstituteCommon" %>
 <br />
 <asp:HyperLink ID="hlCourseOffering" runat="server" NavigateUrl="~/CourseOffering.aspx">Course Offering</asp:HyperLink>
 <br />
