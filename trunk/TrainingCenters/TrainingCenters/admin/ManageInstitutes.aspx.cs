@@ -13,5 +13,37 @@ namespace TrainingCenters.admin
         {
 
         }
+
+        protected void gvInstitutes_PageIndexChanged(object sender, EventArgs e)
+        {
+            //gvInstitutes.SelectedIndex = -1;
+            if (gvInstitutes.PageIndex == Convert.ToInt32(ViewState["pageNo"]))
+            {
+                gvInstitutes.SelectedIndex = Convert.ToInt32(ViewState["sIndex"]);
+            }
+            else
+                gvInstitutes.SelectedIndex = -1;
+
+
+
+        }
+
+        protected void gvInstitutes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ViewState["sIndex"] = gvInstitutes.SelectedIndex;
+            ViewState["pageNo"] = gvInstitutes.PageIndex;
+        }
+
+        protected void gvInstitutes_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.DataItem != null)
+            {
+                if (e.Row.Cells[4].Text.Contains("nagar"))
+                {
+                    e.Row.BackColor = System.Drawing.Color.Green;
+                }
+
+            }
+        }
     }
 }
