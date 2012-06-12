@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AboutUs.aspx" />
+    <Content Include="admin\GridViewCityState.aspx" />
     <Content Include="admin\ManageInstitutes.aspx" />
     <Content Include="ASPNetControls.aspx" />
     <Content Include="bin\TBServerControl.dll" />
@@ -117,6 +118,13 @@
     </Compile>
     <Compile Include="AboutUs.aspx.designer.cs">
       <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\GridViewCityState.aspx.cs">
+      <DependentUpon>GridViewCityState.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\GridViewCityState.aspx.designer.cs">
+      <DependentUpon>GridViewCityState.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\ManageInstitutes.aspx.cs">
       <DependentUpon>ManageInstitutes.aspx</DependentUpon>
