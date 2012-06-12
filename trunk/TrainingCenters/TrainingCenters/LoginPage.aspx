@@ -8,7 +8,6 @@
             width: 100%;
             height: 32px;
         }
-        
         .style16
         {
             text-decoration: underline;
