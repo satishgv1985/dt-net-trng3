@@ -27,10 +27,6 @@
         {
             width: 303px;
         }
-        .style12
-        {
-            width: 299px;
-        }
         </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphBody" runat="server">
@@ -43,14 +39,16 @@
             <tr>
                 <td class="style2" align="right">
                     <strong>
-                    <asp:Label ID="lblUserName" runat="server" Text="Enter User Name  :" Font-Bold="True"></asp:Label>
+                    <asp:Label ID="lblUserName" runat="server" Text="Enter Student Name  :" 
+                        Font-Bold="True"></asp:Label>
                     </strong>
                 </td>
                 <td align="left">
                     <strong>
-                    <asp:TextBox ID="tbUserName" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="tbStudentName" runat="server"></asp:TextBox>
                    
-                    <asp:RequiredFieldValidator ID="rfvUserName" Display="Dynamic" runat="server" ControlToValidate="tbUserName"
+                    <asp:RequiredFieldValidator ID="rfvStudentName" Display="Dynamic" 
+                        runat="server" ControlToValidate="ddlState"
                         ErrorMessage="Name should be required" SetFocusOnError="true" ForeColor="red"
                         ValidationGroup="vgStudent"></asp:RequiredFieldValidator>
                     </strong>
@@ -159,7 +157,8 @@
                     </asp:DropDownList>
                     <asp:RequiredFieldValidator ID="rfvState" runat="server" Display="Dynamic"
                         ControlToValidate="ddlState" ErrorMessage="Select atleast one State" 
-                        ForeColor="Red" InitialValue="0" ValidationGroup="vgStudent"></asp:RequiredFieldValidator>
+                        ForeColor="Red" InitialValue="0" ValidationGroup="vgStudent" 
+                        style="font-weight: 700"></asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
@@ -171,7 +170,8 @@
                     </asp:DropDownList>
                     <asp:RequiredFieldValidator ID="rfvCity" runat="server" Display="Dynamic"
                         ControlToValidate="ddlCity" ErrorMessage="Select atleast one City" 
-                        ForeColor="Red" InitialValue="0" ValidationGroup="vgStudent"></asp:RequiredFieldValidator>
+                        ForeColor="Red" InitialValue="0" ValidationGroup="vgStudent" 
+                        style="font-weight: 700"></asp:RequiredFieldValidator>
                 </td>
             </tr>
        
@@ -183,7 +183,7 @@
                     <asp:TextBox ID="tbMobileNumber" runat="server"></asp:TextBox>
                     <asp:RegularExpressionValidator ID="revMobileNumber" runat="server" ControlToValidate="tbMobileNumber"
                         ErrorMessage="Mobile number should be 10 digits" ForeColor="Red" ValidationExpression="\d{10}"
-                        ValidationGroup="vgInstitute"></asp:RegularExpressionValidator>
+                        ValidationGroup="vgInstitute" style="font-weight: 700"></asp:RegularExpressionValidator>
                 </td>
             </tr>
             <tr>
@@ -192,20 +192,19 @@
                 </td>
                 <td>
                     <asp:TextBox ID="tbEmailId" runat="server"></asp:TextBox>
-                    <asp:RegularExpressionValidator ID="revEmailId" Display="Dynamic" runat="server" ControlToValidate="tbEmailId"
+                    <asp:RegularExpressionValidator ID="revEmailId" Display="Dynamic" 
+                        runat="server" ControlToValidate="tbEmailId"
                         ErrorMessage="give valid email id" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"
-                        ValidationGroup="vgStudent"></asp:RegularExpressionValidator>
+                        ValidationGroup="vgStudent" style="font-weight: 700"></asp:RegularExpressionValidator>
                 </td>
             </tr>
             </table>
         <br />
-        <asp:ValidationSummary ID="vsStudent" runat="server" ForeColor="Red" ValidationGroup="vgInstitute"
-            HeaderText="Errors occured" ShowMessageBox="false" />
         <table class="style1">
             <tr>
                 <td align="center">
                     <asp:Button ID="btnStudentSubmitForm" runat="server" Text="SubmitStudentForm" 
-                        ValidationGroup="vgStudent"  />
+                        ValidationGroup="vgStudent" onclick="btnStudentSubmitForm_Click"  />
                 </td>
             </tr>
         </table>

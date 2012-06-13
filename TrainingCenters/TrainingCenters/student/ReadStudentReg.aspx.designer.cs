@@ -22,22 +22,22 @@ namespace TrainingCenters.student {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// lblUserName0 control.
+        /// lblStudentName0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblUserName0;
+        protected global::System.Web.UI.WebControls.Label lblStudentName0;
         
         /// <summary>
-        /// lblUserName control.
+        /// lblStudentName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblUserName;
+        protected global::System.Web.UI.WebControls.Label lblStudentName;
         
         /// <summary>
         /// lblAge0 control.

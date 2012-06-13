@@ -15,8 +15,8 @@ namespace TrainingCenters.student
 
             lblQualification.Text = Session["City"].ToString();
 
-            TextBox tb1 = (TextBox)PreviousPage.FindControl("tbUserName");
-            lblUserName.Text = tb1.Text;
+            TextBox tb1 = (TextBox)PreviousPage.FindControl("tbStudentName");
+            lblStudentName.Text = tb1.Text;
 
             TextBox tb2 = (TextBox)PreviousPage.FindControl("tbAge");
             lblAge.Text = tb2.Text;

@@ -22,22 +22,22 @@ namespace TrainingCenters.student {
         protected global::System.Web.UI.WebControls.Label lblUserName;
         
         /// <summary>
-        /// tbUserName control.
+        /// tbStudentName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbUserName;
+        protected global::System.Web.UI.WebControls.TextBox tbStudentName;
         
         /// <summary>
-        /// rfvUserName control.
+        /// rfvStudentName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvUserName;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvStudentName;
         
         /// <summary>
         /// lblPassword control.
@@ -254,15 +254,6 @@ namespace TrainingCenters.student {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator revEmailId;
-        
-        /// <summary>
-        /// vsStudent control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ValidationSummary vsStudent;
         
         /// <summary>
         /// btnStudentSubmitForm control.
