@@ -430,7 +430,8 @@
   <ItemGroup>
     <Folder Include="training\anupam\" />
     <Folder Include="training\kishore\" />
-    <Folder Include="training\sabijit\" />
+    <Folder Include="training\shijith\" />
+    <Folder Include="training\shilpa\" />
     <Folder Include="training\shiva\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
