@@ -70,10 +70,9 @@
         </td>
         <td>
             <asp:TextBox ID="tbDoorNumber" runat="server"></asp:TextBox>
-        &nbsp;
-            <asp:RequiredFieldValidator ID="rfvDoorNumber" runat="server" 
-                ControlToValidate="tbDoorNumber" ErrorMessage="Door number should be required" 
-                ForeColor="Red" ValidationGroup="vgInstitute"></asp:RequiredFieldValidator>
+            &nbsp;
+            <asp:RequiredFieldValidator ID="rfvDoorNumber" runat="server" ControlToValidate="tbDoorNumber"
+                ErrorMessage="Door number should be required" ForeColor="Red" ValidationGroup="vgInstitute"></asp:RequiredFieldValidator>
         </td>
     </tr>
     <tr>
@@ -82,9 +81,19 @@
         </td>
         <td>
             <asp:TextBox ID="tbArea" runat="server"></asp:TextBox>
-        &nbsp;<asp:RequiredFieldValidator ID="rfvArea" runat="server" 
-                ControlToValidate="tbArea" ErrorMessage="Area should be required" 
-                ForeColor="Red" ValidationGroup="vgInstitute"></asp:RequiredFieldValidator>
+            &nbsp;<asp:RequiredFieldValidator ID="rfvArea" runat="server" ControlToValidate="tbArea"
+                ErrorMessage="Area should be required" ForeColor="Red" ValidationGroup="vgInstitute"></asp:RequiredFieldValidator>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            State :
+        </td>
+        <td>
+            <asp:DropDownList ID="ddlState" runat="server" DataValueField="StateId" 
+                DataTextField="StateName" AutoPostBack="true" 
+                onselectedindexchanged="ddlState_SelectedIndexChanged">
+            </asp:DropDownList>
         </td>
     </tr>
     <tr>
@@ -92,12 +101,15 @@
             <asp:Label ID="lblCity" runat="server" Style="font-weight: 700" Text="City  :"></asp:Label>
         </td>
         <td class="style2">
-            <asp:TextBox ID="tbCity" runat="server"></asp:TextBox>
+            <asp:DropDownList ID="ddlCity" runat="server">
+               
+            </asp:DropDownList>
+            <%--<asp:TextBox ID="tbCity" runat="server"></asp:TextBox>
             
             &nbsp;
             <asp:RequiredFieldValidator ID="rfvCity" runat="server" 
                 ControlToValidate="tbCity" ErrorMessage="City should be required" 
-                ForeColor="Red" ValidationGroup="vgInstitute"></asp:RequiredFieldValidator>
+                ForeColor="Red" ValidationGroup="vgInstitute"></asp:RequiredFieldValidator>--%>
         </td>
     </tr>
     <tr>
