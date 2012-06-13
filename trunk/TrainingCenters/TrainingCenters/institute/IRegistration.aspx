@@ -27,7 +27,7 @@
         }
         .style11
         {
-            width: 501px;
+            width: 386px;
             height: 49px;
         }
         .style12
@@ -37,6 +37,10 @@
         .style13
         {
             width: 475px;
+        }
+        .style14
+        {
+            width: 386px;
         }
     </style>
 </asp:Content>
@@ -49,7 +53,7 @@
     <div>
         <table class="style1">
             <tr>
-                <td align="right">
+                <td align="right" class="style14">
                     <asp:Label ID="lblUserName" runat="server" Text="Enter User Name  :" Font-Bold="True"></asp:Label>
                 </td>
                 <td>
@@ -71,8 +75,8 @@
                 </td>
             </tr>
             <tr>
-                <td class="style8" align="right">
-                    <asp:Label ID="lblConfirmPassword" runat="server" Text="Confirm Password  :" Font-Bold="True"></asp:Label>
+                <td class="style14" align="right">
+                    <strong>ConformPassword : </strong>
                 </td>
                 <td align="left">
                     <asp:TextBox ID="tbConfirmPassword" TextMode="Password" runat="server"></asp:TextBox>

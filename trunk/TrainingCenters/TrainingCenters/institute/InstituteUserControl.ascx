@@ -9,6 +9,10 @@
     {
         height: 23px;
     }
+    .style3
+    {
+        height: 26px;
+    }
 </style>
 <p>
     &nbsp;</p>
@@ -86,14 +90,19 @@
         </td>
     </tr>
     <tr>
-        <td>
-            State :
+        <td align="right" class="style3">
+            <asp:Label ID="lblState" runat="server" Style="font-weight: 700" 
+                Text="State  :"></asp:Label>
         </td>
-        <td>
+        <td class="style3">
             <asp:DropDownList ID="ddlState" runat="server" DataValueField="StateId" 
                 DataTextField="StateName" AutoPostBack="true" 
-                onselectedindexchanged="ddlState_SelectedIndexChanged">
+                onselectedindexchanged="ddlState_SelectedIndexChanged" Height="26px" 
+                Width="130px">
             </asp:DropDownList>
+        &nbsp;<asp:RequiredFieldValidator ID="rfvState" runat="server" ControlToValidate="ddlState"
+                ErrorMessage="State should be required" ForeColor="Red" 
+                ValidationGroup="vgInstitute"></asp:RequiredFieldValidator>
         </td>
     </tr>
     <tr>
@@ -101,15 +110,18 @@
             <asp:Label ID="lblCity" runat="server" Style="font-weight: 700" Text="City  :"></asp:Label>
         </td>
         <td class="style2">
-            <asp:DropDownList ID="ddlCity" runat="server">
+            <asp:DropDownList ID="ddlCity" runat="server" Height="16px" Width="128px">
                
             </asp:DropDownList>
-            <%--<asp:TextBox ID="tbCity" runat="server"></asp:TextBox>
+            &nbsp;<%--<asp:TextBox ID="tbCity" runat="server"></asp:TextBox>
             
             &nbsp;
             <asp:RequiredFieldValidator ID="rfvCity" runat="server" 
                 ControlToValidate="tbCity" ErrorMessage="City should be required" 
-                ForeColor="Red" ValidationGroup="vgInstitute"></asp:RequiredFieldValidator>--%>
+                ForeColor="Red" ValidationGroup="vgInstitute"></asp:RequiredFieldValidator>--%><asp:RequiredFieldValidator 
+                ID="rfvCity" runat="server" ControlToValidate="ddlCity"
+                ErrorMessage="City should be required" ForeColor="Red" 
+                ValidationGroup="vgInstitute"></asp:RequiredFieldValidator>
         </td>
     </tr>
     <tr>
@@ -135,6 +147,14 @@
                 ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGroup="vgInstitute"></asp:RegularExpressionValidator>
         </td>
     </tr>
+    <tr>
+    <td align="right">
+                <asp:Label ID="lblWebSite" runat="server" Style="font-weight: 700" Text="Web Site :"></asp:Label>
+
+    </td>
+    <td>
+        <asp:TextBox ID="tbWebSite" runat="server"></asp:TextBox>
+&nbsp;</td></tr>
     <tr>
         <td align="right">
             <asp:Label ID="lblPincodeNumber" runat="server" Style="font-weight: 700" Text="Pincode Number  :"></asp:Label>

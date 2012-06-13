@@ -28,11 +28,11 @@
     <table class="style1">
         <tr>
             <td align="right">
-                <asp:Label ID="lblUserName0" runat="server" style="font-weight: 700" 
+                <asp:Label ID="lblStudentName0" runat="server" style="font-weight: 700" 
                     Text="User Name  :"></asp:Label>
             </td>
             <td>
-                <asp:Label ID="lblUserName" runat="server"></asp:Label>
+                <asp:Label ID="lblStudentName" runat="server"></asp:Label>
             </td>
         </tr>
         <tr>

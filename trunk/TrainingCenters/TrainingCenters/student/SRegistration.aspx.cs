@@ -47,5 +47,7 @@ namespace TrainingCenters.student
                 ddlCity.Items.Add(licity);
             }
         }
+
+       
     }
 }
