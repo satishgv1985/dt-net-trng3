@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/TCSite.Master" CodeBehind="IRegistration.aspx.cs"
     Inherits="TrainingCenters.institute.IRegistration" %>
 
-<%@ Register Src="~/InstituteUserControl.ascx" TagName="instituteReg" TagPrefix="uc" %>
+<%@ Register Src="~/institute/InstituteUserControl.ascx" TagName="instituteReg" TagPrefix="uc" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphHeader" runat="server">
     <title>institute Registration Form</title>
     <script type="text/javascript">

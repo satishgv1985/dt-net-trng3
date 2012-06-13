@@ -93,6 +93,7 @@
         </td>
         <td class="style2">
             <asp:TextBox ID="tbCity" runat="server"></asp:TextBox>
+            
             &nbsp;
             <asp:RequiredFieldValidator ID="rfvCity" runat="server" 
                 ControlToValidate="tbCity" ErrorMessage="City should be required" 
