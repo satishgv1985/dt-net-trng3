@@ -55,11 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AboutUs.aspx" />
-<<<<<<< .mine
-    <Content Include="training\kishore\CourseOffering.aspx" />
-=======
     <Content Include="training\anupam\gvDemo.aspx" />
->>>>>>> .r37
     <Content Include="training\shirisha\GridViewCityState.aspx" />
     <Content Include="admin\ManageInstitutes.aspx" />
     <Content Include="ASPNetControls.aspx" />
@@ -129,15 +125,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
-<<<<<<< .mine
-    <Compile Include="training\kishore\CourseOffering.aspx.cs">
-      <DependentUpon>CourseOffering.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="training\kishore\CourseOffering.aspx.designer.cs">
-      <DependentUpon>CourseOffering.aspx</DependentUpon>
-    </Compile>
-=======
     <Compile Include="training\anupam\gvDemo.aspx.cs">
       <DependentUpon>gvDemo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -145,7 +132,6 @@
     <Compile Include="training\anupam\gvDemo.aspx.designer.cs">
       <DependentUpon>gvDemo.aspx</DependentUpon>
     </Compile>
->>>>>>> .r37
     <Compile Include="training\shirisha\GridViewCityState.aspx.cs">
       <DependentUpon>GridViewCityState.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -464,15 +450,9 @@
     <None Include="docs\TCProject.xls" />
     <Content Include="TCSite.Master" />
     <Content Include="training\TestSite.Master" />
-    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< .mine
-    <Folder Include="App_Data\" />
-    <Folder Include="obj\Debug\TempPE\" />
     <Folder Include="training\kishore\" />
-=======
->>>>>>> .r39
     <Folder Include="training\shijith\" />
     <Folder Include="training\shilpa\" />
     <Folder Include="training\shiva\" />
