@@ -464,8 +464,15 @@
     <None Include="docs\TCProject.xls" />
     <Content Include="TCSite.Master" />
     <Content Include="training\TestSite.Master" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< .mine
+    <Folder Include="App_Data\" />
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="training\kishore\" />
+=======
+>>>>>>> .r39
     <Folder Include="training\shijith\" />
     <Folder Include="training\shilpa\" />
     <Folder Include="training\shiva\" />
