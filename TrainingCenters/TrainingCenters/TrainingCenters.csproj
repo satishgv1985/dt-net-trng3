@@ -55,7 +55,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AboutUs.aspx" />
+<<<<<<< .mine
+    <Content Include="training\kishore\CourseOffering.aspx" />
+=======
     <Content Include="training\anupam\gvDemo.aspx" />
+>>>>>>> .r37
     <Content Include="training\shirisha\GridViewCityState.aspx" />
     <Content Include="admin\ManageInstitutes.aspx" />
     <Content Include="ASPNetControls.aspx" />
@@ -68,7 +72,7 @@
     <Content Include="CourseSearch.ascx" />
     <Content Include="institute\EditInstituteProfile.aspx" />
     <Content Include="ForgotPassword.aspx" />
-    <Content Include="HomeTrainingCenter.aspx" />
+    <Content Include="training\HomeTrainingCenter.aspx" />
     <Content Include="institute\IRegistration.aspx" />
     <Content Include="institute\InstituteCommon.ascx" />
     <Content Include="institute\InstituteProfile.aspx" />
@@ -125,6 +129,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
+<<<<<<< .mine
+    <Compile Include="training\kishore\CourseOffering.aspx.cs">
+      <DependentUpon>CourseOffering.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="training\kishore\CourseOffering.aspx.designer.cs">
+      <DependentUpon>CourseOffering.aspx</DependentUpon>
+    </Compile>
+=======
     <Compile Include="training\anupam\gvDemo.aspx.cs">
       <DependentUpon>gvDemo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -132,6 +145,7 @@
     <Compile Include="training\anupam\gvDemo.aspx.designer.cs">
       <DependentUpon>gvDemo.aspx</DependentUpon>
     </Compile>
+>>>>>>> .r37
     <Compile Include="training\shirisha\GridViewCityState.aspx.cs">
       <DependentUpon>GridViewCityState.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -195,11 +209,11 @@
     <Compile Include="ForgotPassword.aspx.designer.cs">
       <DependentUpon>ForgotPassword.aspx</DependentUpon>
     </Compile>
-    <Compile Include="HomeTrainingCenter.aspx.cs">
+    <Compile Include="training\HomeTrainingCenter.aspx.cs">
       <DependentUpon>HomeTrainingCenter.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="HomeTrainingCenter.aspx.designer.cs">
+    <Compile Include="training\HomeTrainingCenter.aspx.designer.cs">
       <DependentUpon>HomeTrainingCenter.aspx</DependentUpon>
     </Compile>
     <Compile Include="institute\IRegistration.aspx.cs">
@@ -452,7 +466,6 @@
     <Content Include="training\TestSite.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="training\kishore\" />
     <Folder Include="training\shijith\" />
     <Folder Include="training\shilpa\" />
     <Folder Include="training\shiva\" />
