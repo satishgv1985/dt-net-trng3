@@ -49,15 +49,6 @@ namespace TrainingCenters {
         protected global::System.Web.UI.WebControls.TextBox tbStudentEmald;
         
         /// <summary>
-        /// revStudentEmailId control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator revStudentEmailId;
-        
-        /// <summary>
         /// lblPassword1 control.
         /// </summary>
         /// <remarks>
@@ -148,22 +139,13 @@ namespace TrainingCenters {
         protected global::System.Web.UI.WebControls.Label lblUserEmailId0;
         
         /// <summary>
-        /// tbUserEmaild control.
+        /// tbUserName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbUserEmaild;
-        
-        /// <summary>
-        /// revUserEmailId control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator revUserEmailId;
+        protected global::System.Web.UI.WebControls.TextBox tbUserName;
         
         /// <summary>
         /// lblPassword2 control.

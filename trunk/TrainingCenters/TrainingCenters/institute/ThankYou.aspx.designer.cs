@@ -10,24 +10,15 @@
 namespace TrainingCenters.institute {
     
     
-    public partial class InstituteWelcome {
+    public partial class ThankYou {
         
         /// <summary>
-        /// lblName control.
+        /// hlLogin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblName;
-        
-        /// <summary>
-        /// ucInstitute control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::TrainingCenters.institute.InstituteCommon ucInstitute;
+        protected global::System.Web.UI.WebControls.HyperLink hlLogin;
     }
 }

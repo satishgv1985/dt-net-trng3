@@ -49,8 +49,11 @@
         <h3 style="text-decoration: underline">
             Institute Registration Form</h3>
     </center>
+    <asp:Label ID="lblMessage" runat="server" Visible="false"></asp:Label>
+    
     <uc:instituteReg ID="ucInstituteReg" runat="server"></uc:instituteReg>
     <div>
+    
         <table class="style1">
             <tr>
                 <td align="right" class="style14">
