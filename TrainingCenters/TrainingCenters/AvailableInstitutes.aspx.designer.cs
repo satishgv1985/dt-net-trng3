@@ -10,15 +10,15 @@
 namespace TrainingCenters {
     
     
-    public partial class InstituteSendEnquiry {
+    public partial class AvailableInstitutes {
         
         /// <summary>
-        /// ucInstitute control.
+        /// lvInstitutes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::TrainingCenters.institute.InstituteCommon ucInstitute;
+        protected global::System.Web.UI.WebControls.ListView lvInstitutes;
     }
 }

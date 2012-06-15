@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TCSite.Master" AutoEventWireup="true"
-    CodeBehind="InstituteSendEnquiry.aspx.cs" Inherits="TrainingCenters.InstituteSendEnquiry" %>
+    CodeBehind="InstituteSendEnquiry.aspx.cs" Inherits="TrainingCenters.institute.InstituteSendEnquiry" %>
 
-<%@ Register Src="~/InstituteCommon.ascx" TagName="Institute" TagPrefix="uc" %>
+<%@ Register Src="~/institute/InstituteCommon.ascx" TagName="Institute" TagPrefix="uc" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphHeader" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphBody" runat="server">

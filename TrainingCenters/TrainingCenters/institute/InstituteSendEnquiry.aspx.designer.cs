@@ -10,7 +10,7 @@
 namespace TrainingCenters.institute {
     
     
-    public partial class InstituteProfile {
+    public partial class InstituteSendEnquiry {
         
         /// <summary>
         /// ucInstitute control.

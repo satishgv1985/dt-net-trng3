@@ -89,8 +89,8 @@ namespace TrainingCenters
             {
                 Session["InstituteEmailID"] = emailID;
 
-                FormsAuthentication.RedirectFromLoginPage(iName, false);
-                //Response.Redirect("InstituteWelcome.aspx");
+                FormsAuthentication.SetAuthCookie(iName, false);
+                Response.Redirect("~/institute/InstituteWelcome.aspx");
             }
             else
             {

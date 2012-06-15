@@ -55,6 +55,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AboutUs.aspx" />
+    <Content Include="AvailableInstitutes.aspx" />
+    <Content Include="HomeTrainingCenter.aspx" />
     <Content Include="institute\ThankYou.aspx" />
     <Content Include="training\anupam\gvDemo.aspx" />
     <Content Include="training\shirisha\GridViewCityState.aspx" />
@@ -69,12 +71,11 @@
     <Content Include="CourseSearch.ascx" />
     <Content Include="institute\EditInstituteProfile.aspx" />
     <Content Include="ForgotPassword.aspx" />
-    <Content Include="training\HomeTrainingCenter.aspx" />
     <Content Include="institute\IRegistration.aspx" />
     <Content Include="institute\InstituteCommon.ascx" />
     <Content Include="institute\InstituteProfile.aspx" />
     <Content Include="institute\InstituteSearch.aspx" />
-    <Content Include="InstituteSendEnquiry.aspx" />
+    <Content Include="institute\InstituteSendEnquiry.aspx" />
     <Content Include="institute\InstituteUserControl.ascx" />
     <Content Include="institute\InstituteWelcome.aspx" />
     <Content Include="institute\testSam.aspx" />
@@ -121,10 +122,24 @@
     <Compile Include="AboutUs.aspx.designer.cs">
       <DependentUpon>AboutUs.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AvailableInstitutes.aspx.cs">
+      <DependentUpon>AvailableInstitutes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AvailableInstitutes.aspx.designer.cs">
+      <DependentUpon>AvailableInstitutes.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HomeTrainingCenter.aspx.cs">
+      <DependentUpon>HomeTrainingCenter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeTrainingCenter.aspx.designer.cs">
+      <DependentUpon>HomeTrainingCenter.aspx</DependentUpon>
     </Compile>
     <Compile Include="institute\ThankYou.aspx.cs">
       <DependentUpon>ThankYou.aspx</DependentUpon>
@@ -203,13 +218,6 @@
     <Compile Include="ForgotPassword.aspx.designer.cs">
       <DependentUpon>ForgotPassword.aspx</DependentUpon>
     </Compile>
-    <Compile Include="training\HomeTrainingCenter.aspx.cs">
-      <DependentUpon>HomeTrainingCenter.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="training\HomeTrainingCenter.aspx.designer.cs">
-      <DependentUpon>HomeTrainingCenter.aspx</DependentUpon>
-    </Compile>
     <Compile Include="institute\IRegistration.aspx.cs">
       <DependentUpon>IRegistration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -238,11 +246,11 @@
     <Compile Include="institute\InstituteSearch.aspx.designer.cs">
       <DependentUpon>InstituteSearch.aspx</DependentUpon>
     </Compile>
-    <Compile Include="InstituteSendEnquiry.aspx.cs">
+    <Compile Include="institute\InstituteSendEnquiry.aspx.cs">
       <DependentUpon>InstituteSendEnquiry.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="InstituteSendEnquiry.aspx.designer.cs">
+    <Compile Include="institute\InstituteSendEnquiry.aspx.designer.cs">
       <DependentUpon>InstituteSendEnquiry.aspx</DependentUpon>
     </Compile>
     <Compile Include="institute\InstituteUserControl.ascx.cs">
@@ -473,7 +481,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>31192</DevelopmentServerPort>
+          <DevelopmentServerPort>8353</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

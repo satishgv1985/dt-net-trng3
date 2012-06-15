@@ -7,10 +7,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TrainingCenters.training.anupam {
-    
-    
-    public partial class gvDemo {
+namespace TrainingCenters.training.anupam
+{
+
+
+    public partial class gvDemo
+    {
         
         /// <summary>
         /// form1 control.
