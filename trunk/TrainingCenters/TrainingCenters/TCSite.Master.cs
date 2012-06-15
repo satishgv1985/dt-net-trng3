@@ -38,7 +38,7 @@ namespace TrainingCenters
 
         protected void InstituteSearch_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/AvailableInstitutes.aspx");
         }
 
         //protected void lbLogout_Click(object sender, EventArgs e)
