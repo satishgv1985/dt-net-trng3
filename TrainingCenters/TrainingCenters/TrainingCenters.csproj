@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AboutUs.aspx" />
+    <Content Include="institute\ThankYou.aspx" />
     <Content Include="training\anupam\gvDemo.aspx" />
     <Content Include="training\shirisha\GridViewCityState.aspx" />
     <Content Include="admin\ManageInstitutes.aspx" />
@@ -124,6 +125,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="institute\ThankYou.aspx.cs">
+      <DependentUpon>ThankYou.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="institute\ThankYou.aspx.designer.cs">
+      <DependentUpon>ThankYou.aspx</DependentUpon>
     </Compile>
     <Compile Include="training\anupam\gvDemo.aspx.cs">
       <DependentUpon>gvDemo.aspx</DependentUpon>

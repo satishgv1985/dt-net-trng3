@@ -5,6 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.Security;
+using System.Data.SqlClient;
+using System.Configuration;
+using System.Data;
 
 namespace TrainingCenters
 {
@@ -24,7 +27,7 @@ namespace TrainingCenters
 
         protected void btnInstituteReset_Click(object sender, EventArgs e)
         {
-            tbUserEmaild.Text = "";
+            tbUserName.Text = "";
             tbUserPassword.Text = "";
             lblMessage.Visible = false;
         }
@@ -33,6 +36,9 @@ namespace TrainingCenters
         {
             bool validUser = true;
             string Name = "Satish";
+
+
+
 
 
             if (validUser)
@@ -55,11 +61,35 @@ namespace TrainingCenters
             string Name = "Satish";
 
 
-            if (validUser)
-            {
-                Session["InstituteEmailID"] = tbUserEmaild.Text;
 
-                FormsAuthentication.RedirectFromLoginPage("satish", false);
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["TCdbConnectionString"].ConnectionString);
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+            cmd.CommandText = "spValidateUser";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("username", tbUserName.Text));
+            cmd.Parameters.Add(new SqlParameter("password", tbUserPassword.Text));
+            cmd.Parameters.Add(new SqlParameter("isInst", true));
+
+            con.Open();
+            SqlDataReader sdrI=cmd.ExecuteReader();
+
+            string emailID="";
+            string iName="";
+            
+
+            while (sdrI.Read())
+            {
+                emailID = Convert.ToString(sdrI["EmailID"]);
+                iName=Convert.ToString(sdrI["InstituteName"]);
+            }
+            con.Close();
+
+            if (iName.Length>0)
+            {
+                Session["InstituteEmailID"] = emailID;
+
+                FormsAuthentication.RedirectFromLoginPage(iName, false);
                 //Response.Redirect("InstituteWelcome.aspx");
             }
             else

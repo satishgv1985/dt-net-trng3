@@ -51,9 +51,9 @@
                         </td>
                         <td>
                             <asp:TextBox ID="tbStudentEmald" runat="server"></asp:TextBox>
-                            <asp:RegularExpressionValidator ID="revStudentEmailId" Display="Dynamic" runat="server"
+                            <%--<asp:RegularExpressionValidator ID="revStudentEmailId" Display="Dynamic" runat="server"
                                 ControlToValidate="tbStudentEmald" ErrorMessage="give valid email id" ForeColor="Red"
-                                ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGroup="vgStudentLogin"></asp:RegularExpressionValidator>
+                                ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGroup="vgStudentLogin"></asp:RegularExpressionValidator>--%>
                         </td>
                     </tr>
                     <tr>
@@ -113,13 +113,13 @@
                 <table class="style15">
                     <tr>
                         <td>
-                            <asp:Label ID="lblUserEmailId0" runat="server" Text="User Email Id  :"></asp:Label>
+                            <asp:Label ID="lblUserEmailId0" runat="server" Text="User Name :"></asp:Label>
                         </td>
                         <td>
-                            <asp:TextBox ID="tbUserEmaild" runat="server"></asp:TextBox>
-                            <asp:RegularExpressionValidator ID="revUserEmailId" Display="Dynamic" runat="server"
+                            <asp:TextBox ID="tbUserName" runat="server"></asp:TextBox>
+                            <%--<asp:RegularExpressionValidator ID="revUserEmailId" Display="Dynamic" runat="server"
                                 ControlToValidate="tbUserEmaild" ErrorMessage="give valid email id" ForeColor="Red"
-                                ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGroup="vgInstituteLogin"></asp:RegularExpressionValidator>
+                                ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGroup="vgInstituteLogin"></asp:RegularExpressionValidator>--%>
                         </td>
                     </tr>
                     <tr>
