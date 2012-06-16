@@ -64,7 +64,7 @@ namespace TrainingCenters.institute
             try
             {
 
-                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["TCdbConnectionString"].ConnectionString);
+                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["TCdbConnectionString2"].ConnectionString);
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
                 cmd.CommandText = "spInstituteInsert";
@@ -72,21 +72,53 @@ namespace TrainingCenters.institute
                 con.Open();
 
                 TextBox tbIN = (TextBox)ucInstituteReg.FindControl("tbInstituteName");
-
                 cmd.Parameters.Add(new SqlParameter("InstituteName", tbIN.Text));
 
-                cmd.Parameters.Add(new SqlParameter("YearOfEstablishment", DateTime.Now));
-                cmd.Parameters.Add(new SqlParameter("Area", "Majestic"));
-                cmd.Parameters.Add(new SqlParameter("CityID", "1"));
-                cmd.Parameters.Add(new SqlParameter("StateID", "1"));
-                cmd.Parameters.Add(new SqlParameter("EmailID", "sat@gmail.com"));
+                Calendar tbYear = (Calendar)ucInstituteReg.FindControl("cDateOfEstablishment");
+                cmd.Parameters.Add(new SqlParameter("YearOfEstablishment", tbYear.SelectedDate));
 
 
-                cmd.Parameters.Add(new SqlParameter("ContactNo", "999"));
-                cmd.Parameters.Add(new SqlParameter("Website", "www.g.co"));
-                cmd.Parameters.Add(new SqlParameter("Pincode", "5551"));
+                TextBox tbArea1 = (TextBox)ucInstituteReg.FindControl("tbArea");
+                cmd.Parameters.Add(new SqlParameter("Area", tbArea1.Text));
+
+
+               DropDownList tbCityID1 = (DropDownList)ucInstituteReg.FindControl("ddlCity");
+                cmd.Parameters.Add(new SqlParameter("CityID",tbCityID1.SelectedValue));
+
+
+                DropDownList tbStateID1 = (DropDownList)ucInstituteReg.FindControl("ddlState");
+                cmd.Parameters.Add(new SqlParameter("StateID",tbStateID1.SelectedValue));
+
+
+                TextBox tbEmailID1 = (TextBox)ucInstituteReg.FindControl("tbEmailId");
+                cmd.Parameters.Add(new SqlParameter("EmailID", tbEmailID1.Text));
+
+
+                TextBox tbContactNo = (TextBox)ucInstituteReg.FindControl("tbMobileNumber");
+                cmd.Parameters.Add(new SqlParameter("ContactNo",tbContactNo.Text));
+
+
+                TextBox tbWebSite1 = (TextBox)ucInstituteReg.FindControl("tbWebSite");
+                cmd.Parameters.Add(new SqlParameter("Website",tbWebSite1.Text));
+
+
+
+                TextBox tbPincodeNumber1 = (TextBox)ucInstituteReg.FindControl("tbPincodeNumber");
+                cmd.Parameters.Add(new SqlParameter("Pincode",tbPincodeNumber1.Text));
+
+
+                //TextBox tbPincode = (TextBox)ucInstituteReg.FindControl("tbInstituteName");
+
                 cmd.Parameters.Add(new SqlParameter("username", tbUserName.Text));
                 cmd.Parameters.Add(new SqlParameter("password", tbPassword.Text));
+
+
+
+
+
+
+
+
                 int ret = cmd.ExecuteNonQuery();
                 con.Close();
                 lblMessage.Visible = true;
@@ -98,7 +130,8 @@ namespace TrainingCenters.institute
             catch (Exception ee)
             {
                 lblMessage.Visible = true;
-                lblMessage.Text = ee.Message;
+                lblMessage.Text = ee.StackTrace; 
+                
             }
 
            
