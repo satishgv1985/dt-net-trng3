@@ -35,7 +35,7 @@ namespace TrainingCenters
         protected void btnStudentSubmit_Click(object sender, EventArgs e)
         {
             bool validUser = true;
-            string Name = "Satish";
+           // string Name = "Satish";
 
 
 
@@ -57,8 +57,8 @@ namespace TrainingCenters
         protected void btnInstituteSubmit_Click(object sender, EventArgs e)
         {
             // validate the email id and password against database and validate the INSTITUTE
-            bool validUser = true;
-            string Name = "Satish";
+            //bool validUser = true;
+            //string Name = "Satish";
 
 
 

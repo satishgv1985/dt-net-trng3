@@ -140,7 +140,8 @@
             <asp:Label ID="lblEmailId" runat="server" Style="font-weight: 700" Text="Email ID  :"></asp:Label>
         </td>
         <td>
-            <asp:TextBox ID="tbEmailId" runat="server"> 
+            <asp:TextBox ID="tbEmailId" runat="server">
+              
             </asp:TextBox>
             &nbsp;<asp:RegularExpressionValidator ID="revEmailId" Display="Dynamic" runat="server"
                 ControlToValidate="tbEmailId" ErrorMessage="give valid email id" ForeColor="Red"

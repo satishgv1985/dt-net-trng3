@@ -17,7 +17,7 @@ namespace TrainingCenters.institute
         protected void btnInstituteSearch_Click(object sender, EventArgs e)
         {
             bool validUser = true;
-            string Name = "Drona";
+            //string Name = "Drona";
             if (validUser)
             {
 
