@@ -27,6 +27,15 @@
         {
             width: 303px;
         }
+        .style10
+        {
+            width: 365px;
+            height: 30px;
+        }
+        .style11
+        {
+            height: 30px;
+        }
         </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphBody" runat="server">
@@ -36,10 +45,11 @@
                 Student Registration</h3>
         </center>
         <table class="style1">
+        <tr><td><asp:Label ID="lblMessage" runat="server" Visible="false"></asp:Label></td></tr>
             <tr>
                 <td class="style2" align="right">
                     <strong>
-                    <asp:Label ID="lblUserName" runat="server" Text="Enter Student Name  :" 
+                    <asp:Label ID="lblStudentName" runat="server" Text="Enter Student Name  :" 
                         Font-Bold="True"></asp:Label>
                     </strong>
                 </td>
@@ -48,19 +58,29 @@
                     <asp:TextBox ID="tbStudentName" runat="server"></asp:TextBox>
                    
                     <asp:RequiredFieldValidator ID="rfvStudentName" Display="Dynamic" 
-                        runat="server" ControlToValidate="ddlState"
+                        runat="server" ControlToValidate="tbStudentName"
                         ErrorMessage="Name should be required" SetFocusOnError="true" ForeColor="red"
                         ValidationGroup="vgStudent"></asp:RequiredFieldValidator>
                     </strong>
                 </td>
             </tr>
+            <tr><td align="right"><asp:Label ID="lblUserName" runat="server" 
+                    Text="User Name  :" style="font-weight: 700" ></asp:Label>
+</td>
+            <td><asp:TextBox ID="tbUserName" runat="server"></asp:TextBox>
+&nbsp;<strong><asp:RequiredFieldValidator ID="rfvUserName" Display="Dynamic" 
+                        runat="server" ControlToValidate="tbUserName"
+                        ErrorMessage="User Name should be required" SetFocusOnError="true" ForeColor="red"
+                        ValidationGroup="vgStudent"></asp:RequiredFieldValidator>
+                    </strong>
+</td></tr>
             <tr>
-                <td class="style2" align="right">
+                <td class="style10" align="right">
                     <strong>
                     <asp:Label ID="lblPassword" runat="server" Text="Password  :" Font-Bold="True"></asp:Label>
                     </strong>
                 </td>
-                <td align="left">
+                <td align="left" class="style11">
                     <strong>
                     <asp:TextBox ID="tbPassword" TextMode="Password" runat="server"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="rfvPassword" Display="Dynamic" SetFocusOnError="true" runat="server"
@@ -110,8 +130,8 @@
                     <strong>Gender :</strong></td>
                 <td align="left" class="style3">
                     <asp:RadioButtonList ID="rbtnGender" runat="server">
-                        <asp:ListItem>Male</asp:ListItem>
-                        <asp:ListItem>Female</asp:ListItem>
+                        <asp:ListItem Value="Male">Male</asp:ListItem>
+                        <asp:ListItem Value="Female">Female</asp:ListItem>
                     </asp:RadioButtonList>
                     <strong>
                     <asp:RequiredFieldValidator ID="rfvGender" runat="server" Display="Dynamic"
@@ -149,7 +169,7 @@
                     State :</td>
                 <td>
                     <asp:DropDownList ID="ddlState" runat="server" 
-                        onselectedindexchanged="ddlState_SelectedIndexChanged" AutoPostBack="True" 
+                         AutoPostBack="True" 
                         style="margin-bottom: 0px">
                         <asp:ListItem Value="0">---Select Your State---</asp:ListItem>
                         <asp:ListItem Value="1">Andhra Pradesh</asp:ListItem>
@@ -174,6 +194,16 @@
                         style="font-weight: 700"></asp:RequiredFieldValidator>
                 </td>
             </tr>
+            <tr>
+            <td align="right"><asp:Label ID="lblArea" runat="server" Style="font-weight: 700" Text="Area :"></asp:Label>
+ </td>
+            <td><asp:TextBox ID="tbArea" runat="server"></asp:TextBox>
+&nbsp;<strong><asp:RequiredFieldValidator ID="rfvArea" Display="Dynamic" 
+                        runat="server" ControlToValidate="tbArea"
+                        ErrorMessage="Area name should be required" SetFocusOnError="true" ForeColor="red"
+                        ValidationGroup="vgStudent"></asp:RequiredFieldValidator>
+                    </strong>
+</td></tr>
        
             <tr>
                 <td align="right">
