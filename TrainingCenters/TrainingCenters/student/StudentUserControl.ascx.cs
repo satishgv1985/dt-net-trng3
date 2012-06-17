@@ -8,9 +8,9 @@ using System.Data.SqlClient;
 using System.Configuration;
 using System.Data;
 
-namespace TrainingCenters.institute
+namespace TrainingCenters.student
 {
-    public partial class InstituteUserControl : System.Web.UI.UserControl
+    public partial class StudentUserControl : System.Web.UI.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -43,7 +43,7 @@ namespace TrainingCenters.institute
 
             if (IsPostBack)
             {
-               
+
             }
             if (!ddlCity.Items.Contains(ddlCity.Items.FindByValue("0")))
                 ddlCity.Items.Insert(0, new ListItem("-Select State First-", "0"));
@@ -53,11 +53,9 @@ namespace TrainingCenters.institute
 
 
 
-       
-
         protected void ddlState_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (ddlState.SelectedValue != "0")
+             if (ddlState.SelectedValue != "0")
             {
                 SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["TCdbConnectionString"].ConnectionString);
                 SqlCommand cmd = new SqlCommand();
@@ -78,7 +76,8 @@ namespace TrainingCenters.institute
             if (!ddlCity.Items.Contains(ddlCity.Items.FindByValue("0")))
                 ddlCity.Items.Insert(0, new ListItem("-Select State First-", "0"));
         }
+        }
 
-       
-    }
+      
+    
 }

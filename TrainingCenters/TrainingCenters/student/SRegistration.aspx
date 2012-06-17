@@ -1,4 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TCSite.Master" AutoEventWireup="true" CodeBehind="SRegistration.aspx.cs" Inherits="TrainingCenters.student.StudentReg" %>
+
+<%@ Register Src="~/student/StudentUserControl.ascx" TagName="studentReg" TagPrefix="uc" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphHeader" runat="server">
  <title>Student Registration Form</title>
 <script type="text/javascript">
@@ -14,10 +16,6 @@
         .style2
         {
             width: 279px;
-        }
-        .style3
-        {
-            width: 406px;
         }
         .style4
         {
@@ -40,30 +38,14 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphBody" runat="server">
   <div>
-        <center>
+   <center>
             <h3 style="text-decoration: underline">
                 Student Registration</h3>
         </center>
+        <asp:Label ID="lblMessage" runat="server" Visible="false"></asp:Label>
+   <uc:studentReg ID="ucStudentReg" runat="server"></uc:studentReg>
+       
         <table class="style1">
-        <tr><td><asp:Label ID="lblMessage" runat="server" Visible="false"></asp:Label></td></tr>
-            <tr>
-                <td class="style2" align="right">
-                    <strong>
-                    <asp:Label ID="lblStudentName" runat="server" Text="Enter Student Name  :" 
-                        Font-Bold="True"></asp:Label>
-                    </strong>
-                </td>
-                <td align="left">
-                    <strong>
-                    <asp:TextBox ID="tbStudentName" runat="server"></asp:TextBox>
-                   
-                    <asp:RequiredFieldValidator ID="rfvStudentName" Display="Dynamic" 
-                        runat="server" ControlToValidate="tbStudentName"
-                        ErrorMessage="Name should be required" SetFocusOnError="true" ForeColor="red"
-                        ValidationGroup="vgStudent"></asp:RequiredFieldValidator>
-                    </strong>
-                </td>
-            </tr>
             <tr><td align="right"><asp:Label ID="lblUserName" runat="server" 
                     Text="User Name  :" style="font-weight: 700" ></asp:Label>
 </td>
@@ -105,127 +87,6 @@
                         ControlToValidate="tbConfirmPassword" ErrorMessage="Both Passwords should be same"
                         ForeColor="red" ValidationGroup="vgStudent"></asp:CompareValidator>
                     </strong>
-                </td>
-            </tr>
-            <tr>
-                <td class="style2" align="right">
-                    <strong>
-                    <asp:Label ID="lblAge" runat="server" Text="Age  :"
-                        Font-Bold="True"></asp:Label>
-                    </strong>
-                </td>
-                <td align="left">
-                    <strong>
-                    <asp:TextBox ID="tbAge" runat="server"></asp:TextBox>
-                    <asp:RangeValidator ID="rvAge" runat="server" Display="Dynamic" ControlToValidate="tbAge" 
-                        ErrorMessage="Age should be between 15 to 30" ForeColor="Red" MaximumValue="30" 
-                        MinimumValue="15"></asp:RangeValidator>
-                    </strong>
-                </td>
-            </tr>
-       
-            <tr>
-                <td align="right">
-                   
-                    <strong>Gender :</strong></td>
-                <td align="left" class="style3">
-                    <asp:RadioButtonList ID="rbtnGender" runat="server">
-                        <asp:ListItem Value="Male">Male</asp:ListItem>
-                        <asp:ListItem Value="Female">Female</asp:ListItem>
-                    </asp:RadioButtonList>
-                    <strong>
-                    <asp:RequiredFieldValidator ID="rfvGender" runat="server" Display="Dynamic"
-                        ControlToValidate="rbtnGender" ErrorMessage="You should select male or female" 
-                        ForeColor="Red" ValidationGroup="vgStudent"></asp:RequiredFieldValidator>
-&nbsp;
-                </strong>
-                </td>
-            </tr>
-       
-            <tr>
-                <td align="right">
-                    <strong>&nbsp;&nbsp;Qualification&nbsp; :</strong></td>
-                <td align="left">
-                    <strong>
-                    <asp:DropDownList ID="ddlQualification" runat="server" >
-                        <asp:ListItem Value="0">---Select Qualification---</asp:ListItem>
-                        <asp:ListItem Value="1">Intermediate</asp:ListItem>
-                        <asp:ListItem Value="2">Degree</asp:ListItem>
-                        <asp:ListItem Value="3">Btech</asp:ListItem>
-                        <asp:ListItem Value="4">MSC</asp:ListItem>
-                        <asp:ListItem Value="5">MCA</asp:ListItem>
-                        <asp:ListItem Value="6">MBA</asp:ListItem>
-                        <asp:ListItem Value="7">Mtech</asp:ListItem>
-                        <asp:ListItem Value="8">Phd</asp:ListItem>
-                    </asp:DropDownList>
-                    <asp:RequiredFieldValidator ID="rfvQualification" runat="server" Display="Dynamic" 
-                        ControlToValidate="ddlQualification" ErrorMessage="Select atleast one" 
-                        ForeColor="Red" InitialValue="0" ValidationGroup="vgStudent"></asp:RequiredFieldValidator>
-                    </strong>
-                </td>
-            </tr>
-            <tr>
-                <td align="right" style="font-weight: 700">
-                    State :</td>
-                <td>
-                    <asp:DropDownList ID="ddlState" runat="server" 
-                         AutoPostBack="True" 
-                        style="margin-bottom: 0px">
-                        <asp:ListItem Value="0">---Select Your State---</asp:ListItem>
-                        <asp:ListItem Value="1">Andhra Pradesh</asp:ListItem>
-                        <asp:ListItem Value="2">Karnataka</asp:ListItem>
-                    </asp:DropDownList>
-                    <asp:RequiredFieldValidator ID="rfvState" runat="server" Display="Dynamic"
-                        ControlToValidate="ddlState" ErrorMessage="Select atleast one State" 
-                        ForeColor="Red" InitialValue="0" ValidationGroup="vgStudent" 
-                        style="font-weight: 700"></asp:RequiredFieldValidator>
-                </td>
-            </tr>
-            <tr>
-                <td align="right" style="font-weight: 700">
-                    City :</td>
-                <td>
-                    <asp:DropDownList ID="ddlCity" runat="server"  Width="154px">
-                        <asp:ListItem Value="0">---Select Your City---</asp:ListItem>
-                    </asp:DropDownList>
-                    <asp:RequiredFieldValidator ID="rfvCity" runat="server" Display="Dynamic"
-                        ControlToValidate="ddlCity" ErrorMessage="Select atleast one City" 
-                        ForeColor="Red" InitialValue="0" ValidationGroup="vgStudent" 
-                        style="font-weight: 700"></asp:RequiredFieldValidator>
-                </td>
-            </tr>
-            <tr>
-            <td align="right"><asp:Label ID="lblArea" runat="server" Style="font-weight: 700" Text="Area :"></asp:Label>
- </td>
-            <td><asp:TextBox ID="tbArea" runat="server"></asp:TextBox>
-&nbsp;<strong><asp:RequiredFieldValidator ID="rfvArea" Display="Dynamic" 
-                        runat="server" ControlToValidate="tbArea"
-                        ErrorMessage="Area name should be required" SetFocusOnError="true" ForeColor="red"
-                        ValidationGroup="vgStudent"></asp:RequiredFieldValidator>
-                    </strong>
-</td></tr>
-       
-            <tr>
-                <td align="right">
-                    <asp:Label ID="lblMobileNumber" runat="server" Style="font-weight: 700" Text="Mobile Number  :"></asp:Label>
-                </td>
-                <td>
-                    <asp:TextBox ID="tbMobileNumber" runat="server"></asp:TextBox>
-                    <asp:RegularExpressionValidator ID="revMobileNumber" runat="server" ControlToValidate="tbMobileNumber"
-                        ErrorMessage="Mobile number should be 10 digits" ForeColor="Red" ValidationExpression="\d{10}"
-                        ValidationGroup="vgInstitute" style="font-weight: 700"></asp:RegularExpressionValidator>
-                </td>
-            </tr>
-            <tr>
-                <td align="right">
-                    <asp:Label ID="lblEmailId" runat="server" Style="font-weight: 700" Text="Email ID  :"></asp:Label>
-                </td>
-                <td>
-                    <asp:TextBox ID="tbEmailId" runat="server"></asp:TextBox>
-                    <asp:RegularExpressionValidator ID="revEmailId" Display="Dynamic" 
-                        runat="server" ControlToValidate="tbEmailId"
-                        ErrorMessage="give valid email id" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"
-                        ValidationGroup="vgStudent" style="font-weight: 700"></asp:RegularExpressionValidator>
                 </td>
             </tr>
             </table>
