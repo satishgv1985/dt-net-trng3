@@ -34,24 +34,69 @@ namespace TrainingCenters
 
         protected void btnStudentSubmit_Click(object sender, EventArgs e)
         {
-            bool validUser = true;
-           // string Name = "Satish";
+           // bool validUser = true;
+           //// string Name = "Satish";
 
 
 
 
 
-            if (validUser)
-            {
-                Session["StudentEmailID"] = tbStudentEmald.Text;
+           // if (validUser)
+           // {
+           //     Session["StudentEmailID"] = tbStudentEmald.Text;
 
                 
-               //Response.Redirect("StudentWelcome.aspx");
+           //    Response.Redirect("StudentWelcome.aspx");
+           // }
+           // else
+           // {
+           //     lblMessage.Visible = true;
+           // }
+
+
+
+
+
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["TCdbConnectionString"].ConnectionString);
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+            cmd.CommandText = "spValidateUser";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("username", tbUserName.Text));
+            cmd.Parameters.Add(new SqlParameter("password", tbUserPassword.Text));
+            cmd.Parameters.Add(new SqlParameter("isInst", false));
+
+            con.Open();
+            SqlDataReader sdrI = cmd.ExecuteReader();
+
+            string emailID = "";
+            string iName = "";
+
+
+            while (sdrI.Read())
+            {
+                emailID = Convert.ToString(sdrI["EmailID"]);
+                iName = Convert.ToString(sdrI["StudentName"]);
+            }
+            con.Close();
+
+            if (iName.Length > 0)
+            {
+                Session["StudentEmailID"] = emailID;
+
+                FormsAuthentication.SetAuthCookie(iName, false);
+                Response.Redirect("~/student/StudentWelcome.aspx");
             }
             else
             {
                 lblMessage.Visible = true;
             }
+        
+        
+        
+        
+        
+        
         }
 
         protected void btnInstituteSubmit_Click(object sender, EventArgs e)
