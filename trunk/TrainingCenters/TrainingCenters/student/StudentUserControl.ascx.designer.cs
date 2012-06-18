@@ -103,13 +103,13 @@ namespace TrainingCenters.student {
         protected global::System.Web.UI.WebControls.Label lblQualification;
         
         /// <summary>
-        /// ddlQualification control.
+        /// tbQualification control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlQualification;
+        protected global::System.Web.UI.WebControls.TextBox tbQualification;
         
         /// <summary>
         /// rfvQualification control.
