@@ -22,7 +22,7 @@ namespace TrainingCenters.student
             try
             {
 
-                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["TCdbConnectionString2"].ConnectionString);
+                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["TCdbConnectionString"].ConnectionString);
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
                 cmd.CommandText = "spStudentInsert";
@@ -59,8 +59,8 @@ namespace TrainingCenters.student
                 cmd.Parameters.Add(new SqlParameter("Area", tbArea1.Text));
 
 
-                //DropDownList ddlQualificationID1 = (DropDownList)ucStudentReg.FindControl("ddlQualificaton");
-              //  cmd.Parameters.Add(new SqlParameter("QualificationID","MCA"));
+              //  TextBox  tbQualification = (TextBox)ucStudentReg.FindControl("tbQualificaton");
+                cmd.Parameters.Add(new SqlParameter("Qualification","mca"));
 
 
                 DropDownList ddlStateID1 = (DropDownList)ucStudentReg.FindControl("ddlState");
@@ -103,7 +103,7 @@ namespace TrainingCenters.student
                 lblMessage.Visible = true;
                 //lblMessage.Text = "Successfully inserted.";
 
-                Response.Redirect("ThankYou.aspx");
+                Response.Redirect("StudentWelcome.aspx");
 
             }
             catch (Exception ee)

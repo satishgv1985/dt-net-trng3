@@ -75,22 +75,11 @@
                     </strong>
                 </td>
         <td class="style2">
+                    <asp:TextBox ID="tbQualification" runat="server"></asp:TextBox>
                     <strong>
-                    <asp:DropDownList ID="ddlQualification" runat="server" Height="18px" 
-                        Width="146px" >
-                        <asp:ListItem Value="0">---Select Qualification---</asp:ListItem>
-                        <asp:ListItem Value="1">Intermediate</asp:ListItem>
-                        <asp:ListItem Value="2">Degree</asp:ListItem>
-                        <asp:ListItem Value="3">Btech</asp:ListItem>
-                        <asp:ListItem Value="4">MSC</asp:ListItem>
-                        <asp:ListItem Value="5">MCA</asp:ListItem>
-                        <asp:ListItem Value="6">MBA</asp:ListItem>
-                        <asp:ListItem Value="7">Mtech</asp:ListItem>
-                        <asp:ListItem Value="8">Phd</asp:ListItem>
-                    </asp:DropDownList>
                     &nbsp;
                     <asp:RequiredFieldValidator ID="rfvQualification" runat="server" Display="Dynamic" 
-                        ControlToValidate="ddlQualification" ErrorMessage="Select atleast one" 
+                        ControlToValidate="tbQualification" ErrorMessage="Select atleast one" 
                         ForeColor="Red" InitialValue="0" ValidationGroup="vgStudent"></asp:RequiredFieldValidator>
                     </strong>
                 </td>
