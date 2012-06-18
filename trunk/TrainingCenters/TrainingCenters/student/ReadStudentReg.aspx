@@ -24,8 +24,14 @@
             </td>
         </tr>
     </table>
-    <br />
     <table class="style1">
+        <tr>
+            <td align="left">
+                <asp:Label ID="lblMessage" runat="server" Text="Label" Visible="False"></asp:Label>
+            </td>
+            <td>
+                &nbsp;</td>
+        </tr>
         <tr>
             <td align="right">
                 <asp:Label ID="lblStudentName0" runat="server" style="font-weight: 700" 
@@ -81,6 +87,14 @@
         </tr>
         <tr>
             <td align="right">
+                <asp:Label ID="lblArea1" runat="server" style="font-weight: 700" Text="Area  :"></asp:Label>
+            </td>
+            <td>
+                <asp:Label ID="lblArea" runat="server"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td align="right">
                 <asp:Label ID="lblMobileNumber0" runat="server" style="font-weight: 700" 
                     Text="Mobile Number  :"></asp:Label>
             </td>
@@ -97,17 +111,36 @@
                 <asp:Label ID="lblEmailId" runat="server"></asp:Label>
             </td>
         </tr>
+        <tr>
+            <td align="right">
+                <asp:Label ID="lblUserName1" runat="server" style="font-weight: 700" 
+                    Text="UserName  :"></asp:Label>
+            </td>
+            <td>
+                <asp:Label ID="lblUserName" runat="server"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td align="right">
+                <asp:Label ID="lblPassword1" runat="server" style="font-weight: 700" 
+                    Text="Password  :"></asp:Label>
+            </td>
+            <td>
+                <asp:Label ID="lblPassword" runat="server"></asp:Label>
+            </td>
+        </tr>
     </table>
     <br />
     <br />
     <table class="style1">
         <tr>
             <td align="center">
-                <asp:Button ID="btnConfirm" runat="server" Text="Confirm" />
+                <asp:Button ID="btnConfirm" runat="server" Text="Confirm" 
+                    onclick="btnConfirm_Click" PostBackUrl="~/student/StudentWelcome.aspx" />
             </td>
             <td align="center">
                 <asp:Button ID="btnResetStudent" runat="server" onclick="btnReset_Click" 
-                    Text="ResetStudent" PostBackUrl="~/StudentReg.aspx" />
+                    Text="ResetStudent" PostBackUrl="~/student/SRegistration.aspx" />
             </td>
         </tr>
     </table>
