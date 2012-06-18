@@ -136,7 +136,7 @@
         <tr>
             <td align="center">
                 <asp:Button ID="btnConfirm" runat="server" Text="Confirm" 
-                    onclick="btnConfirm_Click" PostBackUrl="~/student/StudentWelcome.aspx" />
+                    onclick="btnConfirm_Click"/>
             </td>
             <td align="center">
                 <asp:Button ID="btnResetStudent" runat="server" onclick="btnReset_Click" 
