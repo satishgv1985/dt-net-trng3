@@ -19,108 +19,44 @@ namespace TrainingCenters.student
         protected void btnStudentSubmitForm_Click(object sender, EventArgs e)
         {
             
-            try
-            {
 
-                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["TCdbConnectionString"].ConnectionString);
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = con;
-                cmd.CommandText = "spStudentInsert";
-                cmd.CommandType = CommandType.StoredProcedure;
-                con.Open();
-
-             //   cmd.Parameters.Add(new SqlParameter("StudentName",tbStudentName.Text));
-             //   cmd.Parameters.Add(new SqlParameter("Age",tbAge.Text));
-
-             //   cmd.Parameters.Add(new SqlParameter("Area", tbArea.Text));
-             //   cmd.Parameters.Add(new SqlParameter("Gender", rbtnGender.SelectedValue));
-             //cmd.Parameters.Add(new SqlParameter("QualificationID", ddlQualification.SelectedValue));
-             //  cmd.Parameters.Add(new SqlParameter("StateID", ddlState.SelectedValue));
-
-             //  cmd.Parameters.Add(new SqlParameter("EmailID", tbEmailId.Text));
-             //   cmd.Parameters.Add(new SqlParameter("MobileNo", tbMobileNumber.Text));
-
-                
-             //   cmd.Parameters.Add(new SqlParameter("username", tbUserName.Text));
-             //   cmd.Parameters.Add(new SqlParameter("password", tbPassword.Text));
+                TextBox tb = (TextBox)ucStudentReg.FindControl("tbStudentName");
+                Session["StudentName"] = tb.Text;
+                //Cache["InstituteName"] = tb.Text;
 
 
+                TextBox tb1 = (TextBox)ucStudentReg.FindControl("tbAge");
+                Session["Age"] = tb1.Text;
 
-                TextBox tbStuName = (TextBox)ucStudentReg.FindControl("tbStudentName");
-                cmd.Parameters.Add(new SqlParameter("StudentName", tbStuName.Text));
+                TextBox tb2 = (TextBox)ucStudentReg.FindControl("tbArea");
+                Session["Area"] = tb2.Text;
 
-                TextBox tbAge1 = (TextBox)ucStudentReg.FindControl("tbAge");
-                cmd.Parameters.Add(new SqlParameter("Age", tbAge1.Text));
+                DropDownList ddl1 = (DropDownList)ucStudentReg.FindControl("ddlCity");
+                Session["City"] = ddl1.SelectedValue;
 
-                RadioButtonList rbtnGen = (RadioButtonList)ucStudentReg.FindControl("rbtnGender");
-                cmd.Parameters.Add(new SqlParameter("Gender",rbtnGen.SelectedValue));
-
-                TextBox tbArea1 = (TextBox)ucStudentReg.FindControl("tbArea");
-                cmd.Parameters.Add(new SqlParameter("Area", tbArea1.Text));
-
-
-              //  TextBox  tbQualification = (TextBox)ucStudentReg.FindControl("tbQualificaton");
-                cmd.Parameters.Add(new SqlParameter("Qualification","mca"));
+                DropDownList ddl2 = (DropDownList)ucStudentReg.FindControl("ddlState");
+                Session["State"] = ddl2.SelectedValue;
 
 
-                DropDownList ddlStateID1 = (DropDownList)ucStudentReg.FindControl("ddlState");
-                cmd.Parameters.Add(new SqlParameter("StateID", ddlStateID1.SelectedValue));
+                TextBox tb4 = (TextBox)ucStudentReg.FindControl("tbEmailId");
+                Session["EmailId"] = tb4.Text;
+                TextBox tb5 = (TextBox)ucStudentReg.FindControl("tbMobileNumber");
+                Session["MobileNumber"] = tb5.Text;
 
-                 DropDownList ddlCityID1 = (DropDownList)ucStudentReg.FindControl("ddlCity");
-                cmd.Parameters.Add(new SqlParameter("CityID", ddlCityID1.SelectedValue));
-
-                TextBox tbEmailID1 = (TextBox)ucStudentReg.FindControl("tbEmailId");
-                cmd.Parameters.Add(new SqlParameter("EmailID", tbEmailID1.Text));
-
-
-                TextBox tbContactNo = (TextBox)ucStudentReg.FindControl("tbMobileNumber");
-                cmd.Parameters.Add(new SqlParameter("MobileNo", tbContactNo.Text));
+                RadioButtonList tb6 = (RadioButtonList)ucStudentReg.FindControl("rbtnGender");
+                Session["Gender"] = tb6.Text;
 
 
-//TextBox tbWebSite1 = (TextBox)ucStudentReg.FindControl("tbWebSite");
-//cmd.Parameters.Add(new SqlParameter("Website", tbWebSite1.Text));
+                TextBox tb3 = (TextBox)ucStudentReg.FindControl("tbQualification");
+                Session["Qualification"] = tb3.Text;
 
 
+                Response.Redirect("ReadStudentReg.aspx?"+tbUserName.Text+""+tbPassword.Text);
+             //   Response.Redirect("ReadQueryStrings.aspx?name=" + txtName.Text + "&rollno=" + txtRollNo.Text);
 
-  //TextBox tbPincodeNumber1 = (TextBox)ucStudentReg.FindControl("tbPincodeNumber");
- // cmd.Parameters.Add(new SqlParameter("Pincode", tbPincodeNumber1.Text));
-
-
-                //TextBox tbPincode = (TextBox)ucInstituteReg.FindControl("tbInstituteName");
-
-                cmd.Parameters.Add(new SqlParameter("username", tbUserName.Text));
-                cmd.Parameters.Add(new SqlParameter("password", tbPassword.Text));
-
-
-
-
-
-
-
-
-                int res = cmd.ExecuteNonQuery();
-                con.Close();
-                lblMessage.Visible = true;
-                //lblMessage.Text = "Successfully inserted.";
-
-                Response.Redirect("StudentWelcome.aspx");
-
-            }
-            catch (Exception ee)
-            {
-                lblMessage.Visible = true;
-                lblMessage.Text = ee.StackTrace; 
-                
-            }
-
-           
-
-          
-
+            //Response.Redirect("ReadInstituteRegistration.aspx? " + tbInstituteName.Text + "" + tbUserName.Text +"" + tbDoorNumber.Text + ""+tbArea.Text+""+tbCity.Text+""+tbEmailId+""+tbMobileNumber);
 
         }
-
-
      
 
         

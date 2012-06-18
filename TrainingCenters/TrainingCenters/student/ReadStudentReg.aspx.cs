@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+using System.Configuration;
+using System.Data;
 
 namespace TrainingCenters.student
 {
@@ -11,37 +14,78 @@ namespace TrainingCenters.student
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                //TextBox tb1 = (TextBox)PreviousPage.FindControl("tbUserNmae");
+                //lblUserName.Text = tb1.Text;
+
+                //TextBox tb2 = (TextBox)PreviousPage.FindControl("tbPassword");
+                //lblPassword.Text = tb2.Text;
+
+                lblStudentName.Text = Convert.ToString(Session["StudentName"]);
 
 
-            lblQualification.Text = Session["City"].ToString();
+                //  lblInstituteName.Text = Convert.ToString(Cache["InstituteName"]);
 
-            TextBox tb1 = (TextBox)PreviousPage.FindControl("tbStudentName");
-            lblStudentName.Text = tb1.Text;
+                lblAge.Text = Convert.ToString(Session["Age"]);
 
-            TextBox tb2 = (TextBox)PreviousPage.FindControl("tbAge");
-            lblAge.Text = tb2.Text;
-
-            RadioButtonList rbtn = (RadioButtonList)PreviousPage.FindControl("rbtnGender");
-            lblGender.Text = rbtn.SelectedValue;
-
-            DropDownList ddl1 = (DropDownList)PreviousPage.FindControl("ddlQualification");
-            lblQualification.Text = ddl1.SelectedItem.Text;
-
-            DropDownList ddl2 = (DropDownList)PreviousPage.FindControl("ddlState");
-            lblState.Text = ddl2.SelectedValue;
-
-            TextBox tb3 = (TextBox)PreviousPage.FindControl("tbEmailId");
-            lblEmailId.Text = tb3.Text;
-
-            DropDownList ddl3 = (DropDownList)PreviousPage.FindControl("ddlCity");
-            lblCity.Text = ddl3.SelectedValue;
+                lblGender.Text = Convert.ToString(Session["Gender"]);
+                lblEmailId.Text = Convert.ToString(Session["EmailId"]);
+                lblMobileNumber.Text = Convert.ToString(Session["MobileNumber"]);
+                lblState.Text = Convert.ToString(Session["State"]);
+                lblCity.Text = Convert.ToString(Session["City"]);
+                lblArea.Text = Convert.ToString(Session["Area"]);
+                lblQualification.Text = Convert.ToString(Session["Qualification"]);
+              
 
 
-            TextBox tb4 = (TextBox)PreviousPage.FindControl("tbMobileNumber");
-            lblMobileNumber.Text = tb4.Text;
 
-            
-        
+
+
+
+
+
+
+
+               // lblUserName.Text = Convert.ToString(Session["UserNmae"]);
+                //lblPassword.Text = Convert.ToString(Session["Password"]);
+
+
+                //TextBox tb7 = (TextBox)PreviousPage.FindControl("tbUserName");
+                //lblUserName = tb7.Text;
+
+
+
+                //TextBox tb8 = (TextBox)PreviousPage.FindControl("tbPassword");
+                //lblPassword = tb8.Text;
+
+                //  CheckBoxList cbNew = (CheckBoxList)Session["CBL_Courses"];
+
+
+
+                //lblQualification.Text = Session["City"].ToString();
+
+              
+                //RadioButtonList rbtn = (RadioButtonList)PreviousPage.FindControl("rbtnGender");
+                //lblGender.Text = rbtn.SelectedValue;
+
+                //DropDownList ddl1 = (DropDownList)PreviousPage.FindControl("ddlQualification");
+                //lblQualification.Text = ddl1.SelectedItem.Text;
+
+                //DropDownList ddl2 = (DropDownList)PreviousPage.FindControl("ddlState");
+                //lblState.Text = ddl2.SelectedValue;
+
+                //TextBox tb3 = (TextBox)PreviousPage.FindControl("tbEmailId");
+                //lblEmailId.Text = tb3.Text;
+
+                //DropDownList ddl3 = (DropDownList)PreviousPage.FindControl("ddlCity");
+                //lblCity.Text = ddl3.SelectedValue;
+
+
+                //TextBox tb4 = (TextBox)PreviousPage.FindControl("tbMobileNumber");
+                //lblMobileNumber.Text = tb4.Text;
+
+            }
 
         }
 
@@ -49,5 +93,116 @@ namespace TrainingCenters.student
         {
 
         }
+
+        protected void btnConfirm_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+               SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["TCdbConnectionString"].ConnectionString);
+               SqlCommand cmd = new SqlCommand();
+                cmd.Connection = con;
+              cmd.CommandText = "spStudentInsert";
+               cmd.CommandType = CommandType.StoredProcedure;
+               con.Open();
+
+              cmd.Parameters.Add(new SqlParameter("StudentName", lblStudentName.Text));
+               cmd.Parameters.Add(new SqlParameter("Age", lblAge.Text));
+                cmd.Parameters.Add(new SqlParameter("Gender", lblGender.Text));
+                cmd.Parameters.Add(new SqlParameter("Area", lblArea.Text));
+               cmd.Parameters.Add(new SqlParameter("Qualification", lblQualification.Text));
+               cmd.Parameters.Add(new SqlParameter("StateID", lblState.Text));
+                cmd.Parameters.Add(new SqlParameter("CityID", lblCity.Text));
+                cmd.Parameters.Add(new SqlParameter("EmailID", lblEmailId.Text));
+                cmd.Parameters.Add(new SqlParameter("MobileNo", lblMobileNumber.Text));
+               cmd.Parameters.Add(new SqlParameter("password", "mahi"));
+
+               cmd.Parameters.Add(new SqlParameter("UserName", "ma"));
+
+
+                int res = cmd.ExecuteNonQuery();
+              con.Close();
+
+               // lblMessage.Visible = true;
+
+
+            //    Response.Redirect("StudentWelcome.aspx");
+
+            }
+            catch (Exception ee)
+            {
+               lblMessage.Visible = true;
+               lblMessage.Text = ee.StackTrace;
+
+            }
+
+
+
+
+
+
+        }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // TextBox tbStuName = (TextBox)ucStudentReg.FindControl("tbStudentName");
+  //cmd.Parameters.Add(new SqlParameter("StudentName", tbStuName.Text));
+
+
+
+    //TextBox tbAge1 = (TextBox)ucStudentReg.FindControl("tbAge");
+   //cmd.Parameters.Add(new SqlParameter("Age", tbAge1.Text));
+
+
+
+   //RadioButtonList rbtnGen = (RadioButtonList)ucStudentReg.FindControl("rbtnGender");
+    // cmd.Parameters.Add(new SqlParameter("Gender", rbtnGen.SelectedValue));
+
+
+
+     //TextBox tbArea1 = (TextBox)ucStudentReg.FindControl("tbArea");
+    //cmd.Parameters.Add(new SqlParameter("Area", tbArea1.Text));
+
+     //  TextBox  tbQualification = (TextBox)ucStudentReg.FindControl("tbQualificaton");
+    //cmd.Parameters.Add(new SqlParameter("Qualification", "mca"));
+
+
+    // DropDownList ddlStateID1 = (DropDownList)ucStudentReg.FindControl("ddlState");
+   // cmd.Parameters.Add(new SqlParameter("StateID", ddlStateID1.SelectedValue));
+   // DropDownList ddlCityID1 = (DropDownList)ucStudentReg.FindControl("ddlCity");
+    //  cmd.Parameters.Add(new SqlParameter("CityID", ddlCityID1.SelectedValue));
+
+
+   //TextBox tbEmailID1 = (TextBox)ucStudentReg.FindControl("tbEmailId");
+   //cmd.Parameters.Add(new SqlParameter("EmailID", tbEmailID1.Text));
+
+
+ // TextBox tbContactNo = (TextBox)ucStudentReg.FindControl("tbMobileNumber");
+//cmd.Parameters.Add(new SqlParameter("MobileNo", tbContactNo.Text));
+
+
+     // cmd.Parameters.Add(new SqlParameter("username", tbUserName.Text));
+      // cmd.Parameters.Add(new SqlParameter("password", tbPassword.Text));
+
+
+
+
+
+
+
+            
