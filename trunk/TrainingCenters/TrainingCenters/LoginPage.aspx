@@ -79,7 +79,7 @@
                         <td>
                             <asp:TextBox ID="tbStudentPassword" runat="server" TextMode="Password"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="rfvStudentPassword" SetFocusOnError="true" runat="server"
-                                ControlToValidate="tbUserPassword" ErrorMessage="Password should not be blank"
+                                ControlToValidate="tbStudentPassword" ErrorMessage="Password should not be blank"
                                 ForeColor="red" ValidationGroup="vgStudent"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
@@ -139,7 +139,7 @@
                                 ControlToValidate="tbUserEmaild" ErrorMessage="give valid email id" ForeColor="Red"
                                 ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGroup="vgInstituteLogin"></asp:RegularExpressionValidator>--%>&nbsp;<asp:RequiredFieldValidator 
                                 ID="rfvUserName" SetFocusOnError="true" runat="server"
-                                ControlToValidate="tbUserPassword" ErrorMessage="UserName Should be Required"
+                                ControlToValidate="tbUserName" ErrorMessage="UserName Should be Required"
                                 ForeColor="red" ValidationGroup="vgInstitute"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
