@@ -95,7 +95,7 @@
             <tr>
                 <td align="center">
                     <asp:Button ID="btnStudentSubmitForm" runat="server" Text="SubmitStudentForm" 
-                        ValidationGroup="vgStudent" onclick="btnStudentSubmitForm_Click"  />
+                        ValidationGroup="vgStudent" onclick="btnStudentSubmitForm_Click"   />
                 </td>
             </tr>
         </table>
