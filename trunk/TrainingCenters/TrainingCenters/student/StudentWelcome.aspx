@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphBody" runat="server">
     Thanks for login.
+    <br />
 Welcome <asp:Label ID="lblName" runat="server"></asp:Label> <br />
-<br />
-<uc:Student ID="ucStudent" runat="server"></uc:Student>
+<br /><uc:Student ID="ucStudent" runat="server"></uc:Student>
 </asp:Content>

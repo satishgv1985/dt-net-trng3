@@ -31,6 +31,15 @@ namespace TrainingCenters {
         protected global::System.Web.UI.WebControls.HyperLink hlStudentRegistration;
         
         /// <summary>
+        /// lblStudentMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblStudentMessage;
+        
+        /// <summary>
         /// lblStudentEmailId control.
         /// </summary>
         /// <remarks>
@@ -40,13 +49,22 @@ namespace TrainingCenters {
         protected global::System.Web.UI.WebControls.Label lblStudentEmailId;
         
         /// <summary>
-        /// tbStudentEmald control.
+        /// tbStudentUserName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbStudentEmald;
+        protected global::System.Web.UI.WebControls.TextBox tbStudentUserName;
+        
+        /// <summary>
+        /// rfvStudentUserName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvStudentUserName;
         
         /// <summary>
         /// lblPassword1 control.
@@ -103,13 +121,13 @@ namespace TrainingCenters {
         protected global::System.Web.UI.WebControls.HyperLink hlStudentPassword;
         
         /// <summary>
-        /// lblMessage control.
+        /// lblInstituteMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMessage;
+        protected global::System.Web.UI.WebControls.Label lblInstituteMessage;
         
         /// <summary>
         /// lblInstituteLogin control.
@@ -148,6 +166,15 @@ namespace TrainingCenters {
         protected global::System.Web.UI.WebControls.TextBox tbUserName;
         
         /// <summary>
+        /// rfvUserName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvUserName;
+        
+        /// <summary>
         /// lblPassword2 control.
         /// </summary>
         /// <remarks>
@@ -166,13 +193,13 @@ namespace TrainingCenters {
         protected global::System.Web.UI.WebControls.TextBox tbUserPassword;
         
         /// <summary>
-        /// rfvUserPassword0 control.
+        /// rfvUserPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvUserPassword0;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvUserPassword;
         
         /// <summary>
         /// btnInstituteSubmit control.
