@@ -2,4 +2,4 @@
 <br />
 <asp:HyperLink ID="hlCourseSearch" runat="server" NavigateUrl="~/Course Search.aspx">Course Search</asp:HyperLink>
 <br />
-<asp:HyperLink ID="hlInstituteSearch" runat="server" NavigateUrl="~/InstituteSearch.aspx">Institute Search</asp:HyperLink>
+<asp:HyperLink ID="hlInstituteSearch" runat="server" NavigateUrl="~/institute/InstituteSearch.aspx">Institute Search</asp:HyperLink>

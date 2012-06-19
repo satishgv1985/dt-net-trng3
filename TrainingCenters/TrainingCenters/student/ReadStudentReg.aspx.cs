@@ -55,8 +55,9 @@ namespace TrainingCenters.student
 
 
                 //TextBox tb7111 = Request.QueryString["name"];
-                lblUserName.Text = Convert.ToString(Request.QueryString["name"]);
+                lblUserName.Text = Convert.ToString(Request.QueryString["UserName"]);
 
+               
 
 
                 //TextBox tb8 = (TextBox)PreviousPage.FindControl("tbPassword");
@@ -119,8 +120,8 @@ namespace TrainingCenters.student
                 cmd.Parameters.Add(new SqlParameter("CityID", lblCity.Text));
                 cmd.Parameters.Add(new SqlParameter("EmailID", lblEmailId.Text));
                 cmd.Parameters.Add(new SqlParameter("MobileNo", lblMobileNumber.Text));
-                cmd.Parameters.Add(new SqlParameter("username", "mahi"));
-                cmd.Parameters.Add(new SqlParameter("password", "saaa"));
+                cmd.Parameters.Add(new SqlParameter("username", lblUserName.Text));
+                cmd.Parameters.Add(new SqlParameter("password",  Convert.ToString(Request.QueryString["Password"])));
 
 
                 int res = cmd.ExecuteNonQuery();
@@ -129,10 +130,10 @@ namespace TrainingCenters.student
                 // lblMessage.Visible = true;
 
 
-                bool ret = MailModule.SendStudentWelcomeMail(lblStudentName.Text, lblEmailId.Text);
-                
+               // bool ret = MailModule.SendStudentWelcomeMail(lblStudentName.Text, lblEmailId.Text);
 
-                Response.Redirect("StudentWelcome.aspx");
+
+                Response.Redirect("~/institute/ThankYou.aspx");
 
             }
             catch (Exception ee)

@@ -11,11 +11,13 @@ namespace TrainingCenters.student
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (Session["StudentEmailID"] != null)
-            //    lblName.Text = Session["StudentEmailID"].ToString();
-            //else
-            //    Response.Redirect("LoginPage.aspx");
+            if (Session["StudentEmailID"] != null)
+             lblName.Text =Session["StudentEmailID"].ToString();
+            else
+                Response.Redirect("LoginPage.aspx");
 
+
+           
         }
     }
 }

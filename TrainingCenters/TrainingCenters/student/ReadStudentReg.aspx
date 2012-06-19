@@ -35,7 +35,7 @@
         <tr>
             <td align="right">
                 <asp:Label ID="lblStudentName0" runat="server" style="font-weight: 700" 
-                    Text="User Name  :"></asp:Label>
+                    Text="StudentName  :"></asp:Label>
             </td>
             <td>
                 <asp:Label ID="lblStudentName" runat="server"></asp:Label>

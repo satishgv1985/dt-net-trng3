@@ -11,11 +11,20 @@
         .style16
         {
             text-decoration: underline;
+            width: 396px;
         }
         
         .style17
         {
             width: 100%;
+        }
+        .style18
+        {
+            width: 229px;
+        }
+        .style19
+        {
+            width: 445px;
         }
     </style>
     <title>LoginPage</title>
@@ -23,16 +32,16 @@
 <asp:Content ID="cpLoginBody" ContentPlaceHolderID="cphBody" runat="server">
     <table class="style15" cellpadding="10" border="5">
         <tr>
-            <td>
+            <td class="style19">
                 <table border="2">
                     <tr>
                         <td align="right" class="style16"  style="padding:10px;">
                             <asp:Label ID="lblStudentLogin" runat="server" Font-Bold="True" Font-Overline="False"
                                 Font-Size="Large" Text="STUDENT LOGIN" Style="text-decoration: underline"></asp:Label>
                         </td>
-                        <td align="right"  style="padding:10px;">
+                        <td align="right"  style="padding:10px;" class="style18">
                             <asp:HyperLink ID="hlStudentRegistration" runat="server" ForeColor="Blue" Style="font-weight: 700"
-                                NavigateUrl="~/StudentReg.aspx">Student Registration</asp:HyperLink>
+                                NavigateUrl="~/student/SRegistration.aspx">Student Registration</asp:HyperLink>
                         </td>
                     </tr>
                 </table>
@@ -41,19 +50,26 @@
                     <tr>
                         <td>
                             &nbsp;
+                        <asp:Label ID="lblStudentMessage" runat="server" 
+                                Text="Invalid UserName or Password." ForeColor="Red" Font-Bold="true" 
+                                Visible="false"></asp:Label>
+                
                         </td>
                     </tr>
                 </table>
                 <table class="style15">
                     <tr>
                         <td>
-                            <asp:Label ID="lblStudentEmailId" runat="server" Text="Student Email Id  :"></asp:Label>
+                            <asp:Label ID="lblStudentEmailId" runat="server" Text="StudentUserName  :"></asp:Label>
                         </td>
                         <td>
-                            <asp:TextBox ID="tbStudentEmald" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="tbStudentUserName" runat="server"></asp:TextBox>
                             <%--<asp:RegularExpressionValidator ID="revStudentEmailId" Display="Dynamic" runat="server"
                                 ControlToValidate="tbStudentEmald" ErrorMessage="give valid email id" ForeColor="Red"
-                                ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGroup="vgStudentLogin"></asp:RegularExpressionValidator>--%>
+                                ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGroup="vgStudentLogin"></asp:RegularExpressionValidator>--%>&nbsp;<asp:RequiredFieldValidator 
+                                ID="rfvStudentUserName" SetFocusOnError="true" runat="server"
+                                ControlToValidate="tbStudentUserName" ErrorMessage="UserName should be required"
+                                ForeColor="red" ValidationGroup="vgStudent"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
                     <tr>
@@ -63,8 +79,8 @@
                         <td>
                             <asp:TextBox ID="tbStudentPassword" runat="server" TextMode="Password"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="rfvStudentPassword" SetFocusOnError="true" runat="server"
-                                ControlToValidate="tbStudentPassword" ErrorMessage="Password should not be blank"
-                                ForeColor="red" ValidationGroup="vgInstitute"></asp:RequiredFieldValidator>
+                                ControlToValidate="tbUserPassword" ErrorMessage="Password should not be blank"
+                                ForeColor="red" ValidationGroup="vgStudent"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
                 </table>
@@ -73,11 +89,13 @@
                     <tr>
                         <td>
                             <asp:Button ID="btnStudentSubmit" runat="server" Style="margin-left: 65px" Text="Student Submit"
-                                Width="156px" OnClick="btnStudentSubmit_Click" ValidationGroup="vgStudentLogin" />
+                                Width="156px" OnClick="btnStudentSubmit_Click" 
+                                ValidationGroup="vgStudent" />
                         </td>
                         <td>
                             <asp:Button ID="btnStudentReset" runat="server" Style="margin-left: 107px" Text="StudentReset"
-                                Width="124px" OnClick="btnStudentReset_Click" ValidationGroup="InstituteLogin" />
+                                Width="124px" OnClick="btnStudentReset_Click" 
+                                ValidationGroup="vgStudent" />
                         </td>
                     </tr>
                 </table>
@@ -95,7 +113,7 @@
 
                 <table class="style15">
                 <tr><td colspan="2">
-                <asp:Label ID="lblMessage" runat="server" Text="Invalid email id or password." ForeColor="Red" Font-Bold="true" Visible="false"></asp:Label>
+                <asp:Label ID="lblInstituteMessage" runat="server" Text="Invalid username or password." ForeColor="Red" Font-Bold="true" Visible="false"></asp:Label>
                 
                 </td></tr>
                     <tr>
@@ -105,7 +123,7 @@
                         </td>
                         <td align="right">
                             <asp:HyperLink ID="hlInstituteRegistration" runat="server" ForeColor="Blue" Style="font-weight: 700"
-                                NavigateUrl="~/institute.aspx">Institute Registration</asp:HyperLink>
+                                NavigateUrl="~/institute/IRegistration.aspx">Institute Registration</asp:HyperLink>
                         </td>
                     </tr>
                 </table>
@@ -119,7 +137,10 @@
                             <asp:TextBox ID="tbUserName" runat="server"></asp:TextBox>
                             <%--<asp:RegularExpressionValidator ID="revUserEmailId" Display="Dynamic" runat="server"
                                 ControlToValidate="tbUserEmaild" ErrorMessage="give valid email id" ForeColor="Red"
-                                ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGroup="vgInstituteLogin"></asp:RegularExpressionValidator>--%>
+                                ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGroup="vgInstituteLogin"></asp:RegularExpressionValidator>--%>&nbsp;<asp:RequiredFieldValidator 
+                                ID="rfvUserName" SetFocusOnError="true" runat="server"
+                                ControlToValidate="tbUserPassword" ErrorMessage="UserName Should be Required"
+                                ForeColor="red" ValidationGroup="vgInstitute"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
                     <tr>
@@ -128,7 +149,7 @@
                         </td>
                         <td>
                             <asp:TextBox ID="tbUserPassword" runat="server" TextMode="Password"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="rfvUserPassword0" SetFocusOnError="true" runat="server"
+                            <asp:RequiredFieldValidator ID="rfvUserPassword" SetFocusOnError="true" runat="server"
                                 ControlToValidate="tbUserPassword" ErrorMessage="Password should not be blank"
                                 ForeColor="red" ValidationGroup="vgInstitute"></asp:RequiredFieldValidator>
                         </td>
@@ -139,11 +160,13 @@
                     <tr>
                         <td>
                             <asp:Button ID="btnInstituteSubmit" runat="server" Style="margin-left: 61px" Text="InstituteSubmit"
-                                Width="111px" OnClick="btnInstituteSubmit_Click" />
+                                Width="111px" OnClick="btnInstituteSubmit_Click" 
+                                ValidationGroup="vgInstitute" />
                         </td>
                         <td>
                             <asp:Button ID="btnInstituteReset" runat="server" Style="margin-left: 61px" Text="InstituteReset"
-                                Width="111px" OnClick="btnInstituteReset_Click" />
+                                Width="111px" OnClick="btnInstituteReset_Click" 
+                                ValidationGroup="vgInstitute" />
                         </td>
                     </tr>
                 </table>

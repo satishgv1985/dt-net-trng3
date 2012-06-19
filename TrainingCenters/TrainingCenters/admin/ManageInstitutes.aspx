@@ -76,7 +76,7 @@
             <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
         </asp:GridView>
         <asp:SqlDataSource ID="sdsInstitutes" runat="server" ConnectionString="<%$ ConnectionStrings:TCdbConnectionString %>"
-            SelectCommand="spStudentInsert"
+            SelectCommand="spValidateUser"
             UpdateCommand="UPDATE Institute SET InstituteName = @InstituteName, YearOfEstablishment = @YearOfEstablishment, Area = @Area, EmailID = @EmailID, ContactNo = @ContactNo WHERE (InstituteID = @instituteid)"
             DeleteCommand="DELETE FROM Institute WHERE (InstituteID = @instituteid)" 
             SelectCommandType="StoredProcedure">
@@ -84,17 +84,9 @@
                 <asp:Parameter Name="instituteid" />
             </DeleteParameters>
             <SelectParameters>
-                <asp:Parameter Name="StudentName" Type="String" />
                 <asp:Parameter Name="username" Type="String" />
                 <asp:Parameter Name="password" Type="String" />
-                <asp:Parameter Name="Age" Type="String" />
-                <asp:Parameter Name="Gender" Type="String" />
-                <asp:Parameter Name="Qualification" Type="String" />
-                <asp:Parameter Name="CityID" Type="Int32" />
-                <asp:Parameter Name="StateID" Type="Int32" />
-                <asp:Parameter Name="Area" Type="String" />
-                <asp:Parameter Name="EmailID" Type="String" />
-                <asp:Parameter Name="MobileNO" Type="String" />
+                <asp:Parameter Name="isInst" Type="Boolean" />
             </SelectParameters>
             <UpdateParameters>
                 <asp:Parameter Name="InstituteName" />
