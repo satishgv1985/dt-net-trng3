@@ -7,6 +7,9 @@ using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Data;
+using System.Net;
+using System.Net.Mail;
+using TrainingCenters.Utilities;
 
 namespace TrainingCenters.student
 {
@@ -36,7 +39,6 @@ namespace TrainingCenters.student
                 lblCity.Text = Convert.ToString(Session["City"]);
                 lblArea.Text = Convert.ToString(Session["Area"]);
                 lblQualification.Text = Convert.ToString(Session["Qualification"]);
-              
 
 
 
@@ -47,12 +49,13 @@ namespace TrainingCenters.student
 
 
 
-               // lblUserName.Text = Convert.ToString(Session["UserNmae"]);
+
+                // lblUserName.Text = Convert.ToString(Session["UserNmae"]);
                 //lblPassword.Text = Convert.ToString(Session["Password"]);
 
 
-                //TextBox tb7 = (TextBox)PreviousPage.FindControl("tbUserName");
-                //lblUserName = tb7.Text;
+                //TextBox tb7111 = Request.QueryString["name"];
+                lblUserName.Text = Convert.ToString(Request.QueryString["name"]);
 
 
 
@@ -65,7 +68,7 @@ namespace TrainingCenters.student
 
                 //lblQualification.Text = Session["City"].ToString();
 
-              
+
                 //RadioButtonList rbtn = (RadioButtonList)PreviousPage.FindControl("rbtnGender");
                 //lblGender.Text = rbtn.SelectedValue;
 
@@ -99,39 +102,43 @@ namespace TrainingCenters.student
             try
             {
 
-               SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["TCdbConnectionString"].ConnectionString);
-               SqlCommand cmd = new SqlCommand();
+                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["TCdbConnectionString"].ConnectionString);
+                SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
-              cmd.CommandText = "spStudentInsert";
-               cmd.CommandType = CommandType.StoredProcedure;
-               con.Open();
+                cmd.CommandText = "spStudentInsert";
+                cmd.CommandType = CommandType.StoredProcedure;
+                con.Open();
 
-              cmd.Parameters.Add(new SqlParameter("StudentName", lblStudentName.Text));
-               cmd.Parameters.Add(new SqlParameter("Age", lblAge.Text));
+                
+                cmd.Parameters.Add(new SqlParameter("StudentName", lblStudentName.Text));
+                cmd.Parameters.Add(new SqlParameter("Age", lblAge.Text));
                 cmd.Parameters.Add(new SqlParameter("Gender", lblGender.Text));
                 cmd.Parameters.Add(new SqlParameter("Area", lblArea.Text));
-               cmd.Parameters.Add(new SqlParameter("Qualification", lblQualification.Text));
-               cmd.Parameters.Add(new SqlParameter("StateID", lblState.Text));
+                cmd.Parameters.Add(new SqlParameter("Qualification", lblQualification.Text));
+                cmd.Parameters.Add(new SqlParameter("StateID", lblState.Text));
                 cmd.Parameters.Add(new SqlParameter("CityID", lblCity.Text));
                 cmd.Parameters.Add(new SqlParameter("EmailID", lblEmailId.Text));
                 cmd.Parameters.Add(new SqlParameter("MobileNo", lblMobileNumber.Text));
-                cmd.Parameters.Add(new SqlParameter("username","mahi"));
-                cmd.Parameters.Add(new SqlParameter("password","saaa"));
+                cmd.Parameters.Add(new SqlParameter("username", "mahi"));
+                cmd.Parameters.Add(new SqlParameter("password", "saaa"));
 
 
                 int res = cmd.ExecuteNonQuery();
-              con.Close();
+                con.Close();
 
-               // lblMessage.Visible = true;
+                // lblMessage.Visible = true;
 
 
-            Response.Redirect("StudentWelcome.aspx");
+                bool ret = MailModule.SendStudentWelcomeMail(lblStudentName.Text, lblEmailId.Text);
+                
+
+                Response.Redirect("StudentWelcome.aspx");
 
             }
             catch (Exception ee)
             {
-               lblMessage.Visible = true;
-               lblMessage.Text = ee.StackTrace;
+                lblMessage.Visible = true;
+                lblMessage.Text = ee.StackTrace;
 
             }
 
@@ -159,44 +166,44 @@ namespace TrainingCenters.student
 
 
 
-  // TextBox tbStuName = (TextBox)ucStudentReg.FindControl("tbStudentName");
-  //cmd.Parameters.Add(new SqlParameter("StudentName", tbStuName.Text));
+// TextBox tbStuName = (TextBox)ucStudentReg.FindControl("tbStudentName");
+//cmd.Parameters.Add(new SqlParameter("StudentName", tbStuName.Text));
 
 
 
-    //TextBox tbAge1 = (TextBox)ucStudentReg.FindControl("tbAge");
-   //cmd.Parameters.Add(new SqlParameter("Age", tbAge1.Text));
+//TextBox tbAge1 = (TextBox)ucStudentReg.FindControl("tbAge");
+//cmd.Parameters.Add(new SqlParameter("Age", tbAge1.Text));
 
 
 
-   //RadioButtonList rbtnGen = (RadioButtonList)ucStudentReg.FindControl("rbtnGender");
-    // cmd.Parameters.Add(new SqlParameter("Gender", rbtnGen.SelectedValue));
+//RadioButtonList rbtnGen = (RadioButtonList)ucStudentReg.FindControl("rbtnGender");
+// cmd.Parameters.Add(new SqlParameter("Gender", rbtnGen.SelectedValue));
 
 
 
-     //TextBox tbArea1 = (TextBox)ucStudentReg.FindControl("tbArea");
-    //cmd.Parameters.Add(new SqlParameter("Area", tbArea1.Text));
+//TextBox tbArea1 = (TextBox)ucStudentReg.FindControl("tbArea");
+//cmd.Parameters.Add(new SqlParameter("Area", tbArea1.Text));
 
-     //  TextBox  tbQualification = (TextBox)ucStudentReg.FindControl("tbQualificaton");
-    //cmd.Parameters.Add(new SqlParameter("Qualification", "mca"));
-
-
-    // DropDownList ddlStateID1 = (DropDownList)ucStudentReg.FindControl("ddlState");
-   // cmd.Parameters.Add(new SqlParameter("StateID", ddlStateID1.SelectedValue));
-   // DropDownList ddlCityID1 = (DropDownList)ucStudentReg.FindControl("ddlCity");
-    //  cmd.Parameters.Add(new SqlParameter("CityID", ddlCityID1.SelectedValue));
+//  TextBox  tbQualification = (TextBox)ucStudentReg.FindControl("tbQualificaton");
+//cmd.Parameters.Add(new SqlParameter("Qualification", "mca"));
 
 
-   //TextBox tbEmailID1 = (TextBox)ucStudentReg.FindControl("tbEmailId");
-   //cmd.Parameters.Add(new SqlParameter("EmailID", tbEmailID1.Text));
+// DropDownList ddlStateID1 = (DropDownList)ucStudentReg.FindControl("ddlState");
+// cmd.Parameters.Add(new SqlParameter("StateID", ddlStateID1.SelectedValue));
+// DropDownList ddlCityID1 = (DropDownList)ucStudentReg.FindControl("ddlCity");
+//  cmd.Parameters.Add(new SqlParameter("CityID", ddlCityID1.SelectedValue));
 
 
- // TextBox tbContactNo = (TextBox)ucStudentReg.FindControl("tbMobileNumber");
+//TextBox tbEmailID1 = (TextBox)ucStudentReg.FindControl("tbEmailId");
+//cmd.Parameters.Add(new SqlParameter("EmailID", tbEmailID1.Text));
+
+
+// TextBox tbContactNo = (TextBox)ucStudentReg.FindControl("tbMobileNumber");
 //cmd.Parameters.Add(new SqlParameter("MobileNo", tbContactNo.Text));
 
 
-     // cmd.Parameters.Add(new SqlParameter("username", tbUserName.Text));
-      // cmd.Parameters.Add(new SqlParameter("password", tbPassword.Text));
+// cmd.Parameters.Add(new SqlParameter("username", tbUserName.Text));
+// cmd.Parameters.Add(new SqlParameter("password", tbPassword.Text));
 
 
 
@@ -204,4 +211,3 @@ namespace TrainingCenters.student
 
 
 
-            

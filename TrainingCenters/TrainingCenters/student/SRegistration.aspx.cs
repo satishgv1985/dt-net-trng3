@@ -51,7 +51,7 @@ namespace TrainingCenters.student
                 Session["Qualification"] = tb3.Text;
 
 
-                Response.Redirect("ReadStudentReg.aspx?"+tbUserName.Text+""+tbPassword.Text);
+                Response.Redirect("ReadStudentReg.aspx?name="+tbUserName.Text+"&pass"+tbPassword.Text);
              //   Response.Redirect("ReadQueryStrings.aspx?name=" + txtName.Text + "&rollno=" + txtRollNo.Text);
 
             //Response.Redirect("ReadInstituteRegistration.aspx? " + tbInstituteName.Text + "" + tbUserName.Text +"" + tbDoorNumber.Text + ""+tbArea.Text+""+tbCity.Text+""+tbEmailId+""+tbMobileNumber);

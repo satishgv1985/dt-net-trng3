@@ -465,6 +465,7 @@
     <Compile Include="training\UserDataUC.ascx.designer.cs">
       <DependentUpon>UserDataUC.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Utilities\MailModule.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="DataSet1.xsc">
