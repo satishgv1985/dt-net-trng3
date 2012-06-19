@@ -13,11 +13,7 @@ namespace TrainingCenters.institute
 {
     public partial class IRegistration : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-           
-        }
-
+       
         protected void btninstsubmit_Click(object sender, EventArgs e)
         {
 
@@ -141,9 +137,14 @@ namespace TrainingCenters.institute
 
         }
 
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
 
      
-
+        
         
         
         
