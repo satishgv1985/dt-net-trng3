@@ -56,6 +56,7 @@
   <ItemGroup>
     <Content Include="AboutUs.aspx" />
     <Content Include="AvailableInstitutes.aspx" />
+    <Content Include="HomeTrainingCenter.aspx" />
     <Content Include="institute\ThankYou.aspx" />
     <Content Include="student\StudentUserControl.ascx" />
     <Content Include="training\anupam\gvDemo.aspx" />

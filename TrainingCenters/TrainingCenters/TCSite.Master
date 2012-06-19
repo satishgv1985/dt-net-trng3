@@ -64,11 +64,11 @@
                 </td>
                 <td align="right" class="style9">
                     <asp:HyperLink ID="hlStudentRegistration" runat="server" Font-Bold="True" Font-Underline="True"
-                        ForeColor="Blue" NavigateUrl="~/StudentReg.aspx">StudentRegistration</asp:HyperLink>
+                        ForeColor="Blue" NavigateUrl="~/student/SRegistration.aspx">StudentRegistration</asp:HyperLink>
                 </td>
                 <td align="right">
                     <asp:HyperLink ID="hlInstituteRegistration" runat="server" Font-Bold="True" Font-Underline="True"
-                        ForeColor="Blue" NavigateUrl="~/institute.aspx">InstituteRegistration</asp:HyperLink>
+                        ForeColor="Blue" NavigateUrl="~/institute/IRegistration.aspx">InstituteRegistration</asp:HyperLink>
                 </td>
                 
                 <td align="right">
