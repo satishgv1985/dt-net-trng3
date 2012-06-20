@@ -129,6 +129,7 @@
     </div>
     <p align="center">
         <asp:Button ID="btnSelectAnoyherCourse" runat="server" 
-            Text="Select Another Course" ValidationGroup="vgCourseDetails" />
+            Text="Select Another Course" ValidationGroup="vgCourseDetails" 
+            onclick="btnSelectAnoyherCourse_Click" />
     </p>
    </asp:Content>

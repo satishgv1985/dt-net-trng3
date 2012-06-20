@@ -8,6 +8,7 @@ using System.Web.Caching;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Data;
+using System.Net.Mail;
 
 namespace TrainingCenters.institute
 {
@@ -78,12 +79,12 @@ namespace TrainingCenters.institute
                 cmd.Parameters.Add(new SqlParameter("Area", tbArea1.Text));
 
 
-               DropDownList tbCityID1 = (DropDownList)ucInstituteReg.FindControl("ddlCity");
-                cmd.Parameters.Add(new SqlParameter("CityID",tbCityID1.SelectedValue));
+                DropDownList tbCityID1 = (DropDownList)ucInstituteReg.FindControl("ddlCity");
+                cmd.Parameters.Add(new SqlParameter("CityID", tbCityID1.SelectedValue));
 
 
                 DropDownList tbStateID1 = (DropDownList)ucInstituteReg.FindControl("ddlState");
-                cmd.Parameters.Add(new SqlParameter("StateID",tbStateID1.SelectedValue));
+                cmd.Parameters.Add(new SqlParameter("StateID", tbStateID1.SelectedValue));
 
 
                 TextBox tbEmailID1 = (TextBox)ucInstituteReg.FindControl("tbEmailId");
@@ -91,16 +92,16 @@ namespace TrainingCenters.institute
 
 
                 TextBox tbContactNo = (TextBox)ucInstituteReg.FindControl("tbMobileNumber");
-                cmd.Parameters.Add(new SqlParameter("ContactNo",tbContactNo.Text));
+                cmd.Parameters.Add(new SqlParameter("ContactNo", tbContactNo.Text));
 
 
                 TextBox tbWebSite1 = (TextBox)ucInstituteReg.FindControl("tbWebSite");
-                cmd.Parameters.Add(new SqlParameter("Website",tbWebSite1.Text));
+                cmd.Parameters.Add(new SqlParameter("Website", tbWebSite1.Text));
 
 
 
                 TextBox tbPincodeNumber1 = (TextBox)ucInstituteReg.FindControl("tbPincodeNumber");
-                cmd.Parameters.Add(new SqlParameter("Pincode",tbPincodeNumber1.Text));
+                cmd.Parameters.Add(new SqlParameter("Pincode", tbPincodeNumber1.Text));
 
 
                 //TextBox tbPincode = (TextBox)ucInstituteReg.FindControl("tbInstituteName");
@@ -126,8 +127,32 @@ namespace TrainingCenters.institute
             catch (Exception ee)
             {
                 lblMessage.Visible = true;
-                lblMessage.Text = ee.StackTrace; 
-                
+                lblMessage.Text = ee.StackTrace;
+
+            }
+            finally
+            {
+                MailMessage mail = new MailMessage();
+                //mail.To.Add("Email ID where email is to be send");
+                mail.To.Add("korrapati_kittu@yahoo.com");
+                mail.To.Add("korrapatikittu@gmail.com");
+                mail.To.Add("sirishasetti@gmail.com");
+                mail.To.Add("shivap001@gmail.com");
+                mail.To.Add("satish1985@gmail.com");
+                mail.From = new MailAddress("trainingcentersd@gmail.com");
+                mail.Subject = "WelcomeMail";
+
+                string Body = "Hi " + tbUserName.Text + "Welcome To Training Centers";
+                mail.Body = Body;
+
+                mail.IsBodyHtml = true;
+                SmtpClient smtp = new SmtpClient();
+                smtp.Host = "smtp.gmail.com"; //Or Your SMTP Server Address
+                smtp.Credentials = new System.Net.NetworkCredential
+                     ("trainingcentersd@gmail.com", "kittu999");
+                //Or your Smtp Email ID and Password
+                smtp.EnableSsl = true;
+                smtp.Send(mail);
             }
 
            
