@@ -57,6 +57,8 @@ namespace TrainingCenters.student
             //Response.Redirect("ReadInstituteRegistration.aspx? " + tbInstituteName.Text + "" + tbUserName.Text +"" + tbDoorNumber.Text + ""+tbArea.Text+""+tbCity.Text+""+tbEmailId+""+tbMobileNumber);
 
         }
+       
+
      
 
         
@@ -65,6 +67,7 @@ namespace TrainingCenters.student
     }
 
         }
+
 
        
     
