@@ -55,6 +55,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AboutUs.aspx" />
+    <Content Include="admin\AddUpdateCourse.aspx" />
+    <Content Include="admin\CourseConfirmation.aspx" />
+    <Content Include="admin\RegistrationManagement.aspx" />
     <Content Include="AvailableInstitutes.aspx" />
     <Content Include="HomeTrainingCenter.aspx" />
     <Content Include="institute\ThankYou.aspx" />
@@ -123,6 +126,27 @@
     </Compile>
     <Compile Include="AboutUs.aspx.designer.cs">
       <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\AddUpdateCourse.aspx.cs">
+      <DependentUpon>AddUpdateCourse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\AddUpdateCourse.aspx.designer.cs">
+      <DependentUpon>AddUpdateCourse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\CourseConfirmation.aspx.cs">
+      <DependentUpon>CourseConfirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\CourseConfirmation.aspx.designer.cs">
+      <DependentUpon>CourseConfirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\RegistrationManagement.aspx.cs">
+      <DependentUpon>RegistrationManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\RegistrationManagement.aspx.designer.cs">
+      <DependentUpon>RegistrationManagement.aspx</DependentUpon>
     </Compile>
     <Compile Include="AvailableInstitutes.aspx.cs">
       <DependentUpon>AvailableInstitutes.aspx</DependentUpon>
