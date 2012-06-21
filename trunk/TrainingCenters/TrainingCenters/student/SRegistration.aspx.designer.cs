@@ -40,6 +40,15 @@ namespace TrainingCenters.student {
         protected global::System.Web.UI.WebControls.Label lblUserName;
         
         /// <summary>
+        /// upUserName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel upUserName;
+        
+        /// <summary>
         /// tbUserName control.
         /// </summary>
         /// <remarks>
@@ -56,6 +65,15 @@ namespace TrainingCenters.student {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvUserName;
+        
+        /// <summary>
+        /// lblUserNameMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblUserNameMessage;
         
         /// <summary>
         /// lblPassword control.

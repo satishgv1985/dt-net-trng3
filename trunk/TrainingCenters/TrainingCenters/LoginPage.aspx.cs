@@ -114,16 +114,16 @@ namespace TrainingCenters
             cmd.Parameters.Add(new SqlParameter("isInst", false));
 
             con.Open();
-            SqlDataReader sdrI = cmd.ExecuteReader();
+            SqlDataReader sdrS = cmd.ExecuteReader();
 
             string emailID = "";
             string iName = "";
 
 
-            while (sdrI.Read())
+            while (sdrS.Read())
             {
-                emailID = Convert.ToString(sdrI["EmailID"]);
-                iName = Convert.ToString(sdrI["StudentName"]);
+                emailID = Convert.ToString(sdrS["EmailID"]);
+                iName = Convert.ToString(sdrS["StudentName"]);
             }
             con.Close();
 

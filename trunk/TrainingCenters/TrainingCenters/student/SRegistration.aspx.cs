@@ -18,6 +18,13 @@ namespace TrainingCenters.student
 
         protected void btnStudentSubmitForm_Click(object sender, EventArgs e)
         {
+            if (lblUserNameMessage.Text.Contains("taken"))
+            {
+                Page.ClientScript.RegisterClientScriptBlock(typeof(string), "startscript", "alert('hi')");
+                return;
+
+            }
+           
             
 
                 TextBox tb = (TextBox)ucStudentReg.FindControl("tbStudentName");
@@ -55,6 +62,60 @@ namespace TrainingCenters.student
              //   Response.Redirect("ReadQueryStrings.aspx?name=" + txtName.Text + "&rollno=" + txtRollNo.Text);
 
             //Response.Redirect("ReadInstituteRegistration.aspx? " + tbInstituteName.Text + "" + tbUserName.Text +"" + tbDoorNumber.Text + ""+tbArea.Text+""+tbCity.Text+""+tbEmailId+""+tbMobileNumber);
+
+        }
+
+        protected void tbUserName_TextChanged(object sender, EventArgs e)
+        {
+            
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["TCdbConnectionString"].ConnectionString);
+            SqlCommand cmd=new SqlCommand();
+            cmd.Connection = con;
+            cmd.CommandText = "spGetStudentUserName";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("UserName",tbUserName.Text));
+            cmd.Parameters.Add(new SqlParameter("IsInstitute",false));
+
+            con.Open();
+            SqlDataReader sdrS = cmd.ExecuteReader();
+
+        
+            string uName = "";
+
+
+            while (sdrS.Read())
+            {
+               
+                uName = Convert.ToString(sdrS["UserName"]);
+            }
+            con.Close();
+
+            if (uName.Length>0)
+            {
+               
+                lblUserNameMessage.Visible = true;
+             
+               lblUserNameMessage.Text = "!Already taken";
+
+               // FormsAuthentication.SetAuthCookie(iName, false);
+              //  Response.Redirect("~/Student/StudentWelcome.aspx");
+            }
+            else
+            {
+                lblUserNameMessage.Visible = true;
+
+                lblUserNameMessage.Text = "!Available";
+            }
+
+
+
+
+
+
+
+
+
+
 
         }
        
