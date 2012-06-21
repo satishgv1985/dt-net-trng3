@@ -1,6 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/TCSite.Master" CodeBehind="IRegistration.aspx.cs"
-    Inherits="TrainingCenters.institute.IRegistration" MaintainScrollPositionOnPostback="true" %>
-
+    Inherits="TrainingCenters.institute.IRegistration"  MaintainScrollPositionOnPostback="true" %>
 <%@ Register Src="~/institute/InstituteUserControl.ascx" TagName="instituteReg" TagPrefix="uc" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphHeader" runat="server">
     <title>institute Registration Form</title>
@@ -50,20 +49,26 @@
             Institute Registration Form</h3>
     </center>
     <asp:Label ID="lblMessage" runat="server" Visible="false"></asp:Label>
-    
     <uc:instituteReg ID="ucInstituteReg" runat="server"></uc:instituteReg>
     <div>
-    
         <table class="style1">
             <tr>
                 <td align="right" class="style14">
                     <asp:Label ID="lblUserName" runat="server" Text="Enter User Name  :" Font-Bold="True"></asp:Label>
                 </td>
                 <td>
-                    <asp:TextBox ID="tbUserName" runat="server"></asp:TextBox>
-                    &nbsp;<asp:RequiredFieldValidator ID="rfvUserName" Display="Dynamic" runat="server"
-                        ControlToValidate="tbUserName" ErrorMessage="Name should be required" SetFocusOnError="true"
-                        ForeColor="red" ValidationGroup="vgInstitute"></asp:RequiredFieldValidator>
+                    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                        <ContentTemplate>
+                            <asp:TextBox ID="tbUserName" runat="server" OnTextChanged="tbUserName_TextChanged"
+                                AutoPostBack="true">
+                            </asp:TextBox>
+                            &nbsp;<asp:RequiredFieldValidator ID="rfvUserName" Display="Dynamic" runat="server"
+                                ControlToValidate="tbUserName" ErrorMessage="Name should be required" SetFocusOnError="true"
+                                ForeColor="red" ValidationGroup="vgInstitute">
+                            </asp:RequiredFieldValidator>
+                            <asp:Label ID="lblUserNameMessage" runat="server" Visible="false"></asp:Label>
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
                 </td>
             </tr>
             <tr>
@@ -79,7 +84,7 @@
             </tr>
             <tr>
                 <td class="style14" align="right">
-                    <strong>ConformPassword : </strong>
+                    <strong>Confirm Password : </strong>
                 </td>
                 <td align="left">
                     <asp:TextBox ID="tbConfirmPassword" TextMode="Password" runat="server"></asp:TextBox>
