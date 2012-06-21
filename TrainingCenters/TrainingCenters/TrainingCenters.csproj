@@ -60,8 +60,6 @@
     <Content Include="admin\RegistrationManagement.aspx" />
     <Content Include="AvailableInstitutes.aspx" />
     <Content Include="HomeTrainingCenter.aspx" />
-    <Content Include="institute\GetInstituteByCourseNmae.aspx" />
-    <Content Include="institute\GetInstitutesByCourseName.aspx" />
     <Content Include="institute\ThankYou.aspx" />
     <Content Include="student\StudentUserControl.ascx" />
     <Content Include="training\AjaxFirst.aspx" />
@@ -176,20 +174,6 @@
     </Compile>
     <Compile Include="HomeTrainingCenter.aspx.designer.cs">
       <DependentUpon>HomeTrainingCenter.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="institute\GetInstituteByCourseNmae.aspx.cs">
-      <DependentUpon>GetInstituteByCourseNmae.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="institute\GetInstituteByCourseNmae.aspx.designer.cs">
-      <DependentUpon>GetInstituteByCourseNmae.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="institute\GetInstitutesByCourseName.aspx.cs">
-      <DependentUpon>GetInstitutesByCourseName.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="institute\GetInstitutesByCourseName.aspx.designer.cs">
-      <DependentUpon>GetInstitutesByCourseName.aspx</DependentUpon>
     </Compile>
     <Compile Include="institute\ThankYou.aspx.cs">
       <DependentUpon>ThankYou.aspx</DependentUpon>
