@@ -66,7 +66,9 @@
     <Content Include="student\StudentUserControl.ascx" />
     <Content Include="training\AjaxFirst.aspx" />
     <Content Include="training\AjaxTimer.aspx" />
+    <Content Include="training\anupam\AjaxUpdateProgress.aspx" />
     <Content Include="training\anupam\gvDemo.aspx" />
+    <Content Include="training\anupam\loading.gif" />
     <Content Include="training\images\Image1.jpg" />
     <Content Include="training\images\Image2.jpg" />
     <Content Include="training\images\Image3.jpg" />
@@ -216,6 +218,13 @@
     </Compile>
     <Compile Include="training\AjaxTimer.aspx.designer.cs">
       <DependentUpon>AjaxTimer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="training\anupam\AjaxUpdateProgress.aspx.cs">
+      <DependentUpon>AjaxUpdateProgress.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="training\anupam\AjaxUpdateProgress.aspx.designer.cs">
+      <DependentUpon>AjaxUpdateProgress.aspx</DependentUpon>
     </Compile>
     <Compile Include="training\anupam\gvDemo.aspx.cs">
       <DependentUpon>gvDemo.aspx</DependentUpon>
