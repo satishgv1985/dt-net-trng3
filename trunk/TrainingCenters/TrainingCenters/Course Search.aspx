@@ -5,10 +5,6 @@
         {
             width: 100%;
         }
-        .style12
-        {
-            width: 371px;
-        }
         .style13
         {
             text-decoration: underline;
@@ -16,7 +12,8 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphBody" runat="server">
-    <table><tr><td style="width:100%"><center><h3 style="width: 963px" class="style13">COURSE SEARCH</h3></center></td></tr></table>
+    <table><tr><td style="width:100%"><center><h3 style="width: 963px" class="style13">
+        SEARCH FOR COURSES</h3></center></td></tr></table>
 <br />
     <table class="style11">
         <tr>
@@ -25,14 +22,17 @@
                     Text="Enter Institute Name :"></asp:Label>
             </td>
             <td>
-                <asp:TextBox ID="tbCourseName" runat="server" Width="191px"></asp:TextBox>
+                <asp:TextBox ID="tbInstituteName" runat="server" Width="191px"></asp:TextBox>
+            &nbsp;&nbsp;&nbsp;
+                <asp:Button ID="btnSearch" runat="server" Text="Search" 
+                    Width="178px" onclick="btnSearch_Click1"  />
             </td>
         </tr>
     </table>
     <br />
     <br />
     <asp:GridView ID="gvInstitutes" runat="server" AutoGenerateColumns="False" 
-        DataKeyNames="InstituteID">
+        DataKeyNames="InstituteID" Width="862px">
         <Columns>
             <asp:BoundField DataField="InstituteID" HeaderText="InstituteID" 
                 InsertVisible="False" ReadOnly="True" SortExpression="InstituteID" />
@@ -50,20 +50,9 @@
 	left outer join Course c on c.CourseID=co.CourseID
 	where InstituteName like @instituteName+'%'">
         <SelectParameters>
-            <asp:ControlParameter ControlID="tbCourseName" Name="instituteName" 
+            <asp:ControlParameter ControlID="tbInstituteName" Name="instituteName" 
                 PropertyName="Text" />
         </SelectParameters>
     </asp:SqlDataSource>
-    <table class="style11">
-        <tr>
-            <td align="right" class="style12">
-                <asp:Button ID="btnCourseSearch" runat="server" Text="Course Search" 
-                    Width="178px" onclick="btnCourseSearch_Click" />
-            </td>
-            <td align="center">
-                <asp:Button ID="btnCancel" runat="server" Text="Cancel" Width="190px" />
-            </td>
-        </tr>
-    </table>
-
+    
 </asp:Content>
