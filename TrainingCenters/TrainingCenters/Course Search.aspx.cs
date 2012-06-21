@@ -15,13 +15,14 @@ namespace TrainingCenters
 
         }
 
-        protected void btnCourseSearch_Click(object sender, EventArgs e)
+
+        protected void btnSearch_Click1(object sender, EventArgs e)
         {
             gvInstitutes.DataSource= (DataView)sdsInstitutes.Select(DataSourceSelectArguments.Empty);
             gvInstitutes.DataBind();
-
-            
-
         }
     }
 }
+
+
+

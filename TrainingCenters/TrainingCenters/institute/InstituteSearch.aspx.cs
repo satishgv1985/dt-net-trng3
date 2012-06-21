@@ -4,6 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+using System.Configuration;
+using System.Data;
+using System.Web.Security;
 
 namespace TrainingCenters.institute
 {
@@ -16,21 +20,16 @@ namespace TrainingCenters.institute
 
         protected void btnInstituteSearch_Click(object sender, EventArgs e)
         {
-            bool validUser = true;
-            //string Name = "Drona";
-            if (validUser)
-            {
-
-                Session["InstitueName"] = tbInstituteName.Text;
-                Response.Redirect("StudentWelcome.aspx");
-            }
-            else
-            {
-                lblInstituteName.Visible = true;
-            }
 
         }
 
+
+
+
+ 
+
+        }
+
+      
        
     }
-}
