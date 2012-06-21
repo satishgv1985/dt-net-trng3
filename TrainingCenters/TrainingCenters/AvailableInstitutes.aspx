@@ -2,6 +2,7 @@
     CodeBehind="AvailableInstitutes.aspx.cs" Inherits="TrainingCenters.AvailableInstitutes" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cphHeader" runat="server">
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphBody" runat="server">
     This page contains the search results for which the institute offer the courses

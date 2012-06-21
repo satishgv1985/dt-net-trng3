@@ -2,5 +2,5 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="cphHeader" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphBody" runat="server">
-<h2>Welcome to our training center website</h2>
+<h3>Welcome Traing Center</h3>
 </asp:Content>

@@ -16,5 +16,6 @@ namespace TrainingCenters.Utilities
             sm.Send(mes);
             return true;
         }
+
     }
 }

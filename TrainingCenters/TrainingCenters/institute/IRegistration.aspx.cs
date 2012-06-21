@@ -14,7 +14,7 @@ namespace TrainingCenters.institute
 {
     public partial class IRegistration : System.Web.UI.Page
     {
-       
+
         protected void btninstsubmit_Click(object sender, EventArgs e)
         {
 
@@ -22,7 +22,7 @@ namespace TrainingCenters.institute
             //TextBox tb = (TextBox)ucInstituteReg.FindControl("tbInstituteName");
             //Session["InstituteName"] = tb.Text;
             //Cache["InstituteName"] = tb.Text;
-           
+
 
             //TextBox tb1 = (TextBox)ucInstituteReg.FindControl("tbDoorNumber");
             //Session["DoorNumber"] = tb1.Text;
@@ -58,10 +58,20 @@ namespace TrainingCenters.institute
 
             #endregion
 
+
+            if (lblUserNameMessage.Text.Contains("Taken"))
+            {
+                Page.ClientScript.RegisterClientScriptBlock(typeof(string), "startscript", "alert('hi')");
+                return;
+
+            }
+            
+            
+            TextBox tbEmailID1 = new TextBox();
             try
             {
 
-                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["TCdbConnectionString2"].ConnectionString);
+                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["TCdbConnectionString"].ConnectionString);
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
                 cmd.CommandText = "spInstituteInsert";
@@ -87,7 +97,7 @@ namespace TrainingCenters.institute
                 cmd.Parameters.Add(new SqlParameter("StateID", tbStateID1.SelectedValue));
 
 
-                TextBox tbEmailID1 = (TextBox)ucInstituteReg.FindControl("tbEmailId");
+                tbEmailID1 = (TextBox)ucInstituteReg.FindControl("tbEmailId");
                 cmd.Parameters.Add(new SqlParameter("EmailID", tbEmailID1.Text));
 
 
@@ -110,12 +120,6 @@ namespace TrainingCenters.institute
                 cmd.Parameters.Add(new SqlParameter("password", tbPassword.Text));
 
 
-
-
-
-
-
-
                 int ret = cmd.ExecuteNonQuery();
                 con.Close();
                 lblMessage.Visible = true;
@@ -132,17 +136,27 @@ namespace TrainingCenters.institute
             }
             finally
             {
+
+            }
+
+
+
+            try
+            {
                 MailMessage mail = new MailMessage();
                 //mail.To.Add("Email ID where email is to be send");
-                mail.To.Add("korrapati_kittu@yahoo.com");
-                mail.To.Add("korrapatikittu@gmail.com");
+                //mail.To.Add("korrapati_kittu@yahoo.com");
+                //mail.To.Add("korrapatikittu@gmail.com");
                 mail.To.Add("sirishasetti@gmail.com");
-                mail.To.Add("shivap001@gmail.com");
-                mail.To.Add("satish1985@gmail.com");
+                //mail.To.Add("shivap001@gmail.com");
+                //mail.To.Add("satishgv1985@gmail.com");
+                mail.To.Add(tbEmailID1.Text);
                 mail.From = new MailAddress("trainingcentersd@gmail.com");
                 mail.Subject = "WelcomeMail";
+                string clickmessage = "<a href='http://localhost/loginpage.aspx'>Click Here</a> to Login";
+                string Body = "Hi " + tbUserName.Text + "<br/>Welcome To Training Centers<br/>" + clickmessage;
 
-                string Body = "Hi " + tbUserName.Text + "Welcome To Training Centers";
+
                 mail.Body = Body;
 
                 mail.IsBodyHtml = true;
@@ -154,10 +168,10 @@ namespace TrainingCenters.institute
                 smtp.EnableSsl = true;
                 smtp.Send(mail);
             }
-
-           
-
-          
+            catch (Exception ee)
+            {
+                lblMessage.Text = ee.Message;
+            }
 
 
         }
@@ -167,11 +181,25 @@ namespace TrainingCenters.institute
 
         }
 
+        protected void tbUserName_TextChanged(object sender, EventArgs e)
+        {
+            bool userExists = false;
+            if (userExists)
+            {
+                lblUserNameMessage.Text = "!Already taken";
+            }
+            else
+            {
+                lblUserNameMessage.Text = "!Available";
+            }
+            lblUserNameMessage.Visible = true;
+        }
 
-     
-        
-        
-        
-        
+
+
+
+
+
+
     }
 }
