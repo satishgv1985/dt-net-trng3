@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=4.1.51116.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -61,7 +64,9 @@
     <Content Include="AvailableInstitutes.aspx" />
     <Content Include="HomeTrainingCenter.aspx" />
     <Content Include="institute\ThankYou.aspx" />
+    <Content Include="SharedAssemblies\AjaxControlToolkit.dll" />
     <Content Include="student\StudentUserControl.ascx" />
+    <Content Include="training\AjaxControls.aspx" />
     <Content Include="training\AjaxFirst.aspx" />
     <Content Include="training\AjaxTimer.aspx" />
     <Content Include="training\anupam\AjaxUpdateProgress.aspx" />
@@ -188,6 +193,13 @@
     </Compile>
     <Compile Include="student\StudentUserControl.ascx.designer.cs">
       <DependentUpon>StudentUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="training\AjaxControls.aspx.cs">
+      <DependentUpon>AjaxControls.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="training\AjaxControls.aspx.designer.cs">
+      <DependentUpon>AjaxControls.aspx</DependentUpon>
     </Compile>
     <Compile Include="training\AjaxFirst.aspx.cs">
       <DependentUpon>AjaxFirst.aspx</DependentUpon>
