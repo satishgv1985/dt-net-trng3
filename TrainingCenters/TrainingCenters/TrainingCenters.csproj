@@ -69,6 +69,7 @@
     <Content Include="training\AjaxControls.aspx" />
     <Content Include="training\AjaxFirst.aspx" />
     <Content Include="training\AjaxTimer.aspx" />
+    <Content Include="training\anupam\AjaxCalenderExtender.aspx" />
     <Content Include="training\anupam\AjaxUpdateProgress.aspx" />
     <Content Include="training\anupam\gvDemo.aspx" />
     <Content Include="training\anupam\loading.gif" />
@@ -214,6 +215,13 @@
     </Compile>
     <Compile Include="training\AjaxTimer.aspx.designer.cs">
       <DependentUpon>AjaxTimer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="training\anupam\AjaxCalenderExtender.aspx.cs">
+      <DependentUpon>AjaxCalenderExtender.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="training\anupam\AjaxCalenderExtender.aspx.designer.cs">
+      <DependentUpon>AjaxCalenderExtender.aspx</DependentUpon>
     </Compile>
     <Compile Include="training\anupam\AjaxUpdateProgress.aspx.cs">
       <DependentUpon>AjaxUpdateProgress.aspx</DependentUpon>

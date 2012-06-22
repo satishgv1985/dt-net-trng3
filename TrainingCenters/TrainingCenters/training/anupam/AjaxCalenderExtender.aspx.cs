@@ -7,12 +7,8 @@ using System.Web.UI.WebControls;
 
 namespace TrainingCenters.training.anupam
 {
-    public partial class AjaxUpdateProgress : System.Web.UI.Page
+    public partial class AjaxCalenderExtender : System.Web.UI.Page
     {
-        protected void ShowProgress(object sender, EventArgs e)
-        {
-            System.Threading.Thread.Sleep(5000);
-        }
         protected void Page_Load(object sender, EventArgs e)
         {
 
