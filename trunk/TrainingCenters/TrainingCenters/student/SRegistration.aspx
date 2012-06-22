@@ -5,7 +5,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="cphHeader" runat="server">
     <title>Student Registration Form</title>
     <script type="text/javascript">
-      //  function funcCheckCourses() {
+        //  function funcCheckCourses() {
         //    return true;
         //}
     </script>
@@ -51,19 +51,17 @@
                     <asp:Label ID="lblUserName" runat="server" Text="User Name  :" Style="font-weight: 700"></asp:Label>
                 </td>
                 <td>
-                <asp:Updatepanel id="upUserName" runat="server">
-              <ContentTemplate>
-            
-                            <asp:TextBox ID="tbUserName" runat="server" 
-                                ontextchanged="tbUserName_TextChanged" AutoPostBack="True"></asp:TextBox>
+                  <%--  <asp:UpdatePanel ID="upUserName" runat="server">
+                        <ContentTemplate>--%>
+                            <asp:TextBox ID="tbUserName" runat="server" OnTextChanged="tbUserName_TextChanged"
+                                AutoPostBack="True"></asp:TextBox>
                             &nbsp;<strong><asp:RequiredFieldValidator ID="rfvUserName" Display="Dynamic" runat="server"
                                 ControlToValidate="tbUserName" ErrorMessage="User Name should be required" SetFocusOnError="true"
                                 ForeColor="red" ValidationGroup="vgStudent"></asp:RequiredFieldValidator>
                             </strong>
                             <asp:Label ID="lblUserNameMessage" ForeColor="Red" runat="server" Visible="false"></asp:Label>
-                         </ContentTemplate>
-                    </asp:Updatepanel>
-                     
+                       <%-- </ContentTemplate>
+                    </asp:UpdatePanel>--%>
                 </td>
             </tr>
             <tr>

@@ -30,6 +30,9 @@ namespace TrainingCenters.admin
         {
             ViewState["sIndex"] = gvInstitutes.SelectedIndex;
             ViewState["pageNo"] = gvInstitutes.PageIndex;
+            //System.Diagnostics.Debugger.Launch();
+            //string s =(string) gvInstitutes.DataKeyNames.GetValue(0);
+
             Label l = (Label)this.gvInstitutes.SelectedRow.FindControl("Label1");
             this.SqlDataSource2.SelectParameters["InstituteID"].DefaultValue = l.Text;
  
