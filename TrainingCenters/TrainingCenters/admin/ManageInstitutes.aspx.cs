@@ -24,14 +24,15 @@ namespace TrainingCenters.admin
             else
                 gvInstitutes.SelectedIndex = -1;
 
-
-
         }
 
         protected void gvInstitutes_SelectedIndexChanged(object sender, EventArgs e)
         {
             ViewState["sIndex"] = gvInstitutes.SelectedIndex;
             ViewState["pageNo"] = gvInstitutes.PageIndex;
+            Label l = (Label)this.gvInstitutes.SelectedRow.FindControl("Label1");
+            this.SqlDataSource2.SelectParameters["InstituteID"].DefaultValue = l.Text;
+ 
         }
 
         protected void gvInstitutes_RowDataBound(object sender, GridViewRowEventArgs e)
