@@ -28,6 +28,7 @@
             </td>
         </tr>
     </table>
+    <asp:Label ID="lblMessage" runat="server" Visible="False"></asp:Label>
     <br />
     <br />
     <table class="style1">
@@ -56,33 +57,8 @@
     </table>
     <div align="center">
         &nbsp;&nbsp;
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="dsGetStudentPassword"
-            Width="302px">
-            <Columns>
-                <asp:BoundField DataField="UserName" HeaderText="UserName" SortExpression="UserName" />
-                <asp:BoundField DataField="Password" HeaderText="Password" SortExpression="Password" />
-            </Columns>
-        </asp:GridView>
-        <asp:Repeater ID="rptStudent" runat="server" DataSourceID="dsGetStudentPassword">
-            <ItemTemplate>
-                Username:
-                <%# Eval("UserName") %><br />
-                Password:
-            </ItemTemplate>
-            <SeparatorTemplate>
-                <br />
-            </SeparatorTemplate>
-        </asp:Repeater>
-        <asp:SqlDataSource ID="dsGetStudentPassword" runat="server" ConnectionString="<%$ ConnectionStrings:TCdbConnectionString %>"
-            SelectCommand="spGetStudentPassword" SelectCommandType="StoredProcedure">
-            <SelectParameters>
-                <asp:ControlParameter ControlID="tbUserMobileNumber" Name="MobileNO" PropertyName="Text"
-                    Type="String" />
-                <asp:ControlParameter ControlID="tbUserEmaild" Name="EmailID" PropertyName="Text"
-                    Type="String" />
-            </SelectParameters>
-        </asp:SqlDataSource>
         <br />
+        <asp:Label ID="lblSentMessage" runat="server" Visible="False"></asp:Label>
         <br />
         <table class="style1">
             <tr>
