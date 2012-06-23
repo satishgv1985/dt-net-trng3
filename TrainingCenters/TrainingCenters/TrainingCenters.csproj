@@ -188,6 +188,7 @@
     <Compile Include="institute\ThankYou.aspx.designer.cs">
       <DependentUpon>ThankYou.aspx</DependentUpon>
     </Compile>
+    <Compile Include="student\MailMessage.cs" />
     <Compile Include="student\StudentUserControl.ascx.cs">
       <DependentUpon>StudentUserControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

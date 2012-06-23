@@ -7,7 +7,6 @@ using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Data;
-using System.Net;
 using System.Net.Mail;
 using TrainingCenters.Utilities;
 
@@ -126,6 +125,36 @@ namespace TrainingCenters.student
 
                 int res = cmd.ExecuteNonQuery();
                 con.Close();
+
+                try
+                {
+                  MailMessage mail = new MailMessage();
+                    //mail.To.Add("Email ID where email is to be send");
+
+                    mail.To.Add(lblEmailId.Text);
+                    mail.From = new MailAddress("trainingcentersd@gmail.com");
+                    mail.Subject = "WelcomeMail";
+                    string clickmessage = "<a href='http://localhost/loginpage.aspx'>Click Here</a> to Login";
+                    string Body = "Hi " + lblUserName.Text + "<br/>Welcome To Training Centers<br/>" + clickmessage;
+
+
+                    mail.Body = Body;
+
+                    mail.IsBodyHtml = true;
+                    SmtpClient smtp = new SmtpClient();
+                    smtp.Host = "smtp.gmail.com"; //Or Your SMTP Server Address
+                    smtp.Credentials = new System.Net.NetworkCredential
+                         ("trainingcentersd@gmail.com", "kittu999");
+                    //Or your Smtp Email ID and Password
+                    smtp.EnableSsl = true;
+                    smtp.Send(mail);
+                }
+                catch (Exception ee)
+                {
+                    lblMessage.Visible = true;
+                    lblMessage.Text = ee.Message;
+                }
+
 
                 // lblMessage.Visible = true;
 
