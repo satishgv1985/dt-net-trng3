@@ -136,7 +136,7 @@ namespace TrainingCenters
             }
             else
             {
-                lblInstituteMessage.Visible = true;
+                lblStudentMessage.Visible = true;
             }
 
         }

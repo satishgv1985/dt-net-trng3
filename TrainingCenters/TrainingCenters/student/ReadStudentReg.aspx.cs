@@ -54,7 +54,7 @@ namespace TrainingCenters.student
 
 
                 //TextBox tb7111 = Request.QueryString["name"];
-                lblUserName.Text = Convert.ToString(Request.QueryString["UserName"]);
+                lblUserName.Text = Convert.ToString(Session["UserName"]);
 
                
 
@@ -120,7 +120,7 @@ namespace TrainingCenters.student
                 cmd.Parameters.Add(new SqlParameter("EmailID", lblEmailId.Text));
                 cmd.Parameters.Add(new SqlParameter("MobileNo", lblMobileNumber.Text));
                 cmd.Parameters.Add(new SqlParameter("username", lblUserName.Text));
-                cmd.Parameters.Add(new SqlParameter("password",  Convert.ToString(Request.QueryString["Password"])));
+                cmd.Parameters.Add(new SqlParameter("password",  Convert.ToString(Session["Password"])));
 
 
                 int res = cmd.ExecuteNonQuery();
