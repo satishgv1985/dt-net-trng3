@@ -58,7 +58,7 @@
     <div align="center">
         &nbsp;&nbsp;
         <br />
-        <asp:Label ID="lblSentMessage" runat="server" Visible="False"></asp:Label>
+        <asp:Label ID="lblSentMessage" runat="server" ForeColor="Red" c Visible="False"></asp:Label>
         <br />
         <table class="style1">
             <tr>

@@ -57,8 +57,9 @@ namespace TrainingCenters.student
             TextBox tb3 = (TextBox)ucStudentReg.FindControl("tbQualification");
             Session["Qualification"] = tb3.Text;
 
-
-            Response.Redirect("ReadStudentReg.aspx?UserName=" + tbUserName.Text + "&Password=" + tbPassword.Text);
+            Session["UserName"] = tbUserName.Text;
+            Session["Password"] = tbPassword.Text;
+            Response.Redirect("ReadStudentReg.aspx");
             //   Response.Redirect("ReadQueryStrings.aspx?name=" + txtName.Text + "&rollno=" + txtRollNo.Text);
 
             //Response.Redirect("ReadInstituteRegistration.aspx? " + tbInstituteName.Text + "" + tbUserName.Text +"" + tbDoorNumber.Text + ""+tbArea.Text+""+tbCity.Text+""+tbEmailId+""+tbMobileNumber);

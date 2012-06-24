@@ -120,16 +120,7 @@
                 <asp:Label ID="lblUserName" runat="server"></asp:Label>
             </td>
         </tr>
-        <tr>
-            <td align="right">
-                <asp:Label ID="lblPassword1" runat="server" style="font-weight: 700" 
-                    Text="Password  :"></asp:Label>
-            </td>
-            <td>
-                <asp:Label ID="lblPassword" runat="server"></asp:Label>
-            </td>
-        </tr>
-    </table>
+        </table>
     <br />
     <br />
     <table class="style1">

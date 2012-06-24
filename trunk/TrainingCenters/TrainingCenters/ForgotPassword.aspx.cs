@@ -50,12 +50,12 @@ namespace TrainingCenters
                 {
                     MailMessage mail = new MailMessage();
                     //mail.To.Add("Email ID where email is to be send");
-                    
+
                     mail.To.Add(tbUserEmaild.Text);
                     mail.From = new MailAddress("trainingcentersd@gmail.com");
                     mail.Subject = "WelcomeMail";
                     string clickmessage = "<a href='http://localhost:8353/LoginPage.aspx'>Click Here</a> to Login";
-                    string Body = "Hi <br/>Welcome To Training Centers<br/><br>UserName=" + uName + "<br>Password=" + Pass + "<br></br> + clickmessage" + clickmessage;
+                    string Body = "Hi <br/>Welcome To Training Centers<br/><br>UserName=" + uName + "<br>Password=" + Pass + "<br></br>" + clickmessage;
 
 
                     mail.Body = Body;
@@ -69,28 +69,28 @@ namespace TrainingCenters
                     smtp.EnableSsl = true;
                     smtp.Send(mail);
                     lblSentMessage.Visible = true;
-                    lblSentMessage.Text = "Your UserName and Password sent to your Email address"; 
+                    lblSentMessage.Text = "Your UserName and Password sent to your Email address";
 
 
                 }
                 catch (Exception ee)
                 {
-                    lblMessage.Visible=true;
+                    lblMessage.Visible = true;
                     lblMessage.Text = ee.StackTrace;
                 }
 
-               
+
 
             }
             else
             {
-                lblSentMessage.Visible=true;
-               lblSentMessage.Text = "You have entered wrong EmailID or mobile number"; 
+                lblSentMessage.Visible = true;
+                lblSentMessage.Text = "You have entered wrong EmailID or mobile number";
 
             }
 
         }
 
-       
-        }
+
     }
+}
