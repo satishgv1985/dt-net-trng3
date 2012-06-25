@@ -16,7 +16,8 @@
             OnRowDataBound="gvInstitutes_RowDataBound" OnSelectedIndexChanged="gvInstitutes_SelectedIndexChanged">
             <EditRowStyle BackColor="#999999" />
             <EmptyDataTemplate>
-                No Records Present</EmptyDataTemplate>
+                No Records Present
+            </EmptyDataTemplate>
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
             <Columns>
                 <asp:BoundField DataField="InstituteName" HeaderText="InstituteName" SortExpression="InstituteName" />
@@ -30,8 +31,7 @@
                 <asp:TemplateField>
                     <ItemTemplate>
                         <%# Eval("CityName") %>
-                         <asp:Label ID="Label1" runat="server" Text='<%#Eval("InstituteID") %>' Visible="false"></asp:Label>
-   
+                        <asp:Label ID="Label1" runat="server" Text='<%#Eval("InstituteID") %>' Visible="false"></asp:Label>
                     </ItemTemplate>
                     <EditItemTemplate>
                         <asp:DropDownList ID="ddlCity" runat="server" DataSourceID="sdsCity" DataTextField="CityName"
@@ -82,8 +82,7 @@
         </asp:SqlDataSource>
     </div>
     <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:TCdbConnectionString %>"
- ProviderName="System.Data.SqlClient"
-        SelectCommand="select coursename, course.courseid, Courseshortname from courseoffering inner join course on course.courseid=courseoffering.courseid where courseoffering.instituteid=@InstituteID">
+        ProviderName="System.Data.SqlClient" SelectCommand="select coursename, course.courseid, Courseshortname from courseoffering inner join course on course.courseid=courseoffering.courseid where courseoffering.instituteid=@InstituteID">
         <SelectParameters>
             <asp:Parameter Name="InstituteID" DefaultValue="0" />
         </SelectParameters>
