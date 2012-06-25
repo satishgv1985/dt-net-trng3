@@ -2,6 +2,18 @@
     CodeBehind="ContactUs.aspx.cs" Inherits="TrainingCenters.ContactUs" %>
     <%@ Register Src="~/Contact.ascx" TagName="Contact" TagPrefix="uc" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphHeader" runat="server">
+<script type="text/javascript">
+    function validatePage() {
+        var ret = document.getElementById('txtName').value;
+        if (ret.length > 0) {
+            return true;
+        }
+        else {
+            alert("Please enter name and click submit");
+            return false;
+        }
+    }
+</script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphBody" runat="server">
     <h3>
@@ -20,14 +32,14 @@
     <h3>
         Please send your detailed query in below format, we would come back to you soon.</h3>
       <div> 
-      <uc:Contact id="ucContactSend" runat="server"></uc:Contact>
+     
     <table>
         <tr>
             <td >
                 <asp:Label ID="lbName" runat="server" Text="*Name"></asp:Label>
             </td>
             <td>
-                <asp:TextBox ID="txtName" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtName" ClientIDMode="Static" runat="server"></asp:TextBox>
             </td>
         </tr>
         <tr>
@@ -63,7 +75,7 @@
             </td>
             <td align="right">
                 <asp:Button ID="bttnCSubmit" runat="server" Text="Submit" 
-                    onclick="bttnCSubmit_Click" />
+                    onclick="bttnCSubmit_Click" OnClientClick="return validatePage();" />
             </td>
             <td align="center">
                 <asp:Button ID="bttnCReset" runat="server" Text="Reset" />

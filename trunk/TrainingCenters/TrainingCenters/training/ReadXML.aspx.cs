@@ -14,6 +14,6 @@ namespace TrainingCenters.training
         {
             XmlDocument xdoc = new XmlDocument();
             XmlDataDocument xddoc = new XmlDataDocument();
-          
+        }
     }
 }
