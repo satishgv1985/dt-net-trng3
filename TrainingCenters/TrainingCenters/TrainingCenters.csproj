@@ -62,6 +62,7 @@
     <Content Include="admin\CourseConfirmation.aspx" />
     <Content Include="admin\RegistrationManagement.aspx" />
     <Content Include="AvailableInstitutes.aspx" />
+    <Content Include="Contact.ascx" />
     <Content Include="HomeTrainingCenter.aspx" />
     <Content Include="institute\ThankYou.aspx" />
     <Content Include="SharedAssemblies\AjaxControlToolkit.dll" />
@@ -169,6 +170,13 @@
     <Compile Include="AvailableInstitutes.aspx.designer.cs">
       <DependentUpon>AvailableInstitutes.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Contact.ascx.cs">
+      <DependentUpon>Contact.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.ascx.designer.cs">
+      <DependentUpon>Contact.ascx</DependentUpon>
+    </Compile>
     <Compile Include="DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -188,7 +196,6 @@
     <Compile Include="institute\ThankYou.aspx.designer.cs">
       <DependentUpon>ThankYou.aspx</DependentUpon>
     </Compile>
-    <Compile Include="student\MailMessage.cs" />
     <Compile Include="student\StudentUserControl.ascx.cs">
       <DependentUpon>StudentUserControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -1,27 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TCSite.Master" AutoEventWireup="true"
-    CodeBehind="ContactUs.aspx.cs" Inherits="TrainingCenters.ContactUs" %>
-    <%@ Register Src="~/Contact.ascx" TagName="Contact" TagPrefix="uc" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="cphHeader" runat="server">
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="cphBody" runat="server">
-    <h3>
-        Contact Information&Query Submission</h3>
-    <h3>
-        Training Center</h3>
-    <p>
-        Tulasi theater Road,<br />
-        Marthalli,<br />
-        Bangalore,<br />
-        Karnataka</p>
-    <h3>
-        Office:95026726372</h3>
-    <h3>
-        For Enquery: info@Trainingcenter.com</h3>
-    <h3>
-        Please send your detailed query in below format, we would come back to you soon.</h3>
-      <div> 
-      <uc:Contact id="ucContactSend" runat="server"></uc:Contact>
-    <table>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Contact.ascx.cs" Inherits="TrainingCenters.Contact" %>
+<table>
         <tr>
             <td >
                 <asp:Label ID="lbName" runat="server" Text="*Name"></asp:Label>
@@ -69,6 +47,4 @@
                 <asp:Button ID="bttnCReset" runat="server" Text="Reset" />
             </td>
         </tr>
-    </table></div> 
-    <br />
-</asp:Content>
+    </table>
