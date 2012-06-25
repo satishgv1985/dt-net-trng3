@@ -10,16 +10,7 @@
 namespace TrainingCenters {
     
     
-    public partial class ContactUs {
-        
-        /// <summary>
-        /// ucContactSend control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::TrainingCenters.Contact ucContactSend;
+    public partial class Contact {
         
         /// <summary>
         /// lbName control.
