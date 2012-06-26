@@ -74,11 +74,14 @@
     <Content Include="training\anupam\AjaxUpdateProgress.aspx" />
     <Content Include="training\anupam\gvDemo.aspx" />
     <Content Include="training\anupam\loading.gif" />
+    <Content Include="training\DotNetCalculator.asmx" />
     <Content Include="training\images\Image1.jpg" />
     <Content Include="training\images\Image2.jpg" />
     <Content Include="training\images\Image3.jpg" />
     <Content Include="training\images\Image4.jpg" />
+    <Content Include="admin\Managecourses.aspx" />
     <Content Include="training\ReadXML.aspx" />
+    <Content Include="training\Institutes.asmx" />
     <Content Include="training\shilpa\Managecourses.aspx" />
     <Content Include="training\shirisha\GridViewCityState.aspx" />
     <Content Include="admin\ManageInstitutes.aspx" />
@@ -126,6 +129,12 @@
     <Content Include="training\ReadUCValue.aspx" />
     <Content Include="training\student.xml" />
     <Content Include="training\UserDataUC.ascx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Calculator\DotNetCalculator.disco" />
+    <None Include="Web References\localhost\Institutes.disco" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -135,6 +144,15 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <None Include="Web References\Calculator\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\localhost\Institutes.wsdl" />
+    <None Include="Web References\localhost\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AboutUs.aspx.cs">
@@ -198,6 +216,11 @@
     <Compile Include="institute\ThankYou.aspx.designer.cs">
       <DependentUpon>ThankYou.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="student\StudentUserControl.ascx.cs">
       <DependentUpon>StudentUserControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -247,6 +270,7 @@
     <Compile Include="training\anupam\gvDemo.aspx.designer.cs">
       <DependentUpon>gvDemo.aspx</DependentUpon>
     </Compile>
+    <Compile Include="admin\Managecourses.aspx.cs">
     <Compile Include="training\ReadXML.aspx.cs">
       <DependentUpon>ReadXML.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -258,8 +282,16 @@
       <DependentUpon>Managecourses.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="training\shilpa\Managecourses.aspx.designer.cs">
+    <Compile Include="admin\Managecourses.aspx.designer.cs">
       <DependentUpon>Managecourses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="training\DotNetCalculator.asmx.cs">
+      <DependentUpon>DotNetCalculator.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="training\Institutes.asmx.cs">
+      <DependentUpon>Institutes.asmx</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="training\shirisha\GridViewCityState.aspx.cs">
       <DependentUpon>GridViewCityState.aspx</DependentUpon>
@@ -564,6 +596,16 @@
       <DependentUpon>UserDataUC.ascx</DependentUpon>
     </Compile>
     <Compile Include="Utilities\MailModule.cs" />
+    <Compile Include="Web References\Calculator\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\localhost\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="DataSet1.xsc">
@@ -580,10 +622,40 @@
     <None Include="docs\TCProject.xls" />
     <Content Include="TCSite.Master" />
     <Content Include="training\TestSite.Master" />
+    <None Include="Web References\Calculator\DotNetCalculator.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="training\kishore\" />
     <Folder Include="training\shijith\" />
+    <Folder Include="training\shilpa\" />
+    <Folder Include="training\shiva\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:8353/training/DotNetCalculator.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Calculator\</RelPath>
+      <UpdateFromURL>http://localhost:8353/training/DotNetCalculator.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>TrainingCenters_Calculator_DotNetCalculator</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:8353/training/Institutes.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\localhost\</RelPath>
+      <UpdateFromURL>http://localhost:8353/training/Institutes.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>TrainingCenters_localhost_Institutes</CachedSettingsPropName>
+    </WebReferenceUrl>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

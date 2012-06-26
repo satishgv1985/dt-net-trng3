@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="TrainingCenters.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="TrainingCenters_Calculator_DotNetCalculator" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8353/training/DotNetCalculator.asmx</Value>
+    </Setting>
+    <Setting Name="TrainingCenters_localhost_Institutes" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8353/training/Institutes.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
