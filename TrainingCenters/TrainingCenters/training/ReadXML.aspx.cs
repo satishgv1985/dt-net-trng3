@@ -12,8 +12,8 @@ namespace TrainingCenters.training
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            XmlDocument xdoc = new XmlDocument();
-            XmlDataDocument xddoc = new XmlDataDocument();
+            //XmlDocument xdoc = new XmlDocument();
+           // XmlDataDocument xddoc = new XmlDataDocument();
         }
     }
 }

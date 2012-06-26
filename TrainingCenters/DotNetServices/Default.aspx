@@ -17,6 +17,25 @@
         <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" />
         <br />
         <asp:Label ID="lblReponse" runat="server"></asp:Label>
+        <br />
+        <br />
+        <br />
+        <asp:Label ID="Label1" runat="server" 
+            style="font-weight: 700; font-size: large" 
+            Text="Find Square Root Of Given Number"></asp:Label>
+        <br />
+        <br />
+        <br />
+        <asp:Label ID="Label2" runat="server" style="font-weight: 700" 
+            Text="Enter Number  :"></asp:Label>
+        <asp:TextBox ID="tbNumber" runat="server"></asp:TextBox>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Button ID="btnSqrt" runat="server" onclick="btnSqrt_Click" 
+            Text="Find Sqrt" />
+        <br />
+        <br />
+        <asp:Label ID="lblSqrt" runat="server"></asp:Label>
+    
     </div>
     </form>
 </body>
