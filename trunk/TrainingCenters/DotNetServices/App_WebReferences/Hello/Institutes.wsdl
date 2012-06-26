@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.trainingcenters.com/servoces/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.trainingcenters.com/servoces/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
-    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.trainingcenters.com/servoces/">
       <s:element name="HelloWorld">
         <s:complexType />
       </s:element>
@@ -29,7 +29,7 @@
   <wsdl:binding name="InstitutesSoap" type="tns:InstitutesSoap">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="HelloWorld">
-      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <soap:operation soapAction="http://www.trainingcenters.com/servoces/HelloWorld" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -41,7 +41,7 @@
   <wsdl:binding name="InstitutesSoap12" type="tns:InstitutesSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="HelloWorld">
-      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <soap12:operation soapAction="http://www.trainingcenters.com/servoces/HelloWorld" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -52,10 +52,10 @@
   </wsdl:binding>
   <wsdl:service name="Institutes">
     <wsdl:port name="InstitutesSoap" binding="tns:InstitutesSoap">
-      <soap:address location="http://localhost:8353/training/Institutes.asmx" />
+      <soap:address location="http://localhost:5275/training/Institutes.asmx" />
     </wsdl:port>
     <wsdl:port name="InstitutesSoap12" binding="tns:InstitutesSoap12">
-      <soap12:address location="http://localhost:8353/training/Institutes.asmx" />
+      <soap12:address location="http://localhost:5275/training/Institutes.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

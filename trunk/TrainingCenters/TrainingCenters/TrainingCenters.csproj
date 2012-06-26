@@ -117,6 +117,7 @@
     <Content Include="student\StudentWelcome.aspx" />
     <Content Include="training\SendData.aspx" />
     <Content Include="training\shiva\ExpGrid.aspx" />
+    <Content Include="training\shiva\Sqrt.asmx" />
     <Content Include="training\Technique_Cookie.aspx" />
     <Content Include="training\Technique_ViewState.aspx" />
     <Content Include="Terms Of Use.aspx" />
@@ -271,6 +272,8 @@
       <DependentUpon>gvDemo.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\Managecourses.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="training\ReadXML.aspx.cs">
       <DependentUpon>ReadXML.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -518,6 +521,10 @@
     <Compile Include="training\shiva\ExpGrid.aspx.designer.cs">
       <DependentUpon>ExpGrid.aspx</DependentUpon>
     </Compile>
+    <Compile Include="training\shiva\Sqrt.asmx.cs">
+      <DependentUpon>Sqrt.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="training\Technique_Cookie.aspx.cs">
       <DependentUpon>Technique_Cookie.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -627,8 +634,6 @@
   <ItemGroup>
     <Folder Include="training\kishore\" />
     <Folder Include="training\shijith\" />
-    <Folder Include="training\shilpa\" />
-    <Folder Include="training\shiva\" />
   </ItemGroup>
   <ItemGroup>
     <WebReferences Include="Web References\" />
@@ -665,7 +670,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>8353</DevelopmentServerPort>
+          <DevelopmentServerPort>5275</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>
