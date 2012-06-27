@@ -52,54 +52,42 @@ namespace TrainingCenters
            //     lblMessage.Visible = true;
            // }
 
-
-        
-
-        
-        
-        
-        
-
         protected void btnInstituteSubmit_Click(object sender, EventArgs e)
         {
-            
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["TCdbConnectionString"].ConnectionString);
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+            cmd.CommandText = "spValidateUser";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("username", tbUserName.Text));
+            cmd.Parameters.Add(new SqlParameter("password", tbUserPassword.Text));
+            cmd.Parameters.Add(new SqlParameter("isInst", true));
+
+            con.Open();
+            SqlDataReader sdrI = cmd.ExecuteReader();
+
+            string emailID = "";
+            string iName = "";
 
 
+            while (sdrI.Read())
+            {
+                emailID = Convert.ToString(sdrI["EmailID"]);
+                iName = Convert.ToString(sdrI["InstituteName"]);
+            }
+            con.Close();
 
-            //SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["TCdbConnectionString"].ConnectionString);
-            //SqlCommand cmd = new SqlCommand();
-            //cmd.Connection = con;
-            //cmd.CommandText = "spValidateUser";
-            //cmd.CommandType = CommandType.StoredProcedure;
-            //cmd.Parameters.Add(new SqlParameter("username", tbUserName.Text));
-            //cmd.Parameters.Add(new SqlParameter("password", tbUserPassword.Text));
-            //cmd.Parameters.Add(new SqlParameter("isInst", true));
+            if (iName.Length > 0)
+            {
+                Session["InstituteEmailID"] = emailID;
 
-            //con.Open();
-            //SqlDataReader sdrI=cmd.ExecuteReader();
-
-            //string emailID="";
-            //string iName="";
-            
-
-            //while (sdrI.Read())
-            //{
-            //    emailID = Convert.ToString(sdrI["EmailID"]);
-            //    iName=Convert.ToString(sdrI["StudentName"]);
-            //}
-            //con.Close();
-
-            //if (iName.Length>0)
-            //{
-            //    Session["InstituteEmailID"] = emailID;
-
-            //    FormsAuthentication.SetAuthCookie(iName, false);
-            //    Response.Redirect("~/institute/InstituteWelcome.aspx");
-            //}
-            //else
-            //{
-            //    lblInstituteMessage.Visible = true;
-            //}
+                FormsAuthentication.SetAuthCookie(iName, false);
+                Response.Redirect("~/institute/InstituteWelcome.aspx");
+            }
+            else
+            {
+                lblInstituteMessage.Visible = true;
+            }
         }
 
         protected void btnStudentSubmit_Click(object sender, EventArgs e)

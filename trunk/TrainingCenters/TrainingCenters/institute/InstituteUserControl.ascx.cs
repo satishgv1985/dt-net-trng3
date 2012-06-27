@@ -55,19 +55,18 @@ namespace TrainingCenters.institute
                 Int16 I;
                 SqlDataSource sdsCourseName = new SqlDataSource(ConfigurationManager.ConnectionStrings["TCdbConnectionString"].ConnectionString, "select distinct CourseName, courseid from Course");
 
-              
-                  
-
-                        CheckBoxList cblModels = new CheckBoxList();
-                        cblModels.RepeatColumns = 2;
-     
-                        cblModels.DataSource = sdsCourseName;
-                        cblModels.DataTextField = "CourseName";
-                        cblModels.ID = "courseid";
-                        cblModels.DataBind();
 
 
-                        PlaceHolder1.Controls.Add(cblModels);
+
+
+                cblCourses.RepeatColumns = 2;
+                cblCourses.DataSource = sdsCourseName;
+                cblCourses.DataTextField = "CourseName";
+                cblCourses.DataValueField = "courseid";
+                cblCourses.DataBind();
+
+
+                        //PlaceHolder1.Controls.Add(cblModels);
                     
              
 

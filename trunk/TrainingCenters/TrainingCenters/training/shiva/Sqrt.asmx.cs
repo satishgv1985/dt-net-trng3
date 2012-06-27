@@ -23,7 +23,7 @@ namespace TrainingCenters.training.shiva
             return "Hello World";
         }
         [WebMethod]
-        public double Srrt(Double n)
+        public double Srrt(double n)
         {
             double sqrt = Math.Sqrt(n);
             return sqrt;

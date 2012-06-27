@@ -57,7 +57,7 @@
                 <asp:ListItem Text="NETWORKING" Value="11"></asp:ListItem>
                 <asp:ListItem Text="DBA" Value="12"></asp:ListItem>
             </asp:CheckBoxList>--%>
-            <asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder>
+            <asp:CheckBoxList ID="cblCourses" runat="server"></asp:CheckBoxList>
         </td>
     </tr>
     <tr>

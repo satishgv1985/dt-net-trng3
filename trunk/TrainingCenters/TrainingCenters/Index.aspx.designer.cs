@@ -7,288 +7,243 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TrainingCenters.institute {
+namespace TrainingCenters {
     
     
-    public partial class InstituteUserControl {
+    public partial class HomeTrainingCenter {
         
         /// <summary>
-        /// lblInstituteName control.
+        /// lblCoursesOffering control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblInstituteName;
+        protected global::System.Web.UI.WebControls.Label lblCoursesOffering;
         
         /// <summary>
-        /// tbInstituteName control.
+        /// hlJava control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbInstituteName;
+        protected global::System.Web.UI.WebControls.HyperLink hlJava;
         
         /// <summary>
-        /// rfvInstituteName control.
+        /// hlDotNet control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvInstituteName;
+        protected global::System.Web.UI.WebControls.HyperLink hlDotNet;
         
         /// <summary>
-        /// lblDateOfEstablishment control.
+        /// hlOracle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDateOfEstablishment;
+        protected global::System.Web.UI.WebControls.HyperLink hlOracle;
         
         /// <summary>
-        /// cDateOfEstablishment control.
+        /// hlClanguage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar cDateOfEstablishment;
+        protected global::System.Web.UI.WebControls.HyperLink hlClanguage;
         
         /// <summary>
-        /// Label1 control.
+        /// hlCpp control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.HyperLink hlCpp;
         
         /// <summary>
-        /// cblCourses control.
+        /// hlUnix control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBoxList cblCourses;
+        protected global::System.Web.UI.WebControls.HyperLink hlUnix;
         
         /// <summary>
-        /// lblInstituteAddress control.
+        /// hlTesting control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblInstituteAddress;
+        protected global::System.Web.UI.WebControls.HyperLink hlTesting;
         
         /// <summary>
-        /// lblDoorNumber control.
+        /// hlSap control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDoorNumber;
+        protected global::System.Web.UI.WebControls.HyperLink hlSap;
         
         /// <summary>
-        /// tbDoorNumber control.
+        /// hlPhp control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbDoorNumber;
+        protected global::System.Web.UI.WebControls.HyperLink hlPhp;
         
         /// <summary>
-        /// rfvDoorNumber control.
+        /// hlSql control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDoorNumber;
+        protected global::System.Web.UI.WebControls.HyperLink hlSql;
         
         /// <summary>
-        /// lblArea control.
+        /// hlDataWareHousing control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblArea;
+        protected global::System.Web.UI.WebControls.HyperLink hlDataWareHousing;
         
         /// <summary>
-        /// tbArea control.
+        /// hlDba control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbArea;
+        protected global::System.Web.UI.WebControls.HyperLink hlDba;
         
         /// <summary>
-        /// rfvArea control.
+        /// hlNetWorking control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvArea;
+        protected global::System.Web.UI.WebControls.HyperLink hlNetWorking;
         
         /// <summary>
-        /// lblState control.
+        /// lblTopInstitutes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblState;
+        protected global::System.Web.UI.WebControls.Label lblTopInstitutes;
         
         /// <summary>
-        /// ddlState control.
+        /// hlInstitute1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlState;
+        protected global::System.Web.UI.WebControls.HyperLink hlInstitute1;
         
         /// <summary>
-        /// rfvState control.
+        /// hlInstitute2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvState;
+        protected global::System.Web.UI.WebControls.HyperLink hlInstitute2;
         
         /// <summary>
-        /// lblCity control.
+        /// hlInstitute3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCity;
+        protected global::System.Web.UI.WebControls.HyperLink hlInstitute3;
         
         /// <summary>
-        /// ddlCity control.
+        /// hlInstitute4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlCity;
+        protected global::System.Web.UI.WebControls.HyperLink hlInstitute4;
         
         /// <summary>
-        /// rfvCity control.
+        /// hlInstitute5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCity;
+        protected global::System.Web.UI.WebControls.HyperLink hlInstitute5;
         
         /// <summary>
-        /// lblMobileNumber control.
+        /// hlInstitute6 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMobileNumber;
+        protected global::System.Web.UI.WebControls.HyperLink hlInstitute6;
         
         /// <summary>
-        /// tbMobileNumber control.
+        /// hlInstitute7 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbMobileNumber;
+        protected global::System.Web.UI.WebControls.HyperLink hlInstitute7;
         
         /// <summary>
-        /// revMobileNumber control.
+        /// hlInstitute8 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator revMobileNumber;
+        protected global::System.Web.UI.WebControls.HyperLink hlInstitute8;
         
         /// <summary>
-        /// lblEmailId control.
+        /// hlInstitute9 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEmailId;
+        protected global::System.Web.UI.WebControls.HyperLink hlInstitute9;
         
         /// <summary>
-        /// tbEmailId control.
+        /// hlInstitute10 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbEmailId;
+        protected global::System.Web.UI.WebControls.HyperLink hlInstitute10;
         
         /// <summary>
-        /// revEmailId control.
+        /// rtisements control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator revEmailId;
-        
-        /// <summary>
-        /// lblWebSite control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblWebSite;
-        
-        /// <summary>
-        /// tbWebSite control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbWebSite;
-        
-        /// <summary>
-        /// lblPincodeNumber control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPincodeNumber;
-        
-        /// <summary>
-        /// tbPincodeNumber control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbPincodeNumber;
-        
-        /// <summary>
-        /// revPincodeNumber control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator revPincodeNumber;
+        protected global::System.Web.UI.WebControls.Label rtisements;
     }
 }

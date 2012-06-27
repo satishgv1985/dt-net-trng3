@@ -82,6 +82,7 @@
     <Content Include="admin\Managecourses.aspx" />
     <Content Include="training\ReadXML.aspx" />
     <Content Include="training\Institutes.asmx" />
+    <Content Include="training\Search.aspx" />
     <Content Include="training\shilpa\Managecourses.aspx" />
     <Content Include="training\shirisha\GridViewCityState.aspx" />
     <Content Include="admin\ManageInstitutes.aspx" />
@@ -282,6 +283,13 @@
     </Compile>
     <Compile Include="training\ReadXML.aspx.designer.cs">
       <DependentUpon>ReadXML.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="training\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="training\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
     </Compile>
     <Compile Include="training\shilpa\Managecourses.aspx.cs">
       <DependentUpon>Managecourses.aspx</DependentUpon>
