@@ -19,7 +19,7 @@ namespace TrainingCenters.institute {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UserControl ucEditInstitute;
+        protected global::TrainingCenters.institute.InstituteUserControl ucEditInstitute;
         
         /// <summary>
         /// btnSubmitForm control.

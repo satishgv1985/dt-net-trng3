@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TCSite.Master" AutoEventWireup="true" CodeBehind="EditInstituteProfile.aspx.cs" Inherits="TrainingCenters.institute.EditInstituteProfile" %>
-<%@ Register Src="~/InstituteUserControl.ascx" TagName="editInstitute" TagPrefix="uc" %>
+<%@ Register Src="~/institute/InstituteUserControl.ascx" TagName="editInstitute" TagPrefix="uc" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphHeader" runat="server">
     <style type="text/css">
         .style1
