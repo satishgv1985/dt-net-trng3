@@ -271,10 +271,12 @@
     <Compile Include="training\anupam\gvDemo.aspx.designer.cs">
       <DependentUpon>gvDemo.aspx</DependentUpon>
     </Compile>
-    <Compile Include="admin\Managecourses.aspx.cs">
+	  <Compile Include="admin\Managecourses.aspx.cs">
+	  </Compile>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="training\ReadXML.aspx.cs">
+		
       <DependentUpon>ReadXML.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
