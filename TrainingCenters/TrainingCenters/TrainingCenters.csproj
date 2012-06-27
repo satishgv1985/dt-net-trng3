@@ -63,6 +63,7 @@
     <Content Include="admin\RegistrationManagement.aspx" />
     <Content Include="AvailableInstitutes.aspx" />
     <Content Include="Contact.ascx" />
+    <Content Include="GetInstitutes.asmx" />
     <Content Include="HomeTrainingCenter.aspx" />
     <Content Include="institute\ThankYou.aspx" />
     <Content Include="SharedAssemblies\AjaxControlToolkit.dll" />
@@ -136,7 +137,13 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <None Include="Web References\Calculator\DotNetCalculator.disco" />
+    <None Include="Web References\getInst\GetInstitutes.wsdl" />
+    <None Include="Web References\getInst\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <None Include="Web References\localhost\Institutes.disco" />
+    <None Include="Web References\getInst\GetInstitutes.disco" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -203,6 +210,10 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GetInstitutes.asmx.cs">
+      <DependentUpon>GetInstitutes.asmx</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="HomeTrainingCenter.aspx.cs">
       <DependentUpon>HomeTrainingCenter.aspx</DependentUpon>
@@ -272,12 +283,10 @@
     <Compile Include="training\anupam\gvDemo.aspx.designer.cs">
       <DependentUpon>gvDemo.aspx</DependentUpon>
     </Compile>
-	  <Compile Include="admin\Managecourses.aspx.cs">
-	 
+    <Compile Include="admin\Managecourses.aspx.cs">
       <SubType>ASPXCodeBehind</SubType>
-	  </Compile>
+    </Compile>
     <Compile Include="training\ReadXML.aspx.cs">
-		
       <DependentUpon>ReadXML.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
@@ -618,6 +627,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
+    <Compile Include="Web References\getInst\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
     <Compile Include="Web References\localhost\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -649,6 +663,17 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:5275/GetInstitutes.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\getInst\</RelPath>
+      <UpdateFromURL>http://localhost:5275/GetInstitutes.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>TrainingCenters_getInst_GetInstitutes</CachedSettingsPropName>
+    </WebReferenceUrl>
     <WebReferenceUrl Include="http://localhost:8353/training/DotNetCalculator.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\Calculator\</RelPath>

@@ -1,5 +1,7 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="TCSite.master.cs" Inherits="TrainingCenters.TCSite" %>
 
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -47,9 +49,13 @@
                     <asp:Label ID="lblSearchForInstitutes" runat="server" Text="Search For Institutes  :"
                         Font-Bold="True"></asp:Label>
                     <asp:TextBox ID="tbInstituteSearch" runat="server" Width="233px"></asp:TextBox>
+                    <asp:AutoCompleteExtender ID="AutoCompleteExtender1" TargetControlID="tbInstituteSearch" ServicePath="~/GetInstitutes.asmx"  MinimumPrefixLength="1" CompletionSetCount="5" ServiceMethod="GetInst"
+         runat="server"> 
+                    </asp:AutoCompleteExtender>
                     &nbsp;<asp:Button ID="btnSearch" runat="server" Text="Search" OnClick="InstituteSearch_Click" />
                 </td>
             </tr>
+          
             <tr>
                 <td>
                     <asp:Label ID="lblName" runat="server"></asp:Label>
