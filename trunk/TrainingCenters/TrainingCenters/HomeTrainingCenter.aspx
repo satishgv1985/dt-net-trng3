@@ -50,11 +50,39 @@
                         </td>
                     </tr>
                     <tr>
-                        <td align="left" class="style13">
+                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
+                            DataSourceID="SqlDataSource1" >
+                            
+                            <Columns>
+                            <asp:HyperLinkField DataNavigateUrlFields="CourseID" DataNavigateUrlFormatString=""
+      HeaderText="CourseName" SortExpression="CourseName" Text="Courses" />
+        <asp:HyperLinkField DataNavigateUrlFields="InstituteID" DataNavigateUrlFormatString=""
+      HeaderText="InstituteName" SortExpression="InstituteName" Text="Institutes" />
+                               
+                                    <%--<asp:BoundField DataField="CourseName" HeaderText="CourseName" 
+                                    SortExpression="CourseName" />
+                                <asp:BoundField DataField="InstituteName" HeaderText="InstituteName" 
+                                    SortExpression="InstituteName" />--%>
+                               </Columns>
+                        </asp:GridView>
+                              
+                                <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                            ConnectionString="<%$ ConnectionStrings:TCdbConnectionString6 %>" 
+                            SelectCommand="SELECT Course.CourseName, Course.CourseID, Institute.InstituteID, Institute.InstituteName FROM Course CROSS JOIN Institute">
+                        </asp:SqlDataSource>
+                              
+                                <%--<asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                            ConnectionString="<%$ ConnectionStrings:TCdbConnectionString4 %>" 
+                            SelectCommand="SELECT Course.CourseID, Course.CourseName, Institute.InstituteName FROM Course Cross JOIN Institute">
+                        </asp:SqlDataSource>--%>
+                                
+       
+                       
+                        <%--<td align="left" class="style13">
                             <asp:HyperLink ID="hlJava" runat="server">JAVA</asp:HyperLink>
-                        </td>
+                        </td>--%>
                     </tr>
-                    <tr>
+                    <%-- <tr>
                         <td align="left" class="style13">
                             <asp:HyperLink ID="hlDotNet" runat="server">DotNet</asp:HyperLink>
                         </td>
@@ -148,8 +176,7 @@
                         <td align="center">
                             <asp:HyperLink ID="hlInstitute5" runat="server">Institute5</asp:HyperLink>
                         </td>
-                    </tr>
-                    <tr>
+                    </tr>--%>                    <%--<tr>
                         <td align="center">
                             <asp:HyperLink ID="hlInstitute6" runat="server">Institute6</asp:HyperLink>
                         </td>
@@ -163,8 +190,7 @@
                         <td align="center">
                             <asp:HyperLink ID="hlInstitute8" runat="server">Institute8</asp:HyperLink>
                         </td>
-                    </tr>
-                    <tr>
+                    </tr>--%>                    <%--<tr>
                         <td align="center">
                             <asp:HyperLink ID="hlInstitute9" runat="server">Institute9</asp:HyperLink>
                         </td>
@@ -193,13 +219,14 @@
                 <table class="style1" style="border-style: none; border-color: inherit; border-width: 1px;
                     width: 249px;">
                     <tr>
-                        <td align="right">
-                            <asp:Label ID="rtisements" runat="server" Font-Bold="True" Font-Size="Larger" Font-Underline="True"
+                        <td align="right">--%>                           <%-- <asp:Label ID="rtisements" runat="server" Font-Bold="True" Font-Size="Larger" Font-Underline="True"
                                 Text="Advartisements"></asp:Label>
                         </td>
-                    </tr>
-                </table>
+                    </tr>--%>           <%--     </table>
             </td>
-        </tr>
+        </tr>--%>
+    </table>
+    </td>
+    </tr>
     </table>
 </asp:Content>
