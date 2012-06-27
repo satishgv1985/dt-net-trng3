@@ -38,6 +38,39 @@ namespace TrainingCenters.institute
 
                 #endregion
                 ddlState.Items.Insert(0, new ListItem("--Select--", "0"));
+                //int maxvalue =0;
+
+                //SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["TCdbConnectionString"].ConnectionString);
+                //SqlCommand cmd = new SqlCommand();
+                //cmd.Connection = con;
+                //cmd.CommandText = "select count(*) from Course";
+                //con.Open();
+                //SqlDataReader reader = cmd.ExecuteReader();
+                //while (reader.Read())
+                //{
+                //    maxvalue= reader.GetInt32(0);
+                //}
+
+
+                Int16 I;
+                SqlDataSource sdsCourseName = new SqlDataSource(ConfigurationManager.ConnectionStrings["TCdbConnectionString"].ConnectionString, "select distinct CourseName, courseid from Course");
+
+              
+                  
+
+                        CheckBoxList cblModels = new CheckBoxList();
+                        cblModels.RepeatColumns = 2;
+     
+                        cblModels.DataSource = sdsCourseName;
+                        cblModels.DataTextField = "CourseName";
+                        cblModels.ID = "courseid";
+                        cblModels.DataBind();
+
+
+                        PlaceHolder1.Controls.Add(cblModels);
+                    
+             
+
 
             }
 

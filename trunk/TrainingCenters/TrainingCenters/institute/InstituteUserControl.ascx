@@ -42,7 +42,7 @@
             <asp:Label ID="Label1" runat="server" Text="Courses Offered  :" Font-Bold="True"></asp:Label>
         </td>
         <td>
-            <asp:CheckBoxList ID="cblCoursesOffered" runat="server" RepeatColumns="2" Style="margin-bottom: 0px;
+           <%-- <asp:CheckBoxList ID="cblCoursesOffered" runat="server" RepeatColumns="2" Style="margin-bottom: 0px;
                 margin-left: 0px;">
                 <asp:ListItem Text=".Net" Value="1"></asp:ListItem>
                 <asp:ListItem Text="JAVA" Value="2"></asp:ListItem>
@@ -56,7 +56,8 @@
                 <asp:ListItem Text="DATA WAREHOUSING" Value="10"></asp:ListItem>
                 <asp:ListItem Text="NETWORKING" Value="11"></asp:ListItem>
                 <asp:ListItem Text="DBA" Value="12"></asp:ListItem>
-            </asp:CheckBoxList>
+            </asp:CheckBoxList>--%>
+            <asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder>
         </td>
     </tr>
     <tr>
