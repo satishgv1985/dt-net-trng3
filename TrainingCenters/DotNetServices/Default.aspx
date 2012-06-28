@@ -16,8 +16,16 @@
         <br />
         <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" />
         <br />
-        <asp:Label ID="lblReponse" runat="server"></asp:Label>
+        <asp:Label ID="lblRes" runat="server"></asp:Label>
         <br />
+        <asp:Label ID="Label3" runat="server" Text="sub"></asp:Label>
+        <asp:TextBox ID="TextBox1" runat="server" ontextchanged="TextBox1_TextChanged"></asp:TextBox>
+        <asp:Label ID="Label4" runat="server" Text="-"></asp:Label>
+        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+        <asp:Button ID="Button1" runat="server" onclick="Button1_Click" Text="submit" />
+        <br />
+        <br />
+        <asp:Label ID="sult" runat="server"></asp:Label>
         <br />
         <br />
         <asp:Label ID="Label1" runat="server" 

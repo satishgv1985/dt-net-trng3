@@ -68,6 +68,7 @@
     <Content Include="institute\ThankYou.aspx" />
     <Content Include="SharedAssemblies\AjaxControlToolkit.dll" />
     <Content Include="student\StudentUserControl.ascx" />
+    <Content Include="sub.asmx" />
     <Content Include="training\AjaxControls.aspx" />
     <Content Include="training\AjaxFirst.aspx" />
     <Content Include="training\AjaxTimer.aspx" />
@@ -240,6 +241,10 @@
     </Compile>
     <Compile Include="student\StudentUserControl.ascx.designer.cs">
       <DependentUpon>StudentUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="sub.asmx.cs">
+      <DependentUpon>sub.asmx</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="training\AjaxControls.aspx.cs">
       <DependentUpon>AjaxControls.aspx</DependentUpon>
