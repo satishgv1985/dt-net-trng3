@@ -5,11 +5,8 @@
     <Setting Name="TrainingCenters_Calculator_DotNetCalculator" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">http://localhost:8353/training/DotNetCalculator.asmx</Value>
     </Setting>
-    <Setting Name="TrainingCenters_DivisionCalculator_Division" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">http://localhost:5275/training/shirisha/Division.asmx</Value>
-    </Setting>
     <Setting Name="TrainingCenters_getInst_GetInstitutes" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">http://localhost:5275/GetInstitutes.asmx</Value>
+      <Value Profile="(Default)">http://localhost:8353/GetInstitutes.asmx</Value>
     </Setting>
   </Settings>
 </SettingsFile>

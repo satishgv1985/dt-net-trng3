@@ -9,12 +9,12 @@ public partial class _Default : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        //Hello.Institutes inst = new Hello.Institutes();
-        //string st = inst.HeloWorld();
-        //lblResp.Text = st;
-        subref.sub s = new subref.sub();
-        string r = s.HelloWorld();
-        lblRes.Text = r.ToString();
+        Hello.Institutes inst = new Hello.Institutes();
+        string st = inst.HelloWorld();
+        lblResp.Text = st;
+       // subref.sub s = new subref.sub();
+        //string r = s.HelloWorld();
+       // lblRes.Text = r.ToString();
     }
     protected void btnSubmit_Click(object sender, EventArgs e)
     {
@@ -34,8 +34,8 @@ public partial class _Default : System.Web.UI.Page
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
-        sub1.sub a=new sub1.sub();
-        int res = a.sub1(Convert.ToInt32(TextBox1.Text), Convert.ToInt32(TextBox2.Text));
-        sult.Text = res.ToString();
+      //  sub1.sub a=new sub1.sub();
+      //  int res = a.sub1(Convert.ToInt32(TextBox1.Text), Convert.ToInt32(TextBox2.Text));
+      //  sult.Text = res.ToString();
     }
 }

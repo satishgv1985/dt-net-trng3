@@ -36,17 +36,7 @@ namespace TrainingCenters.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:5275/training/shirisha/Division.asmx")]
-        public string TrainingCenters_DivisionCalculator_Division {
-            get {
-                return ((string)(this["TrainingCenters_DivisionCalculator_Division"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:5275/GetInstitutes.asmx")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:8353/GetInstitutes.asmx")]
         public string TrainingCenters_getInst_GetInstitutes {
             get {
                 return ((string)(this["TrainingCenters_getInst_GetInstitutes"]));
