@@ -78,7 +78,8 @@
                     onclick="bttnCSubmit_Click" OnClientClick="return validatePage();" />
             </td>
             <td align="center">
-                <asp:Button ID="bttnCReset" runat="server" Text="Reset" />
+                <asp:Button ID="bttnCReset" runat="server" Text="Reset" 
+                    onclick="bttnCReset_Click" />
             </td>
         </tr>
     </table></div> 

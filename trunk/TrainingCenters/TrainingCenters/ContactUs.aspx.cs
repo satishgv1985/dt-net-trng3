@@ -52,5 +52,10 @@ namespace TrainingCenters
             smtp.EnableSsl = true;
             smtp.Send(msg);
         }
+
+        protected void bttnCReset_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
