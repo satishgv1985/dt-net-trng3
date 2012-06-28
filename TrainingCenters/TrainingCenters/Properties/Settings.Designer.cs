@@ -36,10 +36,10 @@ namespace TrainingCenters.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:8353/training/Institutes.asmx")]
-        public string TrainingCenters_localhost_Institutes {
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:5275/training/shirisha/Division.asmx")]
+        public string TrainingCenters_DivisionCalculator_Division {
             get {
-                return ((string)(this["TrainingCenters_localhost_Institutes"]));
+                return ((string)(this["TrainingCenters_DivisionCalculator_Division"]));
             }
         }
         
