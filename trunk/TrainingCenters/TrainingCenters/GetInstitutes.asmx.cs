@@ -44,7 +44,7 @@ namespace TrainingCenters
             SqlDataReader sdrI = cmd.ExecuteReader();
             string[] names = new string[6];
 
-         
+
             int i = 0;
             while (sdrI.Read())
             {
@@ -56,6 +56,6 @@ namespace TrainingCenters
             return names;
 
         }
-           }
-         
-        }
+    }
+
+}
