@@ -65,6 +65,7 @@
     <Content Include="Contact.ascx" />
     <Content Include="GetInstitutes.asmx" />
     <Content Include="HomeTrainingCenter.aspx" />
+    <Content Include="institute\CourseOfferingDetails.aspx" />
     <Content Include="institute\ThankYou.aspx" />
     <Content Include="SharedAssemblies\AjaxControlToolkit.dll" />
     <Content Include="student\StudentUserControl.ascx" />
@@ -224,6 +225,13 @@
     </Compile>
     <Compile Include="HomeTrainingCenter.aspx.designer.cs">
       <DependentUpon>HomeTrainingCenter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="institute\CourseOfferingDetails.aspx.cs">
+      <DependentUpon>CourseOfferingDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="institute\CourseOfferingDetails.aspx.designer.cs">
+      <DependentUpon>CourseOfferingDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="institute\ThankYou.aspx.cs">
       <DependentUpon>ThankYou.aspx</DependentUpon>
