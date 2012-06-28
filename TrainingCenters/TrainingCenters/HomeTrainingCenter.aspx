@@ -62,7 +62,7 @@
                                     SortExpression="InstituteName" />--%>
                             </Columns>
                         </asp:GridView>
-                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:TCdbConnectionString6 %>"
+                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:TCdbConnectionString %>"
                             SelectCommand="select c.CourseID,c.CourseName, i.InstituteID,i.InstituteName from CourseOffering co
 inner join Course c on c.CourseID=co.CourseID
 inner join Institute i on i.InstituteID=co.InstituteID"></asp:SqlDataSource>

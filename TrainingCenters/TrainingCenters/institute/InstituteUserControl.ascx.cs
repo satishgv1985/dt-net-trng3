@@ -52,7 +52,7 @@ namespace TrainingCenters.institute
                 //}
 
 
-                Int16 I;
+               // Int16 I;
                 SqlDataSource sdsCourseName = new SqlDataSource(ConfigurationManager.ConnectionStrings["TCdbConnectionString"].ConnectionString, "select distinct CourseName, courseid from Course");
 
 

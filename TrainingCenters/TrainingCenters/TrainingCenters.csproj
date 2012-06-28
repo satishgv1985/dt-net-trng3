@@ -69,7 +69,6 @@
     <Content Include="institute\ThankYou.aspx" />
     <Content Include="SharedAssemblies\AjaxControlToolkit.dll" />
     <Content Include="student\StudentUserControl.ascx" />
-    <Content Include="sub.asmx" />
     <Content Include="training\AjaxControls.aspx" />
     <Content Include="training\AjaxFirst.aspx" />
     <Content Include="training\AjaxTimer.aspx" />
@@ -87,8 +86,6 @@
     <Content Include="training\Institutes.asmx" />
     <Content Include="training\Search.aspx" />
     <Content Include="training\shilpa\Managecourses.aspx" />
-    <Content Include="training\shirisha\Division.asmx" />
-    <Content Include="training\shirisha\Division.aspx" />
     <Content Include="training\shirisha\GridViewCityState.aspx" />
     <Content Include="admin\ManageInstitutes.aspx" />
     <Content Include="ASPNetControls.aspx" />
@@ -146,7 +143,6 @@
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Web References\localhost\Institutes.disco" />
     <None Include="Web References\getInst\GetInstitutes.disco" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -158,11 +154,6 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <None Include="Web References\Calculator\Reference.map">
-      <Generator>MSDiscoCodeGenerator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Web References\DivisionCalculator\Division.wsdl" />
-    <None Include="Web References\DivisionCalculator\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -252,10 +243,6 @@
     <Compile Include="student\StudentUserControl.ascx.designer.cs">
       <DependentUpon>StudentUserControl.ascx</DependentUpon>
     </Compile>
-    <Compile Include="sub.asmx.cs">
-      <DependentUpon>sub.asmx</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="training\AjaxControls.aspx.cs">
       <DependentUpon>AjaxControls.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -329,17 +316,6 @@
     <Compile Include="training\Institutes.asmx.cs">
       <DependentUpon>Institutes.asmx</DependentUpon>
       <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="training\shirisha\Division.asmx.cs">
-      <DependentUpon>Division.asmx</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="training\shirisha\Division.aspx.cs">
-      <DependentUpon>Division.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="training\shirisha\Division.aspx.designer.cs">
-      <DependentUpon>Division.aspx</DependentUpon>
     </Compile>
     <Compile Include="training\shirisha\GridViewCityState.aspx.cs">
       <DependentUpon>GridViewCityState.aspx</DependentUpon>
@@ -658,11 +634,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
-    <Compile Include="Web References\localhost\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.map</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="DataSet1.xsc">
@@ -702,17 +673,6 @@
     </WebReferenceUrl>
     <WebReferenceUrl Include="http://localhost:8353/training/DotNetCalculator.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
-      <RelPath>Web References\DivisionCalculator\</RelPath>
-      <UpdateFromURL>http://localhost:5275/training/shirisha/Division.asmx</UpdateFromURL>
-      <ServiceLocationURL>
-      </ServiceLocationURL>
-      <CachedDynamicPropName>
-      </CachedDynamicPropName>
-      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
-      <CachedSettingsPropName>TrainingCenters_DivisionCalculator_Division</CachedSettingsPropName>
-    </WebReferenceUrl>
-    <WebReferenceUrl Include="http://localhost:8353/training/DotNetCalculator.asmx">
-      <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\Calculator\</RelPath>
       <UpdateFromURL>http://localhost:8353/training/DotNetCalculator.asmx</UpdateFromURL>
       <ServiceLocationURL>
@@ -731,7 +691,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>5275</DevelopmentServerPort>
+          <DevelopmentServerPort>6723</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>
