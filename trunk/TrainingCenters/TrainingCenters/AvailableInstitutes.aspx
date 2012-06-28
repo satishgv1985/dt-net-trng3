@@ -7,7 +7,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="cphBody" runat="server">
     This page contains the search results for which the institute offer the courses
     <br />
-    <table>
+    <%--<table>
         <tr>
             <td>
                 InstituteName: Drona
@@ -18,7 +18,7 @@
                 Courses: C#, ASP.Net
             </td>
         </tr>
-    </table>
+    </table>--%>
     <asp:ListView ID="lvInstitutes" runat="server">
         <ItemTemplate>
             <%# Eval("InstituteName") %>

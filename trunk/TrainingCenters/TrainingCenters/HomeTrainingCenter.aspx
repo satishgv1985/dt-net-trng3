@@ -39,9 +39,9 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphBody" runat="server">
-    <table style="width:100%">
+    <table style="width: 100%">
         <tr>
-            <td class="style12" style="width:25%">
+            <td class="style12" style="width: 25%">
                 <table class="style1">
                     <tr>
                         <td align="left" class="style13">
@@ -50,34 +50,26 @@
                         </td>
                     </tr>
                     <tr>
-                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
-                            DataSourceID="SqlDataSource1" >
-                            
+                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
                             <Columns>
-                            <asp:HyperLinkField DataNavigateUrlFields="CourseID" DataNavigateUrlFormatString=""
-      HeaderText="CourseName" SortExpression="CourseName" Text="Courses" />
-        <asp:HyperLinkField DataNavigateUrlFields="InstituteID" DataNavigateUrlFormatString=""
-      HeaderText="InstituteName" SortExpression="InstituteName" Text="Institutes" />
-                               
-                                    <%--<asp:BoundField DataField="CourseName" HeaderText="CourseName" 
+                                <asp:HyperLinkField DataNavigateUrlFields="CourseID,InstituteId" DataNavigateUrlFormatString="Courseoffering.aspx?cid={0}&iid={1}"
+                                    HeaderText="CourseName" SortExpression="CourseName" DataTextField="CourseName" />
+                                <asp:HyperLinkField DataNavigateUrlFields="InstituteID" DataNavigateUrlFormatString=""
+                                    HeaderText="InstituteName" SortExpression="InstituteName" Text='<%Eval("InstituteName") %>' />
+                                <%--<asp:BoundField DataField="CourseName" HeaderText="CourseName" 
                                     SortExpression="CourseName" />
                                 <asp:BoundField DataField="InstituteName" HeaderText="InstituteName" 
                                     SortExpression="InstituteName" />--%>
-                               </Columns>
+                            </Columns>
                         </asp:GridView>
-                              
-                                <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-                            ConnectionString="<%$ ConnectionStrings:TCdbConnectionString6 %>" 
-                            SelectCommand="SELECT Course.CourseName, Course.CourseID, Institute.InstituteID, Institute.InstituteName FROM Course CROSS JOIN Institute">
-                        </asp:SqlDataSource>
-                              
-                                <%--<asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:TCdbConnectionString6 %>"
+                            SelectCommand="select c.CourseID,c.CourseName, i.InstituteID,i.InstituteName from CourseOffering co
+inner join Course c on c.CourseID=co.CourseID
+inner join Institute i on i.InstituteID=co.InstituteID"></asp:SqlDataSource>
+                        <%--<asp:SqlDataSource ID="SqlDataSource1" runat="server" 
                             ConnectionString="<%$ ConnectionStrings:TCdbConnectionString4 %>" 
                             SelectCommand="SELECT Course.CourseID, Course.CourseName, Institute.InstituteName FROM Course Cross JOIN Institute">
                         </asp:SqlDataSource>--%>
-                                
-       
-                       
                         <%--<td align="left" class="style13">
                             <asp:HyperLink ID="hlJava" runat="server">JAVA</asp:HyperLink>
                         </td>--%>
@@ -176,7 +168,8 @@
                         <td align="center">
                             <asp:HyperLink ID="hlInstitute5" runat="server">Institute5</asp:HyperLink>
                         </td>
-                    </tr>--%>                    <%--<tr>
+                    </tr>--%>
+                    <%--<tr>
                         <td align="center">
                             <asp:HyperLink ID="hlInstitute6" runat="server">Institute6</asp:HyperLink>
                         </td>
@@ -190,7 +183,8 @@
                         <td align="center">
                             <asp:HyperLink ID="hlInstitute8" runat="server">Institute8</asp:HyperLink>
                         </td>
-                    </tr>--%>                    <%--<tr>
+                    </tr>--%>
+                    <%--<tr>
                         <td align="center">
                             <asp:HyperLink ID="hlInstitute9" runat="server">Institute9</asp:HyperLink>
                         </td>
@@ -219,14 +213,16 @@
                 <table class="style1" style="border-style: none; border-color: inherit; border-width: 1px;
                     width: 249px;">
                     <tr>
-                        <td align="right">--%>                           <%-- <asp:Label ID="rtisements" runat="server" Font-Bold="True" Font-Size="Larger" Font-Underline="True"
+                        <td align="right">--%>
+                    <%-- <asp:Label ID="rtisements" runat="server" Font-Bold="True" Font-Size="Larger" Font-Underline="True"
                                 Text="Advartisements"></asp:Label>
                         </td>
-                    </tr>--%>           <%--     </table>
+                    </tr>--%>
+                    <%--     </table>
             </td>
         </tr>--%>
-    </table>
-    </td>
-    </tr>
+                </table>
+            </td>
+        </tr>
     </table>
 </asp:Content>
