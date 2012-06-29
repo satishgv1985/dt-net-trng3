@@ -119,11 +119,38 @@ namespace TrainingCenters.institute
                 cmd.Parameters.Add(new SqlParameter("username", tbUserName.Text));
                 cmd.Parameters.Add(new SqlParameter("password", tbPassword.Text));
 
+     
+               
+                int insID = (int)cmd.ExecuteScalar();
+                int CourseID;
 
-                int ret = cmd.ExecuteNonQuery();
                 con.Close();
                 lblMessage.Visible = true;
                 //lblMessage.Text = "Successfully inserted.";
+                CheckBoxList cblCourses = (CheckBoxList)ucInstituteReg.FindControl("cblCourses");
+
+
+                foreach (ListItem cBox in cblCourses.Items)
+                {
+                    if (cBox.Selected)
+                    {
+                        CourseID = Convert.ToInt32(cBox.Value);
+                    
+                    if (insID > 0)
+                    {
+                        SqlConnection con2 = new SqlConnection(ConfigurationManager.ConnectionStrings["TCdbConnectionString"].ConnectionString);
+                        SqlCommand cmd2 = new SqlCommand();
+                        cmd2.Connection = con2;
+
+                        cmd2.CommandType = CommandType.Text;
+                        cmd2.CommandText = "insert into courseoffering(courseid,instituteid) values('" + insID + "',"+ CourseID +")";
+                        con2.Open();
+                        cmd2.ExecuteNonQuery();
+
+                        con2.Close();
+                    }
+                    }
+                }
 
                 Response.Redirect("ThankYou.aspx");
 
