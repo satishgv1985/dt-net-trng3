@@ -52,10 +52,10 @@
                     <tr>
                         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
                             <Columns>
-                                <asp:HyperLinkField DataNavigateUrlFields="CourseID,InstituteId" DataNavigateUrlFormatString="Courseoffering.aspx?cid={0}&iid={1}"
-                                    HeaderText="CourseName" SortExpression="CourseName" DataTextField="CourseName" />
+                                <asp:HyperLinkField DataNavigateUrlFields="CourseID" DataNavigateUrlFormatString=""
+                                    HeaderText="CourseName" SortExpression="CourseName" Text="Courses" />
                                 <asp:HyperLinkField DataNavigateUrlFields="InstituteID" DataNavigateUrlFormatString=""
-                                    HeaderText="InstituteName" SortExpression="InstituteName" Text='<%Eval("InstituteName") %>' />
+                                    HeaderText="InstituteName" SortExpression="InstituteName" Text="Institutes" />
                                 <%--<asp:BoundField DataField="CourseName" HeaderText="CourseName" 
                                     SortExpression="CourseName" />
                                 <asp:BoundField DataField="InstituteName" HeaderText="InstituteName" 
@@ -63,9 +63,8 @@
                             </Columns>
                         </asp:GridView>
                         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:TCdbConnectionString %>"
-                            SelectCommand="select c.CourseID,c.CourseName, i.InstituteID,i.InstituteName from CourseOffering co
-inner join Course c on c.CourseID=co.CourseID
-inner join Institute i on i.InstituteID=co.InstituteID"></asp:SqlDataSource>
+                            SelectCommand="SELECT Course.CourseName, Course.CourseID, Institute.InstituteID, Institute.InstituteName FROM Course CROSS JOIN Institute">
+                        </asp:SqlDataSource>
                         <%--<asp:SqlDataSource ID="SqlDataSource1" runat="server" 
                             ConnectionString="<%$ ConnectionStrings:TCdbConnectionString4 %>" 
                             SelectCommand="SELECT Course.CourseID, Course.CourseName, Institute.InstituteName FROM Course Cross JOIN Institute">

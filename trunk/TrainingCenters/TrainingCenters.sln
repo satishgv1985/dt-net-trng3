@@ -5,7 +5,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingCenters", "Training
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TBServerControl", "TBServerControl\TBServerControl.csproj", "{BE7C0309-6268-456E-8F0F-A51E8BD7E45F}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "DotNetServices", "DotNetServices", "{5202248A-C8F2-42D1-99DF-71C04A9D68EC}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "DotNetServices", "DotNetServices\", "{5202248A-C8F2-42D1-99DF-71C04A9D68EC}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
 		Debug.AspNetCompiler.VirtualPath = "/DotNetServices"
