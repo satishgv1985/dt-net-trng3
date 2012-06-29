@@ -52,19 +52,32 @@
                     <tr>
                         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
                             <Columns>
-                                <asp:HyperLinkField DataNavigateUrlFields="CourseID" DataNavigateUrlFormatString=""
-                                    HeaderText="CourseName" SortExpression="CourseName" Text="Courses" />
-                                <asp:HyperLinkField DataNavigateUrlFields="InstituteID" DataNavigateUrlFormatString=""
-                                    HeaderText="InstituteName" SortExpression="InstituteName" Text="Institutes" />
+                          <%--  <asp:TemplateField>
+<ItemTemplate>
+<a href ='<%#"CourseOfferingDetails.aspx?CourseName="+DataBinder.Eval(Container.DataItem,"CourseName") %>'>
+  </a>
+</ItemTemplate>
+</asp:TemplateField>--%>
                                 <%--<asp:BoundField DataField="CourseName" HeaderText="CourseName" 
                                     SortExpression="CourseName" />
                                 <asp:BoundField DataField="InstituteName" HeaderText="InstituteName" 
                                     SortExpression="InstituteName" />--%>
+                                <%--<asp:BoundField DataField="CourseName" HeaderText="CourseName" 
+                                    SortExpression="CourseName" />
+                                <asp:BoundField DataField="InstituteName" HeaderText="InstituteName" 
+                                    SortExpression="InstituteName" />--%>
+                                    <asp:hyperlinkfield headertext="CourseName" datatextfield="CourseName" SortExpression="CourseName"
+                                    DataNavigateUrlFields="CourseName" DataNavigateUrlFormatString="CourseOfferingDetails.aspx" />
+                                    <asp:HyperLinkField HeaderText="InstituteName"  DataNavigateUrlFormatString="" />
                             </Columns>
                         </asp:GridView>
-                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:TCdbConnectionString %>"
-                            SelectCommand="SELECT Course.CourseName, Course.CourseID, Institute.InstituteID, Institute.InstituteName FROM Course CROSS JOIN Institute">
+                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                            ConnectionString="<%$ ConnectionStrings:TCdbConnectionString2 %>" 
+                            SelectCommand="SELECT  Course.CourseName, Institute.InstituteName FROM CourseOffering INNER JOIN Course ON CourseOffering.CourseID = Course.CourseID INNER JOIN Institute ON CourseOffering.InstituteID = Institute.InstituteID">
                         </asp:SqlDataSource>
+                       <%-- <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:TCdbConnectionString %>"
+                            SelectCommand="SELECT Course.CourseName, Course.CourseID, Institute.InstituteID, Institute.InstituteName FROM Course Inner JOIN Institute">
+                        </asp:SqlDataSource>--%>
                         <%--<asp:SqlDataSource ID="SqlDataSource1" runat="server" 
                             ConnectionString="<%$ ConnectionStrings:TCdbConnectionString4 %>" 
                             SelectCommand="SELECT Course.CourseID, Course.CourseName, Institute.InstituteName FROM Course Cross JOIN Institute">
