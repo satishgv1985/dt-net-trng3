@@ -16,6 +16,12 @@
                     <th>
                         InstituteName
                     </th>
+                     <th>
+                        Year of Establishment
+                     </th>
+                     <th>
+                        Area
+                     </th>
                 </tr>
         </HeaderTemplate>
         <ItemTemplate>
@@ -23,8 +29,17 @@
                 <td>
                     <%# DataBinder.Eval(Container.DataItem, "CourseName") %>
                 </td>
+                
                 <td>
                     <%# DataBinder.Eval(Container.DataItem, "InstituteName") %>
+                </td>
+                
+                <td>
+                    <%# DataBinder.Eval(Container.DataItem, "YearofEstablishment") %>
+                </td>
+                
+                <td>
+                    <%# DataBinder.Eval(Container.DataItem, "Area") %>
                 </td>
             </tr>
         </ItemTemplate>
