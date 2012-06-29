@@ -15,8 +15,9 @@ namespace TrainingCenters.institute
     public partial class CourseOfferingDetails : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
 
+        {
+            
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -32,17 +33,20 @@ namespace TrainingCenters.institute
 
             con.Open();
             SqlDataReader sdrI = cmd.ExecuteReader();
+           // int res = cmd.ExecuteNonQuery();
 
             string emailID = "";
           
-
-
-            while (sdrI.Read())
+             while (sdrI.Read())
             {
                 emailID = Convert.ToString(sdrI["EmailID"]);
                
             }
+
             con.Close();
+
+         
+
 
             if (emailID.Length > 0)
             {
@@ -88,7 +92,7 @@ namespace TrainingCenters.institute
                 lblMessage.Text = "You have entered wrong EmailID or Institute Name";
 
             }
-
+        
         }
 
         protected void Button2_Click(object sender, EventArgs e)
@@ -97,12 +101,5 @@ namespace TrainingCenters.institute
             tbEnquiryMessage.Text="";
             tbInstituteName.Text="";
         }
-
-
-      
-       
-     
         }
-
-       
     }
