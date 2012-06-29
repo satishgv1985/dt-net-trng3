@@ -42,5 +42,7 @@ namespace TrainingCenters.Properties {
                 return ((string)(this["TrainingCenters_getInst_GetInstitutes"]));
             }
         }
+
+        public string TrainingCenters_localhost_Institutes { get; set; }
     }
 }

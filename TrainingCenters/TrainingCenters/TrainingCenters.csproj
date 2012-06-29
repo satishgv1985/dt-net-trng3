@@ -36,6 +36,8 @@
       <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -63,12 +65,21 @@
     <Content Include="admin\RegistrationManagement.aspx" />
     <Content Include="AvailableInstitutes.aspx" />
     <Content Include="Contact.ascx" />
+    <Content Include="Division.aspx" />
     <Content Include="GetInstitutes.asmx" />
     <Content Include="HomeTrainingCenter.aspx" />
     <Content Include="institute\CourseOfferingDetails.aspx" />
     <Content Include="institute\ThankYou.aspx" />
+    <None Include="Service References\CourseService\item.disco" />
+    <None Include="Service References\CourseService\configuration91.svcinfo" />
+    <None Include="Service References\CourseService\configuration.svcinfo" />
+    <None Include="Service References\CourseService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="SharedAssemblies\AjaxControlToolkit.dll" />
     <Content Include="student\StudentUserControl.ascx" />
+    <Content Include="sub.asmx" />
     <Content Include="training\AjaxControls.aspx" />
     <Content Include="training\AjaxFirst.aspx" />
     <Content Include="training\AjaxTimer.aspx" />
@@ -85,7 +96,10 @@
     <Content Include="training\ReadXML.aspx" />
     <Content Include="training\Institutes.asmx" />
     <Content Include="training\Search.aspx" />
+    <Content Include="training\ServiceInstitute.svc" />
     <Content Include="training\shilpa\Managecourses.aspx" />
+    <Content Include="training\shirisha\Division.asmx" />
+    <Content Include="training\shirisha\Division.aspx" />
     <Content Include="training\shirisha\GridViewCityState.aspx" />
     <Content Include="admin\ManageInstitutes.aspx" />
     <Content Include="ASPNetControls.aspx" />
@@ -136,6 +150,18 @@
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CourseService\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CourseService\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CourseService\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CourseService\TCCourse.wsdl">
+      <SubType>Designer</SubType>
     </None>
     <None Include="Web References\Calculator\DotNetCalculator.disco" />
     <None Include="Web References\getInst\GetInstitutes.wsdl" />
@@ -206,6 +232,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Division.aspx.cs">
+      <DependentUpon>Division.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Division.aspx.designer.cs">
+      <DependentUpon>Division.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GetInstitutes.asmx.cs">
       <DependentUpon>GetInstitutes.asmx</DependentUpon>
       <SubType>Component</SubType>
@@ -224,6 +256,7 @@
     <Compile Include="institute\CourseOfferingDetails.aspx.designer.cs">
       <DependentUpon>CourseOfferingDetails.aspx</DependentUpon>
     </Compile>
+    <Compile Include="institute\Program.cs" />
     <Compile Include="institute\ThankYou.aspx.cs">
       <DependentUpon>ThankYou.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -236,12 +269,20 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Service References\CourseService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="student\StudentUserControl.ascx.cs">
       <DependentUpon>StudentUserControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="student\StudentUserControl.ascx.designer.cs">
       <DependentUpon>StudentUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="sub.asmx.cs">
+      <DependentUpon>sub.asmx</DependentUpon>
     </Compile>
     <Compile Include="training\AjaxControls.aspx.cs">
       <DependentUpon>AjaxControls.aspx</DependentUpon>
@@ -288,6 +329,7 @@
     <Compile Include="admin\Managecourses.aspx.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="training\IServiceInstitute.cs" />
     <Compile Include="training\ReadXML.aspx.cs">
       <DependentUpon>ReadXML.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -301,6 +343,9 @@
     </Compile>
     <Compile Include="training\Search.aspx.designer.cs">
       <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="training\ServiceInstitute.svc.cs">
+      <DependentUpon>ServiceInstitute.svc</DependentUpon>
     </Compile>
     <Compile Include="training\shilpa\Managecourses.aspx.cs">
       <DependentUpon>Managecourses.aspx</DependentUpon>
@@ -316,6 +361,17 @@
     <Compile Include="training\Institutes.asmx.cs">
       <DependentUpon>Institutes.asmx</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="training\shirisha\Division.asmx.cs">
+      <DependentUpon>Division.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="training\shirisha\Division.aspx.cs">
+      <DependentUpon>Division.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="training\shirisha\Division.aspx.designer.cs">
+      <DependentUpon>Division.aspx</DependentUpon>
     </Compile>
     <Compile Include="training\shirisha\GridViewCityState.aspx.cs">
       <DependentUpon>GridViewCityState.aspx</DependentUpon>
@@ -683,6 +739,12 @@
       <CachedSettingsPropName>TrainingCenters_Calculator_DotNetCalculator</CachedSettingsPropName>
     </WebReferenceUrl>
   </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\CourseService\" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <ProjectExtensions>
@@ -691,7 +753,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>6723</DevelopmentServerPort>
+          <DevelopmentServerPort>5275</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

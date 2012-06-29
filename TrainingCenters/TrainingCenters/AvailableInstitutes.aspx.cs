@@ -16,9 +16,9 @@ namespace TrainingCenters
         {
             if (!IsPostBack)
             {
-                TextBox tb = (TextBox)this.Master.FindControl("tbInstituteSearch");
-                string courseName = tb.Text;
-
+                
+                string courseName = Request.QueryString["cn"];
+                //System.Diagnostics.Debugger.Launch();
                 SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["TCdbConnectionString"].ConnectionString);
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
@@ -34,7 +34,9 @@ namespace TrainingCenters
                 DataSet ds = new DataSet();
                 DataTable dt = new DataTable();
                 dt.Columns.Add("InstituteName", typeof(string));
-                dt.Columns.Add("Area", typeof(string));
+                //dt.Columns.Add("YearOfEstablishment", typeof(string));
+                //dt.Columns.Add("Area", typeof(string));
+                dt.Columns.Add("CourseName",typeof(string));
 
                 DataRow dr;
 
@@ -45,13 +47,18 @@ namespace TrainingCenters
                     dr = dt.NewRow();
                    
                     dr["InstituteName"] = Convert.ToString(sdrI["InstituteName"]);
-                    dr["Area"] = Convert.ToString(sdrI["Area"]);
+                    //dr["YearOfEstablishment"] = Convert.ToString(sdrI["YearOfEstablishment"]);
+                    //dr["Area"] = Convert.ToString(sdrI["Area"]);
+                    dr["CourseName"] = Convert.ToString(sdrI["CourseName"]);
                     dt.Rows.Add(dr);
                     i++;
                 }
+                Repeater1.DataSource = dt;
+                Repeater1.DataBind();
 
-                lvInstitutes.DataSource = dt;
-                lvInstitutes.DataBind();
+                //lvInstitutes.DataSource = dt;
+                //lvInstitutes.DataBind();
+              
 
                 con.Close();
             }

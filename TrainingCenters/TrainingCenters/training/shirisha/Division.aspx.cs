@@ -16,9 +16,9 @@ namespace TrainingCenters.training.shirisha
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-           DivisionCalculator.Division div = new DivisionCalculator.Division();
-           decimal res=div.divide(Convert.ToDecimal(Textbox1.Text) , Convert.ToDecimal(Textbox2.Text));
-           lblAns.Text = Convert.ToString(res);
+           //DivisionCalculator.Division div = new DivisionCalculator.Division();
+           //decimal res=div.divide(Convert.ToDecimal(Textbox1.Text) , Convert.ToDecimal(Textbox2.Text));
+           //lblAns.Text = Convert.ToString(res);
         }
     }
 }
