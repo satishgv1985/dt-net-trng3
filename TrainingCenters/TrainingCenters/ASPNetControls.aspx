@@ -6,7 +6,8 @@
 <head runat="server">
     <title></title>
     <script type="text/javascript">
-        function funcCheckUserNameLength(source, arguments) {            
+        function funcCheckUserNameLength(source, arguments) {
+                   
             arguments.IsValid = true;
             var un = document.getElementById('tbUserName').value;
             if (un.length < 8 || un.length > 15)
@@ -46,7 +47,7 @@ Username:         <asp:TextBox ID="tbUserName" runat="server"></asp:TextBox>
                          <br />
 
 
-        <asp:Button ID="btnSubmit" runat="server" Text="Submit" CausesValidation="true" 
+        <asp:Button ID="btnSubmit" runat="server" Text="Submit" CausesValidation="true" OnClientClick="javascript:funcCheckUserNameLength()"
             onclick="btnSubmit_Click" />
     </div> 
     </form>
