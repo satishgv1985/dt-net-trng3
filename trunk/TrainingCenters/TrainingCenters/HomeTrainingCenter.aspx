@@ -37,6 +37,14 @@
             width: 346px;
         }
     </style>
+    <script type="text/javascript">
+    function funcOpenPopup(id)
+    {
+        //debugger;
+        window.open("/institute/courseofferingdetails.aspx?cid="+id, 'name', 'height=400,width=450');
+    return false;
+    }
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphBody" runat="server">
     <table style="width: 100%">
@@ -50,41 +58,27 @@
                         </td>
                     </tr>
                     <tr>
-                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
-                            <Columns>
-                          <%--  <asp:TemplateField>
-<ItemTemplate>
-<a href ='<%#"CourseOfferingDetails.aspx?CourseName="+DataBinder.Eval(Container.DataItem,"CourseName") %>'>
-  </a>
-</ItemTemplate>
-</asp:TemplateField>--%>
-                                <%--<asp:BoundField DataField="CourseName" HeaderText="CourseName" 
-                                    SortExpression="CourseName" />
-                                <asp:BoundField DataField="InstituteName" HeaderText="InstituteName" 
-                                    SortExpression="InstituteName" />--%>
-                                <%--<asp:BoundField DataField="CourseName" HeaderText="CourseName" 
-                                    SortExpression="CourseName" />
-                                <asp:BoundField DataField="InstituteName" HeaderText="InstituteName" 
-                                    SortExpression="InstituteName" />--%>
-                                    <asp:hyperlinkfield headertext="CourseName" datatextfield="CourseName" SortExpression="CourseName"
-                                    DataNavigateUrlFields="CourseName" DataNavigateUrlFormatString="CourseOfferingDetails.aspx" />
-                                    <asp:HyperLinkField HeaderText="InstituteName"  DataNavigateUrlFormatString="" />
-                            </Columns>
-                        </asp:GridView>
-                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-                            ConnectionString="<%$ ConnectionStrings:TCdbConnectionString2 %>" 
-                            SelectCommand="SELECT  Course.CourseName, Institute.InstituteName FROM CourseOffering INNER JOIN Course ON CourseOffering.CourseID = Course.CourseID INNER JOIN Institute ON CourseOffering.InstituteID = Institute.InstituteID">
-                        </asp:SqlDataSource>
-                       <%-- <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:TCdbConnectionString %>"
-                            SelectCommand="SELECT Course.CourseName, Course.CourseID, Institute.InstituteID, Institute.InstituteName FROM Course Inner JOIN Institute">
-                        </asp:SqlDataSource>--%>
-                        <%--<asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-                            ConnectionString="<%$ ConnectionStrings:TCdbConnectionString4 %>" 
-                            SelectCommand="SELECT Course.CourseID, Course.CourseName, Institute.InstituteName FROM Course Cross JOIN Institute">
-                        </asp:SqlDataSource>--%>
-                        <%--<td align="left" class="style13">
-                            <asp:HyperLink ID="hlJava" runat="server">JAVA</asp:HyperLink>
-                        </td>--%>
+                        <td>
+                            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
+                                <Columns>
+                                    <asp:TemplateField>
+                                        <ItemTemplate>
+                                            <asp:LinkButton ID="lbInstitute" runat="server" Text='<%#Eval("InstituteId") %>'
+                                                OnClientClick="return funcOpenPopup(<%#Eval('InstituteName') %>);"></asp:LinkButton>
+                                       
+                                       <input type="button" onclick="funcOpenPopup('<%#Eval("InstituteName") %>')" value='<%#Eval("InstituteId") %>'/>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:HyperLinkField HeaderText="Course Name" DataTextField="CourseName" DataNavigateUrlFields="CourseID,InstituteID"
+                                        DataNavigateUrlFormatString="institute/CourseOfferingDetails.aspx?cid={0}&iid={1}" />
+                                    <asp:HyperLinkField HeaderText="Institute   Name" DataNavigateUrlFormatString="institute/CourseOfferingDetails.aspx?cid={0}"
+                                        DataTextField="InstituteName" DataNavigateUrlFields="CourseName" />
+                                </Columns>
+                            </asp:GridView>
+                            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:TCdbConnectionString2 %>"
+                                SelectCommand="SELECT  Course.CourseName,Course.CourseID, Institute.InstituteName,Institute.InstituteID FROM CourseOffering INNER JOIN Course ON CourseOffering.CourseID = Course.CourseID INNER JOIN Institute ON CourseOffering.InstituteID = Institute.InstituteID">
+                            </asp:SqlDataSource>
+                        </td>
                     </tr>
                     <%-- <tr>
                         <td align="left" class="style13">

@@ -62,10 +62,10 @@
     <Content Include="AboutUs.aspx" />
     <Content Include="admin\AddUpdateCourse.aspx" />
     <Content Include="admin\CourseConfirmation.aspx" />
+    <Content Include="admin\CoursePopup.aspx" />
     <Content Include="admin\RegistrationManagement.aspx" />
     <Content Include="AvailableInstitutes.aspx" />
     <Content Include="Contact.ascx" />
-    <Content Include="CourseOfferingDetails.aspx" />
     <Content Include="Division.aspx" />
     <Content Include="GetInstitutes.asmx" />
     <Content Include="HomeTrainingCenter.aspx" />
@@ -207,6 +207,13 @@
     <Compile Include="admin\CourseConfirmation.aspx.designer.cs">
       <DependentUpon>CourseConfirmation.aspx</DependentUpon>
     </Compile>
+    <Compile Include="admin\CoursePopup.aspx.cs">
+      <DependentUpon>CoursePopup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\CoursePopup.aspx.designer.cs">
+      <DependentUpon>CoursePopup.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\RegistrationManagement.aspx.cs">
       <DependentUpon>RegistrationManagement.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -227,13 +234,6 @@
     </Compile>
     <Compile Include="Contact.ascx.designer.cs">
       <DependentUpon>Contact.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="CourseOfferingDetails.aspx.cs">
-      <DependentUpon>CourseOfferingDetails.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CourseOfferingDetails.aspx.designer.cs">
-      <DependentUpon>CourseOfferingDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>

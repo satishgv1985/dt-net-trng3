@@ -10,7 +10,7 @@
     <br />
     <asp:Button ID="btnSubmit" Text="Submit" runat="server" 
         onclick="btnSubmit_Click" />
-        <br />
+        <br />  
         <br />
         <asp:HyperLink ID="hlReadCache" runat="server" NavigateUrl="~/training/CacheRead.aspx" Text="Go To Cache Read"></asp:HyperLink>
 </asp:Content>
