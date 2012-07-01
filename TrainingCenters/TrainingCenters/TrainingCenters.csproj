@@ -755,6 +755,12 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\CourseService\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TCBusinessLogic\TCBusinessLogic.csproj">
+      <Project>{B8109256-4C17-48CA-AA50-0165DEDB80CF}</Project>
+      <Name>TCBusinessLogic</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <ProjectExtensions>

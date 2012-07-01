@@ -8,6 +8,8 @@ using System.Web.Security;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Data;
+using TCBusinessLogic.DAL;
+using TCBusinessLogic.DTO;
 
 namespace TrainingCenters
 {
@@ -54,38 +56,18 @@ namespace TrainingCenters
 
         protected void btnInstituteSubmit_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["TCdbConnectionString"].ConnectionString);
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = con;
-            cmd.CommandText = "spValidateUser";
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add(new SqlParameter("username", tbUserName.Text));
-            cmd.Parameters.Add(new SqlParameter("password", tbUserPassword.Text));
-            cmd.Parameters.Add(new SqlParameter("isInst", true));
+           InstituteDTO ins= InstituteDAL.ValidateInstitute(tbUserName.Text, tbUserPassword.Text);
 
-            con.Open();
-            SqlDataReader sdrI = cmd.ExecuteReader();
-
-            string emailID = "";
-            string iName = "";
-
-
-            while (sdrI.Read())
+            if (ins!=null)
             {
-                emailID = Convert.ToString(sdrI["EmailID"]);
-                iName = Convert.ToString(sdrI["InstituteName"]);
-            }
-            con.Close();
+                Session["InstituteDetails"] = ins;
 
-            if (iName.Length > 0)
-            {
-                Session["InstituteEmailID"] = emailID;
-
-                FormsAuthentication.SetAuthCookie(iName, false);
+                FormsAuthentication.SetAuthCookie(ins.InstituteName, false);
                 Response.Redirect("~/institute/InstituteWelcome.aspx");
             }
             else
             {
+                lblInstituteMessage.Text = "Login failed. try again";
                 lblInstituteMessage.Visible = true;
             }
         }
