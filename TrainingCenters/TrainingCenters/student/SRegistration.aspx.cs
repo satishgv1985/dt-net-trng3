@@ -7,7 +7,8 @@ using System.Web.UI.WebControls;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Data;
-
+using TCBusinessLogic.DAL;
+using TCBusinessLogic.DTO;
 namespace TrainingCenters.student
 {
     public partial class StudentReg : System.Web.UI.Page
@@ -68,57 +69,27 @@ namespace TrainingCenters.student
 
         protected void tbUserName_TextChanged(object sender, EventArgs e)
         {
-
-            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["TCdbConnectionString"].ConnectionString);
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = con;
-            cmd.CommandText = "spGetStudentUserName";
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add(new SqlParameter("UserName", tbUserName.Text));
-            //cmd.Parameters.Add(new SqlParameter("IsInstitute", false));
-
-            con.Open();
-            SqlDataReader sdrS = cmd.ExecuteReader();
+            StudentDTO stu = StudentDal.GetStudentByUserName(tbUserName.Text);
 
 
-            string uName = "";
-
-
-            while (sdrS.Read())
+            if (stu == null)
             {
-
-                uName = Convert.ToString(sdrS["UserName"]);
-            }
-            con.Close();
-
-            if (uName.Length > 0)
-            {
-
-                lblUserNameMessage.Visible = true;
-
-                lblUserNameMessage.Text = "!Already taken";
-
-                // FormsAuthentication.SetAuthCookie(iName, false);
-                //  Response.Redirect("~/Student/StudentWelcome.aspx");
-            }
-            else
-            {
-                lblUserNameMessage.Visible = true;
 
                 lblUserNameMessage.Text = "!Available";
             }
 
+            else
 
+            {
+                lblUserNameMessage.Text = "!Already taken";
+            }
+            lblUserNameMessage.Visible = true;
         }
-
-
-
-
-
+    }
 
     }
 
-}
+
 
 
 

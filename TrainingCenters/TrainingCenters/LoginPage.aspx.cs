@@ -74,40 +74,22 @@ namespace TrainingCenters
 
         protected void btnStudentSubmit_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["TCdbConnectionString"].ConnectionString);
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = con;
-            cmd.CommandText = "spValidateUser";
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add(new SqlParameter("username", tbStudentUserName.Text));
-            cmd.Parameters.Add(new SqlParameter("password", tbStudentPassword.Text));
-            cmd.Parameters.Add(new SqlParameter("isInst", false));
+           //InstituteDTO ins = InstituteDAL.ValidateInstitute(tbUserName.Text, tbUserPassword.Text);
+            StudentDTO stu = StudentDal.ValidateStudent(tbStudentUserName.Text, tbStudentPassword.Text);
 
-            con.Open();
-            SqlDataReader sdrS = cmd.ExecuteReader();
-
-            string emailID = "";
-            string iName = "";
-
-
-            while (sdrS.Read())
+            if (stu != null)
             {
-                emailID = Convert.ToString(sdrS["EmailID"]);
-                iName = Convert.ToString(sdrS["StudentName"]);
-            }
-            con.Close();
+                Session["StudentDetails"] = stu;
 
-            if (iName.Length > 0)
-            {
-                Session["StudentEmailID"] = emailID;
-
-                FormsAuthentication.SetAuthCookie(iName, false);
-                Response.Redirect("~/Student/StudentWelcome.aspx");
+                FormsAuthentication.SetAuthCookie(stu.StudentName, false);
+                Response.Redirect("~/student/StudentWelcome.aspx");
             }
             else
             {
-                lblStudentMessage.Visible = true;
+               lblStudentMessage.Text = "Login failed. try again";
+               lblStudentMessage.Visible = true;
             }
+        
 
         }
     }
