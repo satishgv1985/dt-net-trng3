@@ -73,6 +73,10 @@
                                         DataNavigateUrlFormatString="institute/CourseOfferingDetails.aspx?cid={0}&iid={1}" />
                                     <asp:HyperLinkField HeaderText="Institute   Name" DataNavigateUrlFormatString="institute/CourseOfferingDetails.aspx?cid={0}"
                                         DataTextField="InstituteName" DataNavigateUrlFields="CourseName" />
+                                        <asp:HyperLinkField HeaderText="YearofEstablishment" DataNavigateUrlFormatString="institute/CourseOfferingDetails.aspx?cid={0}"
+                                        DataTextField="InstituteName" DataNavigateUrlFields="CourseName" />
+                                        <asp:HyperLinkField HeaderText="Area" DataNavigateUrlFormatString="institute/CourseOfferingDetails.aspx?cid={0}"
+                                        DataTextField="InstituteName" DataNavigateUrlFields="CourseName" />
                                 </Columns>
                             </asp:GridView>
                             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:TCdbConnectionString2 %>"
