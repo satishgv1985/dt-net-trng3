@@ -1,0 +1,6 @@
+C:\Documents and Settings\shiva\Desktop\TrainingCenters\TCBusinessLogic\bin\Debug\TCBusinessLogic.dll.config
+C:\Documents and Settings\shiva\Desktop\TrainingCenters\TCBusinessLogic\bin\Debug\TCBusinessLogic.dll
+C:\Documents and Settings\shiva\Desktop\TrainingCenters\TCBusinessLogic\bin\Debug\TCBusinessLogic.pdb
+C:\Documents and Settings\shiva\Desktop\TrainingCenters\TCBusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\shiva\Desktop\TrainingCenters\TCBusinessLogic\obj\Debug\TCBusinessLogic.dll
+C:\Documents and Settings\shiva\Desktop\TrainingCenters\TCBusinessLogic\obj\Debug\TCBusinessLogic.pdb
