@@ -16,12 +16,17 @@ namespace WindowsTrainingCenter
         public Form1()
         {
             InitializeComponent();
+#if DEBUG
+            label3.Text = "debuggin";
+
+#endif
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             InstituteDTO ins = InstituteDAL.ValidateInstitute(textBox1.Text,textBox2.Text);
-            if (ins == null)
+            if (ins != null)
             {
 
                 label3.Text = "Successful Login.";

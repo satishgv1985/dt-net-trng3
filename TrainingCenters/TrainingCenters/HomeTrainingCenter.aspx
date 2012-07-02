@@ -71,16 +71,16 @@
                                     </asp:TemplateField>
                                     <asp:HyperLinkField HeaderText="Course Name" DataTextField="CourseName" DataNavigateUrlFields="CourseID,InstituteID"
                                         DataNavigateUrlFormatString="institute/CourseOfferingDetails.aspx?cid={0}&iid={1}" />
-                                    <asp:HyperLinkField HeaderText="Institute   Name" DataNavigateUrlFormatString="institute/CourseOfferingDetails.aspx?cid={0}"
+                                    <asp:HyperLinkField HeaderText="Institute Name" DataNavigateUrlFormatString="institute/CourseOfferingDetails.aspx?cid={0}"
                                         DataTextField="InstituteName" DataNavigateUrlFields="CourseName" />
                                         <asp:HyperLinkField HeaderText="YearofEstablishment" DataNavigateUrlFormatString="institute/CourseOfferingDetails.aspx?cid={0}"
-                                        DataTextField="InstituteName" DataNavigateUrlFields="CourseName" />
+                                        DataTextField="YearofEstablishment" DataNavigateUrlFields="CourseName" />
                                         <asp:HyperLinkField HeaderText="Area" DataNavigateUrlFormatString="institute/CourseOfferingDetails.aspx?cid={0}"
-                                        DataTextField="InstituteName" DataNavigateUrlFields="CourseName" />
+                                        DataTextField="Area" DataNavigateUrlFields="CourseName" />
                                 </Columns>
                             </asp:GridView>
                             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:TCdbConnectionString2 %>"
-                                SelectCommand="SELECT  Course.CourseName,Course.CourseID, Institute.InstituteName,Institute.InstituteID FROM CourseOffering INNER JOIN Course ON CourseOffering.CourseID = Course.CourseID INNER JOIN Institute ON CourseOffering.InstituteID = Institute.InstituteID">
+                                SelectCommand="SELECT  Course.CourseName,Course.CourseID, Institute.InstituteName,Institute.Area,Institute.YearofEstablishment,Institute.InstituteID FROM CourseOffering INNER JOIN Course ON CourseOffering.CourseID = Course.CourseID INNER JOIN Institute ON CourseOffering.InstituteID = Institute.InstituteID">
                             </asp:SqlDataSource>
                         </td>
                     </tr>
@@ -182,7 +182,7 @@
                     <%--<tr>
                         <td align="center">
                             <asp:HyperLink ID="hlInstitute6" runat="server">Institute6</asp:HyperLink>
-                        </td>
+                        </td> 
                     </tr>
                     <tr>
                         <td align="center">
