@@ -14,6 +14,7 @@ namespace TrainingCenters
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            string s = Request.QueryString["cn"];
             if (!IsPostBack)
             {
                 SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["TCdbConnectionString"].ConnectionString);
@@ -33,7 +34,7 @@ namespace TrainingCenters
                 }
                 catch (Exception exp)
                 {
-                    Console.WriteLine(exp.Message);
+                   
                 }
 
             }

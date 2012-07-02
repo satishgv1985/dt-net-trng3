@@ -5,7 +5,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingCenters", "Training
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TBServerControl", "TBServerControl\TBServerControl.csproj", "{BE7C0309-6268-456E-8F0F-A51E8BD7E45F}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "DotNetServices", "DotNetServices", "{5202248A-C8F2-42D1-99DF-71C04A9D68EC}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "DotNetServices", "DotNetServices\", "{5202248A-C8F2-42D1-99DF-71C04A9D68EC}"
 	ProjectSection(WebsiteProperties) = preProject
 		SccProjectName = "Svn"
 		SccAuxPath = "Svn"
@@ -33,7 +33,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicesTest", "ServicesTes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCBusinessLogic", "TCBusinessLogic\TCBusinessLogic.csproj", "{B8109256-4C17-48CA-AA50-0165DEDB80CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsTrainingCenter", "WindowsTrainingCenter\WindowsTrainingCenter.csproj", "{C46FEDFB-FAFC-4CAA-9C7C-995E65341A1B}"
+EndProject
 Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|Mixed Platforms = Debug|Mixed Platforms
@@ -91,12 +97,18 @@ Global
 		{B8109256-4C17-48CA-AA50-0165DEDB80CF}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{B8109256-4C17-48CA-AA50-0165DEDB80CF}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{B8109256-4C17-48CA-AA50-0165DEDB80CF}.Release|x86.ActiveCfg = Release|Any CPU
+		{C46FEDFB-FAFC-4CAA-9C7C-995E65341A1B}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{C46FEDFB-FAFC-4CAA-9C7C-995E65341A1B}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{C46FEDFB-FAFC-4CAA-9C7C-995E65341A1B}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{C46FEDFB-FAFC-4CAA-9C7C-995E65341A1B}.Debug|x86.ActiveCfg = Debug|x86
+		{C46FEDFB-FAFC-4CAA-9C7C-995E65341A1B}.Debug|x86.Build.0 = Debug|x86
+		{C46FEDFB-FAFC-4CAA-9C7C-995E65341A1B}.Release|Any CPU.ActiveCfg = Release|x86
+		{C46FEDFB-FAFC-4CAA-9C7C-995E65341A1B}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{C46FEDFB-FAFC-4CAA-9C7C-995E65341A1B}.Release|Mixed Platforms.Build.0 = Release|x86
+		{C46FEDFB-FAFC-4CAA-9C7C-995E65341A1B}.Release|x86.ActiveCfg = Release|x86
+		{C46FEDFB-FAFC-4CAA-9C7C-995E65341A1B}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(SubversionScc) = preSolution
-		Svn-Managed = True
-		Manager = AnkhSVN - Subversion Support for Visual Studio
 	EndGlobalSection
 EndGlobal

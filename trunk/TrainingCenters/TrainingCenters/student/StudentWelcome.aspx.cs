@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using TCBusinessLogic.DTO;
 
 namespace TrainingCenters.student
 {
@@ -11,13 +12,16 @@ namespace TrainingCenters.student
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["StudentEmailID"] != null)
-             lblName.Text =Session["StudentEmailID"].ToString();
+            if (Session["StudentDetails"] != null)
+            {
+                StudentDTO stud = (StudentDTO)Session["StudentDetails"];
+                lblName.Text = stud.StudentName; 
+            }
             else
-                Response.Redirect("LoginPage.aspx");
+                Response.Redirect("~/LoginPage.aspx");
 
 
-           
+
         }
     }
 }

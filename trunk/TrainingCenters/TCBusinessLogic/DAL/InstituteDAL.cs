@@ -71,7 +71,7 @@ namespace TCBusinessLogic.DAL
             bool status = false;
             if (sdrI.Read())
             {
-                status = Convert.ToBoolean(sdrI["status"]);
+                status = Convert.ToBoolean(sdrI[0]);
 
             }
 

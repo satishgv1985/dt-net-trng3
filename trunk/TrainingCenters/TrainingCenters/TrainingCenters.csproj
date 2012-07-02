@@ -135,6 +135,7 @@
     <Content Include="student\StudentWelcome.aspx" />
     <Content Include="training\SendData.aspx" />
     <Content Include="training\shiva\ExpGrid.aspx" />
+    <Content Include="training\shiva\GetStusentByUserName.asmx" />
     <Content Include="training\shiva\Sqrt.asmx" />
     <Content Include="training\Technique_Cookie.aspx" />
     <Content Include="training\Technique_ViewState.aspx" />
@@ -607,6 +608,10 @@
     </Compile>
     <Compile Include="training\shiva\ExpGrid.aspx.designer.cs">
       <DependentUpon>ExpGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="training\shiva\GetStusentByUserName.asmx.cs">
+      <DependentUpon>GetStusentByUserName.asmx</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="training\shiva\Sqrt.asmx.cs">
       <DependentUpon>Sqrt.asmx</DependentUpon>

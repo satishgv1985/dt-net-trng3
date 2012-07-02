@@ -25,7 +25,7 @@ namespace TrainingCenters
             //}
 
 
-            if (Session["InstituteEmailID"] != null || Session["StudentEmailID"] != null)
+            if (Session["StudentDetails"] != null || Session["InstituteDetails"] != null)
             {
                 lbLoginLogout.Text = "Log Out";
             }

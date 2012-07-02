@@ -31,7 +31,7 @@ namespace TCBusinessLogic.DAL
 //             string cmdText = @"select i.InstituteID,i.InstituteName,i.Area,i.YearOfEstablishment 
 //                                from LoginDetails ld inner join Institute i on ld.InsStuID=i.InstituteID
 //                                where UserName='{0}'";
-            string cmdText=@"select s.StudentID,s.StudentName,s.Area,s.Age,s.Gender,s.Qualification,s.EmailID,s.MobileNo
+            string cmdText=@"select s.StudentID,s.StudentName
                             from LoginDetails ld inner join Student s on ld.InsStuID=s.StudentID
                             where UserName='{0}'";
             cmdText = string.Format(cmdText, un);
@@ -43,12 +43,12 @@ namespace TCBusinessLogic.DAL
             {
                 stu.StudentID= Convert.ToInt32(sdr["studentID"]);
                 stu.StudentName = Convert.ToString(sdr["StudentName"]);
-                stu.Area = Convert.ToString(sdr["Area"]);
-                stu.Age = Convert.ToString(sdr["Age"]);
-                stu.Gender = Convert.ToString(sdr["Gender"]);
-                stu.MobileNo = Convert.ToString(sdr["MobileNo"]);
-                stu.EmailID = Convert.ToString(sdr["EmailID"]);
-                stu.Qualification=Convert.ToString(sdr["Qualification"]);
+                //stu.Area = Convert.ToString(sdr["Area"]);
+                //stu.Age = Convert.ToString(sdr["Age"]);
+                //stu.Gender = Convert.ToString(sdr["Gender"]);
+                //stu.MobileNo = Convert.ToString(sdr["MobileNo"]);
+                //stu.EmailID = Convert.ToString(sdr["EmailID"]);
+                //stu.Qualification=Convert.ToString(sdr["Qualification"]);
                // stu.CityID=Convert.ToInt32(sdr["CityID"]);
                // stu.StateID=Convert.ToInt32(sdr["StateID"]);
             }
