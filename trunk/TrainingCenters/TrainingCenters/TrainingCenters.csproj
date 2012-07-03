@@ -66,8 +66,10 @@
     <Content Include="admin\RegistrationManagement.aspx" />
     <Content Include="AvailableInstitutes.aspx" />
     <Content Include="Contact.ascx" />
+    <Content Include="CountCache.aspx" />
     <Content Include="Division.aspx" />
     <Content Include="GetInstitutes.asmx" />
+    <Content Include="Global.asax" />
     <Content Include="HomeTrainingCenter.aspx" />
     <Content Include="institute\CourseOfferingDetails.aspx" />
     <Content Include="institute\ThankYou.aspx" />
@@ -75,6 +77,13 @@
     <None Include="Service References\CourseService\configuration91.svcinfo" />
     <None Include="Service References\CourseService\configuration.svcinfo" />
     <None Include="Service References\CourseService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\WCFCalc\DotNetCalculatorWCF.disco" />
+    <None Include="Service References\WCFCalc\configuration91.svcinfo" />
+    <None Include="Service References\WCFCalc\configuration.svcinfo" />
+    <None Include="Service References\WCFCalc\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -89,6 +98,8 @@
     <Content Include="training\anupam\gvDemo.aspx" />
     <Content Include="training\anupam\loading.gif" />
     <Content Include="training\DotNetCalculator.asmx" />
+    <Content Include="training\DotNetCalculatorWCF.svc" />
+    <Content Include="training\DotNetWCFCalc.aspx" />
     <Content Include="training\images\Image1.jpg" />
     <Content Include="training\images\Image2.jpg" />
     <Content Include="training\images\Image3.jpg" />
@@ -148,6 +159,7 @@
     <Content Include="training\ReadMPTextbox.aspx" />
     <Content Include="training\ReadUCValue.aspx" />
     <Content Include="training\student.xml" />
+    <Content Include="training\TestViewState.aspx" />
     <Content Include="training\UserDataUC.ascx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -163,6 +175,13 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\CourseService\TCCourse.wsdl">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WCFCalc\DotNetCalculatorWCF.wsdl" />
+    <None Include="Service References\WCFCalc\DotNetCalculatorWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WCFCalc\DotNetCalculatorWCF1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Web References\Calculator\DotNetCalculator.disco" />
@@ -236,6 +255,13 @@
     <Compile Include="Contact.ascx.designer.cs">
       <DependentUpon>Contact.ascx</DependentUpon>
     </Compile>
+    <Compile Include="CountCache.aspx.cs">
+      <DependentUpon>CountCache.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CountCache.aspx.designer.cs">
+      <DependentUpon>CountCache.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -251,6 +277,9 @@
     <Compile Include="GetInstitutes.asmx.cs">
       <DependentUpon>GetInstitutes.asmx</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="HomeTrainingCenter.aspx.cs">
       <DependentUpon>HomeTrainingCenter.aspx</DependentUpon>
@@ -280,6 +309,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="Service References\CourseService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WCFCalc\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -340,6 +374,17 @@
     <Compile Include="admin\Managecourses.aspx.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="training\DotNetCalculatorWCF.svc.cs">
+      <DependentUpon>DotNetCalculatorWCF.svc</DependentUpon>
+    </Compile>
+    <Compile Include="training\DotNetWCFCalc.aspx.cs">
+      <DependentUpon>DotNetWCFCalc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="training\DotNetWCFCalc.aspx.designer.cs">
+      <DependentUpon>DotNetWCFCalc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="training\IDotNetCalculatorWCF.cs" />
     <Compile Include="training\IServiceInstitute.cs" />
     <Compile Include="training\ReadXML.aspx.cs">
       <DependentUpon>ReadXML.aspx</DependentUpon>
@@ -687,6 +732,13 @@
     <Compile Include="training\TestSite.Master.designer.cs">
       <DependentUpon>TestSite.Master</DependentUpon>
     </Compile>
+    <Compile Include="training\TestViewState.aspx.cs">
+      <DependentUpon>TestViewState.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="training\TestViewState.aspx.designer.cs">
+      <DependentUpon>TestViewState.aspx</DependentUpon>
+    </Compile>
     <Compile Include="training\UserDataUC.ascx.cs">
       <DependentUpon>UserDataUC.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -759,6 +811,7 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\CourseService\" />
+    <WCFMetadataStorage Include="Service References\WCFCalc\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TCBusinessLogic\TCBusinessLogic.csproj">
