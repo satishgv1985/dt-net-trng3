@@ -6,7 +6,6 @@
 <tr><td>
 <h3>Introduction</h3>
 </td></tr>
-<br />CourseName
 <tr><td>
 Welcome to www.TrainingCenetr.com. These are the terms and conditions governing your use of the Site ("herein after referred to as Acceptable Use Policy "AUP"). </td></tr>
 <tr><td>
